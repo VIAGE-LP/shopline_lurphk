@@ -1,0 +1,44 @@
+.QA_box{
+    position: relative;
+    width:750px;
+    display: block;
+    margin:0 auto;
+}
+@media screen and (max-width:768px) {
+    .QA_box{
+        width:100%;
+    }
+}
+
+.QA_box img{
+    width:100%;
+}
+.gift_upper{
+    position: relative;
+}
+.QA_3btn{
+    position: absolute;
+    bottom: 6%;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .QA_3btn img{
+        width:80%;
+    }
+}
+
+.QAhover{
+    cursor: pointer;
+}
+.QAhover:hover{
+    opacity: 0.6;
+}
+
+.unclicked{
+    opacity: 0.6;
+}
