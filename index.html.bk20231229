@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 <!-- <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/bootstrap.min.css" /> -->
 <!-- <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/wheel.css"> -->
-<link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/fv.css" type="text/css" media="all">
+<!-- <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/img1216/gift.css" type="text/css" media="all"> -->
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/loading.css">
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/common.css" />
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/hide.css" />
@@ -293,60 +293,83 @@
   </div>
   <div id="wrapper">
     <div id="lu-wrapper" class="lu-wrapper">
-      <div class="luna-mv__content">
-        <div class="luna-mv__contentUpper">
-          <h1 class="luna-mv__title">
-            <img src="https://lunanaturalbra.com/hk/lurphknew/img/01_title_sp.png" alt="">
-          </h1>
+      <div class="lu-mv lujs-scrollfade">
+        <div class="lu-mv__innr">
+          <!-- <h2 class="lu-mv__logo news" style="cursor: pointer;">
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img/news_btn.png" alt="" class="lu-resize">
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img/news_animate.png" alt=""
+                  class="news_animate animate__animated animate__shakeY animate__slow	animate__infinite"
+                  style="position: absolute;top: 3%;right: 38%;width: 20%;">
+              </h2> -->
+          <div class="lu-mv__content">
+            <div class="lu-mv__contentUpper">
+              <div class="lu-mv__title">
+                <picture>
+                  <source media="(max-width: 767px)"
+                    srcset="https://lunanaturalbra.com/hk/lurphknew/img/01_title_sp.png">
+                  <source media="(min-width: 768px)" srcset="https://lunanaturalbra.com/hk/lurphknew/img/01_title.png">
+                  <img src="https://lunanaturalbra.com/hk/lurphknew/img/01_title.png" alt="" class="lu-resize">
+                </picture>
+              </div>
 
-          <div class="luna-mv__hashtag">
-            <img src="https://lunanaturalbra.com/hk/lurphknew/img/mv_hashtag_sp.svg" alt="">
-          </div>
-        </div>
-        <div class="luna-mv__text">
-          LUNA晚安內衣開發團隊透過研究女性的胸部構造，<br>
-          發現了主導美胸形成的基本線-ω歐美伽曲線。<br>
-          透過穿著保養擁有完美的ω歐美伽曲線，<br>
-          會讓胸型輪廓更加好看、胸部看起來更加立體！<br>
-          請期待LUNA晚安內衣為你帶來「美麗新變化」吧！
-        </div>
-        <div class="luna-mv__mov lujs-scrollfade">
-          <!-- 影片輪播 -->
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <video class="video01 d-block w-100" src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov" loop autoplay muted playsinline
-                  style="width:100%;">
-                  <source src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov" type="video/mp4" />
-                  <source src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov/video.ogg" type="video/ogg" />
-                </video>
-              </div>
-              <div class="carousel-item">
-                <video class="video01 d-block w-100" src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov" loop autoplay muted playsinline
-                  style="width:100%;">
-                  <source src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov" type="video/mp4" />
-                  <source src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov/video.ogg" type="video/ogg" />
-                </video>
+              <div class="lu-mv__hashtag">
+                <picture>
+                  <source media="(max-width: 767px)"
+                    srcset="https://lunanaturalbra.com/hk/lurphknew/img/mv_hashtag_sp.svg">
+                  <source media="(min-width: 768px)"
+                    srcset="https://lunanaturalbra.com/hk/lurphknew/img/mv_hashtag.svg">
+                  <img src="https://lunanaturalbra.com/hk/lurphknew/img/mv_hashtag.svg" alt="" class="lu-resize">
+                </picture>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+            <div class="lu-mv__text">
+              LUNA晚安內衣開發團隊透過研究女性的胸部構造，<br>
+              發現了主導美胸形成的基本線-ω歐美伽曲線。<br>
+              透過穿著保養擁有完美的ω歐美伽曲線，<br>
+              會讓胸型輪廓更加好看、胸部看起來更加立體！<br>
+              請期待LUNA晚安內衣為你帶來「美麗新變化」吧！
+            </div>
+            <div class="lu-mv__mov lujs-scrollfade">
+              <!-- 影片輪播 -->
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <video class="video01 d-block w-100" src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov"
+                      loop autoplay muted playsinline style="width:100%;">
+                      <source src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov" type="video/mp4" />
+                      <source src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov/video.ogg"
+                        type="video/ogg" />
+                    </video>
+                  </div>
+                  <div class="carousel-item">
+                    <video class="video01 d-block w-100" src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov"
+                      loop autoplay muted playsinline style="width:100%;">
+                      <source src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov" type="video/mp4" />
+                      <source src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov/video.ogg"
+                        type="video/ogg" />
+                    </video>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <p class="lu-mv__movtext" style="margin-top:4px">【日本專利獲得】ω歐美伽曲線養成特別設計</p>
+            </div>
           </div>
-          <p class="lu-mv__movtext" style="margin-top:4px">【日本專利獲得】ω歐美伽曲線養成特別設計</p>
         </div>
       </div>
       <div class="lu-section lu-section--bgL">
@@ -371,14 +394,62 @@
         </div>
 
         <div id="news">
-          <img src="https://lunanaturalbra.com/hk/lurphknew/img0101/event.png" alt="" class="imgcss">
+          <!-- <p id="event_couponcode" style="position: fixed;clip:rect(0 0 0 0);top: -10%;z-index: -100;">trL23iphk</p> -->
+          <div id="news_carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="PC  w-100 event_travel" src="https://lunanaturalbra.com/hk/lurphknew/img/PC-banner.png"
+                  alt="" ;>
+                <img class="SP  w-100 event_travel" src="https://lunanaturalbra.com/hk/lurphknew/img/SP/SP-banner.png"
+                  alt="" ;>
+              </div>
+              <!-- <div class="carousel-item">
+                    <img class="PC  w-100" src="https://lunanaturalbra.com/hk/lurphknew/img/01_banner_gn.png" alt="" style="cursor: pointer;" data-bs-toggle="modal"
+                      data-bs-target="#QA_popup">
+                    <img class="SP  w-100" src="https://lunanaturalbra.com/hk/lurphknew/img/SP/SP_01_banner_gn.png" alt="" style="cursor: pointer;" data-bs-toggle="modal"
+                      data-bs-target="#QA_popup">
+                  </div> -->
+            </div>
+            <!-- <button class="carousel-control-prev" type="button" data-bs-target="#news_carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#news_carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button> -->
+          </div>
         </div>
-        <!-- google表單 -->
-        <div class="form_box">
-          <iframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLScRJTWJKzYGJzXXfWthbzzKVj-WFhwtboTbE1YHUW1nbRY2rQ/viewform?embedded=true"
-            width="750" height="385" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+
+        <style>
+          .coupon_box {
+            position: relative;
+            width: 750px;
+            display: block;
+            margin: 0 auto;
+          }
+
+          @media screen and (max-width:768px) {
+            .coupon_box {
+              width: 100%;
+            }
+          }
+        </style>
+        <div class="coupon_box">
+          <img src="https://lunanaturalbra.com/hk/lurphknew/img1227/HK_sp_event_01.png" alt="">
+          <img class="coupon02_btn coupon_btn" data-show="2" src="https://lunanaturalbra.com/hk/lurphknew/img1227/HK_sp_event_02.png" alt=""
+            style="cursor: pointer;">
+          <img class="coupon03_btn coupon_btn" data-show="3" src="https://lunanaturalbra.com/hk/lurphknew/img1227/HK_sp_event_03.png" alt=""
+            style="cursor: pointer;">
+          <img class="coupon04_btn coupon_btn" data-show="4" src="https://lunanaturalbra.com/hk/lurphknew/img1227/HK_sp_event_04.png" alt=""
+            style="cursor: pointer;">
+          <p id="couponcode" style="position: fixed;clip:rect(0 0 0 0);top: -10%;z-index: -100;">38V2302100</p>
         </div>
+        
+
+        <section class="lu-ev__main">
+          <!-- <img src="https://lunanaturalbra.com/hk/lurphknew/img/event.png" class="img-fluid"> -->
+        </section>
 
 
         <div class="lu-innr">
