@@ -287,7 +287,7 @@
         }
     </style>
     <div class="sizelinkbtn" style="text-align: center">
-        <img class="gotop" style="cursor: pointer;" onclick="copy()" src="https://lunanaturalbra.com/hk/lurphknew/img0329/gotop.png">
+        <img class="gotop" style="cursor: pointer;" onclick="copy()" src="https://lunanaturalbra.com/hk/lurphknew/img/button_LUNATW.png">
     </div>
     <script>
         let discount = document.querySelector(".gotop");
