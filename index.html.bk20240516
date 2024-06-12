@@ -275,21 +275,6 @@
 </style>
 
 <body>
-  <script>
-    const URLredirection = () => {
-        const now = new Date();
-        const start_1 = new Date('2024/05/17 00:00:01'); // 活動一 開始時間
-        // const end_1 = new Date('2024/05/16 00:00:00'); // 活動一 結束時間
-        const differ_start_1 = now.getTime() - start_1.getTime();
-        // const differ_end_1 = now.getTime() - end_1.getTime();
-        const getUrlString = location.href;
-        const url = new URL(getUrlString);
-        if ((differ_start_1 > 0)) {
-            window.location.assign(`https://www.lunabrahk.com/pages/lurphk-0517/${url.search}`); //活動一 跳轉網址
-        } 
-    };
-    URLredirection();
-  </script>
 
   <!-- Boostrap Modal -->
   <!-- <div class="modal fade" id="myModal" role="dialog" style="overflow-y: scroll;">

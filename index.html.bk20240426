@@ -159,9 +159,11 @@
   .countdown_box {
     width: 750px;
     margin: 0 auto;
-    background-color: #FEEEAC;
-    /* text-shadow: 2px 2px 2px #ff2966, -2px 2px 2px #ff2966, 2px -2px 2px #ff2966, -2px -2px 2px #ff2966; */
-    color: #ff2966;
+    background-color: #F27171;
+    text-shadow: 2px 2px 2px #ff2966, -2px 2px 2px #ff2966, 2px -2px 2px #ff2966, -2px -2px 2px #ff2966;
+    color: #ffffff;
+    /* text-shadow: 2px 2px 2px #ffffff, -2px 2px 2px #ffffff, 2px -2px 2px #ffffff, -2px -2px 2px #ffffff;
+    color: #ff2966; */
     text-align: center;
     font-size: 2.2rem;
     font-weight: bold;
@@ -275,31 +277,16 @@
 </style>
 
 <body>
-  <script>
-    const URLredirection = () => {
-        const now = new Date();
-        const start_1 = new Date('2024/05/17 00:00:01'); // 活動一 開始時間
-        // const end_1 = new Date('2024/05/16 00:00:00'); // 活動一 結束時間
-        const differ_start_1 = now.getTime() - start_1.getTime();
-        // const differ_end_1 = now.getTime() - end_1.getTime();
-        const getUrlString = location.href;
-        const url = new URL(getUrlString);
-        if ((differ_start_1 > 0)) {
-            window.location.assign(`https://www.lunabrahk.com/pages/lurphk-0517/${url.search}`); //活動一 跳轉網址
-        } 
-    };
-    URLredirection();
-  </script>
 
   <!-- Boostrap Modal -->
-  <!-- <div class="modal fade" id="myModal" role="dialog" style="overflow-y: scroll;">
+  <div class="modal fade" id="myModal" role="dialog" style="overflow-y: scroll;">
     <div class="modal-dialog" >
       <div class="modal-content" style="background: none;box-shadow: none;border:none;">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         <img src="https://lunanaturalbra.com/hk/lurphknew/img0415/lottery.png" alt="">
       </div>
     </div>
-  </div> -->
+  </div>
 
 
   <!--可用於shopline的複製折扣碼彈跳視窗-->
@@ -369,7 +356,7 @@
     }
   </style>
   <div class="sizelinkbtn" style="text-align: center">
-    <img class="gotop eventbtn" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img0502/gotop.png">
+    <img class="gotop eventbtn" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img0415/gotop.png">
   </div>
   <script>
     let discount = document.querySelector(".gotop");
@@ -396,7 +383,7 @@
       <div class="countdown_box">
         <div id="cdtimer">
           <div class="countdown">
-            <p class="countdown_title">母親節優惠</p>
+            <p class="countdown_title">早鳥優惠</p>
             <div id="countdown" class="main-content">
               <div class="timer-box"><span>只剩</span></div>
               <div class="timer-box" style="display: none;"><span class="day number"></span><span class="name">天</span>
@@ -411,7 +398,7 @@
         </div>
         <div id="cdtimer_day">
           <div class="countdown">
-            <p class="countdown_title">母親節優惠</p>
+            <p class="countdown_title">早鳥優惠</p>
             <div id="countdown" class="main-content">
               <div class="timer-box"><span>只剩</span></div>
               <div class="timer-box"><span class="day number"></span><span class="name">天</span></div>
@@ -422,7 +409,7 @@
       <div class="luna-mv__content">
         <div class="luna-mv__contentUpper">
           <h1 class="luna-mv__title">
-            <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/01_title_sp.png" alt="">
+            <img src="https://lunanaturalbra.com/hk/lurphknew/img0415/01_title_sp.png" alt="">
           </h1>
 
           <div class="luna-mv__hashtag">
@@ -495,9 +482,9 @@
             </g>
           </svg>
         </div>
-        <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/event-1.png" alt="" class="imgcss">
-        <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/sp_event_HK.png" alt="" class="imgcss" data-toggle="modal" data-target="#myModal">
-        <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/color.png" alt="" class="imgcss">
+        <img src="https://lunanaturalbra.com/hk/lurphknew/img0415/event-1.png" alt="" class="imgcss">
+        <img src="https://lunanaturalbra.com/hk/lurphknew/img0415/sp_event_HK.png" alt="" class="imgcss" style="cursor: pointer;" data-toggle="modal" data-target="#myModal">
+
         <!--<div class="wheel_box">
           <div class="wheel_ly" id="wheel_ly">
             <img class="wheel_btn_text"
@@ -666,7 +653,7 @@
                           <div class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade offerbefore">
                             <a href="#size">
                               <img class="btn-add-to-cart js-btn-add-to-cart imgcss"
-                                src="https://lunanaturalbra.com/hk/lurphknew/img0502/07_offer.png" alt="" id="offer"
+                                src="https://lunanaturalbra.com/hk/lurphknew/img0415/07_offer.png" alt="" id="offer"
                                 class="imgcss">
                             </a>
                           </div>
@@ -760,16 +747,16 @@
 const countdown = () => {
       const now = new Date();
       //倒數計時開始時間
-      const target_start = new Date('2024/05/13 00:00:00');
+      const target_start = new Date('2024/04/27 00:00:00');
       const differ_start = target_start.getTime() - now.getTime();
       //倒數計時開始區間
-      const target_mid_start = new Date('2024/05/13 00:00:00');
+      const target_mid_start = new Date('2024/04/27 00:00:00');
       const differ_mid_start = target_mid_start.getTime() - now.getTime();
       //倒數計時結束區間
-      const target_mid_end = new Date('2024/05/16 00:00:00');
+      const target_mid_end = new Date('2024/04/30 00:00:00');
       const differ_mid_end = target_mid_end.getTime() - now.getTime();
       //倒數計時結束時間
-      const target_end = new Date('2024/05/16 23:59:59');
+      const target_end = new Date('2024/04/30 23:59:59');
       const differ_end = target_end.getTime() - now.getTime();
       // console.log(differ_end)
       //  console.log(differ_start)
