@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/common.css" />
 <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/hide.css" />
 <!-- <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/modal.css"> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
 <!-- <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/countdown.css" type="text/css" media="all"> -->
 <!-- shopline offer css -->
 <style>
@@ -238,18 +238,17 @@
     width: fit-content;
   }
 
-  /* 拉霸加碼 */
   .code_modal_content_slot {
-    margin: 30vh auto;
+    margin: 10vh auto;
     padding: 0px;
-    width: 500px;
+    width: 640px;
   }
   @media screen and (max-width: 768px) {
     .code_modal_content_slot{
       width: 90vw;
     }
   }
-  /* 拉霸加碼 */
+
   .code_direction_close_text {
     text-align: right;
     cursor: pointer;
@@ -288,7 +287,7 @@
 
   /* 左側popup */
 
-  /* .left_popup {
+  .left_popup {
     position: fixed;
     cursor: pointer;
     z-index: 98;
@@ -326,7 +325,7 @@
   .left_popup img:hover {
     opacity: 0.5;
     transition: opacity 0.5s ease;
-  } */
+  }
 </style>
 
 <body>
@@ -348,15 +347,18 @@
       <div class="js_code_direction_close code_direction_close_text">✖</div>
       <p class="code_direction_text"></p>
       <!-- <p>歡迎 <a target="_blank" href="https://m.me/102641435046761?ref=drFee2eHyzM8">點此</a>加入官方粉專，開啟提醒通知，折扣不錯過！</p> -->
+
     </div>
   </div>
 
   <!-- 拉霸加碼 -->
   <div id="code_direction_slot">
     <div class="code_modal_content_slot">
-      <img id="slot_gif"  src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_slot.gif" alt="" style="width:100%">
+      <img id="slot_gif"  src="https://viagebeautybra.com/vgdm_mail/images/popup_gif.png" alt="" style="width:100%">
     </div>
   </div>
+
+
 
   <!-- 封面loading動畫 -->
   <div class="loading-all">
@@ -379,7 +381,7 @@
       z-index: 101;
     }
 
-    .sizelinkbtn img {
+    .sizelinkbtn .gotop {
       transform: translate(-8px, 0px);
       width: 95%;
       height: auto;
@@ -396,7 +398,7 @@
         max-width: 170px;
       }
 
-      .sizelinkbtn img {
+      .sizelinkbtn .gotop {
         transform: translate(7px, 0px);
         width: 92%;
         height: auto;
@@ -410,17 +412,16 @@
     }
   </style>
   <div class="sizelinkbtn" style="text-align: center">
-    <!-- <img class="gotop" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img0606/gotop_0606.png"> -->
-    <img class="slot_float" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_slot.gif">
+    <img class="gotop" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img0606/gotop_0606.png">
   </div>
-  <!-- <div class="left_popup">
+  <div class="left_popup">
     <img class="left_popup_btn" src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_btn.png" alt="">
     <div class="left_popup_box">
       <img class="left_popup_event" src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_01.png" alt="">
       <img class="left_popup_offer" src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_02.png" alt="">
     </div>
-  </div> -->
-  <!-- <script>
+  </div>
+  <script>
     let discount = document.querySelector(".gotop");
     discount.addEventListener("click", function (e) {
       // if ($(window).scrollTop() > $('#wheel_ly').offset().top) {
@@ -438,7 +439,7 @@
       //   }, 900);
       // }
     });
-  </script> -->
+  </script>
 
   <div id="wrapper">
     <div id="lu-wrapper" class="lu-wrapper">
@@ -729,7 +730,8 @@
                           <div class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade offerbefore">
                             <a href="#size">
                               <img class="btn-add-to-cart js-btn-add-to-cart imgcss"
-                                src="https://lunanaturalbra.com/hk/lurphknew/img0606/07_offer_0606.png" alt="" id="offer" class="imgcss">
+                                src="https://lunanaturalbra.com/hk/lurphknew/img0606/07_offer_0606.png" alt=""
+                                id="offer" class="imgcss">
                             </a>
                           </div>
                         </div>
@@ -869,30 +871,31 @@
 
   <script>
     // 左側popup
-    // $(window).scroll(function () {
-    //   $('.left_popup').addClass('popup_hide');
-    // });
-    // $('.left_popup').click(function (e) {
-    //   $('.left_popup').toggleClass('popup_hide');
-    // });
-    // $('.left_popup_event').click(function (e) {
-    //   e.preventDefault();
-    //   $('html , body').animate({
-    //     scrollTop: $('#event').offset().top,
-    //   }, 900);
-    // });
-    // $('.left_popup_offer').click(function (e) {
-    //   e.preventDefault();
-    //   $('html , body').animate({
-    //     scrollTop: $('#offer').offset().top,
-    //   }, 900);
-    // });
+    $(window).scroll(function () {
+      $('.left_popup').addClass('popup_hide');
+    });
+    $('.left_popup').click(function (e) {
+      $('.left_popup').toggleClass('popup_hide');
+    });
+    $('.left_popup_event').click(function (e) {
+      e.preventDefault();
+      $('html , body').animate({
+        scrollTop: $('#event').offset().top,
+      }, 900);
+    });
+    $('.left_popup_offer').click(function (e) {
+      e.preventDefault();
+      $('html , body').animate({
+        scrollTop: $('#offer').offset().top,
+      }, 900);
+    });
     // coupon折扣
     function copybtn(couponcode) {
       // 複製（利用 Clipboard API 中的寫入功能）
       navigator.clipboard.writeText(couponcode);
       // 提醒視窗
       confirm(`恭喜您成功領取折扣碼！\n您已複製以下優惠代碼 :${couponcode}！\n於購物車選擇<當週指定顏色>後，於「優惠代碼」欄位輸入 即可享總結帳金額再折HKD$13(NT$50)元`);
+      $("#code_direction_slot").hide();
     }
 
     function event_modal(date_text) {
@@ -985,36 +988,13 @@
     }
 
     // 加碼拉霸
-    // 拉霸活動專用 複製折扣碼
-     function slot_copy() {
-        navigator.clipboard.writeText("06bra618");
-        confirm(`恭喜您成功領取折扣碼！\n您已複製以下優惠代碼 : 06bra618\n結帳時於購物車輸入折扣碼\n即可享會員年中優惠再加碼：\n不限顏色方案享3%現金回饋\n(與限定色優惠碼只能擇一使用)`)
-    }
-
-    //一進入畫面就顯示拉霸popup
     $("#code_direction_slot").show();
-    //6秒後拉霸gif圖換成另張圖，點選圖片可複製折扣碼
     setTimeout(() => {
-      $("#slot_gif").attr("src", "https://lunanaturalbra.com/hk/lurphknew/img0606/popup_copy.png");
+      $("#slot_gif").attr("src", "https://viagebeautybra.com/vgdm_mail/images/popup.png");
       $("#slot_gif").css("cursor", "pointer");
       $("#slot_gif").on("click", function () {
-        slot_copy();
-        $("#code_direction_slot").hide();
+        copybtn("LUNA2406");
       });
-    }, 6000);
+    }, 3000);
 
-    //點選右側拉霸漂浮按鈕
-    $(".slot_float").on("click", function () {
-        //再次跳出 popup_copy 這張圖
-        $("#code_direction_slot").show();
-        let scrollPos = $(window).scrollTop();
-        let offerTop = $('#sizelink').position().top;
-
-        //跳到offer區塊，若點擊拉霸漂浮按鈕時已經過了offer區塊，則不用
-        if (offerTop > scrollPos ) {
-            $('html , body').animate({
-                scrollTop: $('#sizelink').offset().top - 40,
-            }, 900);
-        }
-    });
   </script>
