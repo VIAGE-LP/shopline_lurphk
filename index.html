@@ -159,12 +159,37 @@
   .countdown_box {
     width: 750px;
     margin: 0 auto;
-    background-color: #F2CA5D;
-    /* text-shadow: 2px 2px 2px #ff2966, -2px 2px 2px #ff2966, 2px -2px 2px #ff2966, -2px -2px 2px #ff2966; */
-    color: #7C032B;
+    background-color: #fdb534;
+    text-shadow: 2px 2px 2px #f6617a, -2px 2px 2px #f6617a, 2px -2px 2px #f6617a, -2px -2px 2px #f6617a;
+    color: #ffffff;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.25rem;
     font-weight: bold;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  #cdtimer .linegreen {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  #cdtimer_day .linegreen {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    #cdtimer {
+      font-size: 1.3rem;
+    }
+
+    #cdtimer .linegreen {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   .countdown_box #cdtimer,
@@ -175,20 +200,25 @@
   .countdown {
     display: flex;
     justify-content: center;
+    /* text-align: center; */
+    padding: 10px 0;
+  }
+
+  .countdown_title {
+    margin: 0;
+    display: flex;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .main-content {
     display: flex;
-    padding-left: 8px;
+    justify-content: center;
   }
 
   .timer-box .number {
-    color: #ffff6c;
-    text-shadow: 2px 2px 2px #7C032B, -2px 2px 2px #7C032B, 2px -2px 2px #7C032B, -2px -2px 2px #7C032B;
-
+    color: #fffa55;
+    padding: 0 4px;
+    text-shadow: 2px 2px 2px #9a2849, -2px 2px 2px #9a2849, 2px -2px 2px #9a2849, -2px -2px 2px #9a2849;
   }
 
   @media screen and (max-width: 768px) {
@@ -244,11 +274,13 @@
     padding: 0px;
     width: 500px;
   }
+
   @media screen and (max-width: 768px) {
     .code_modal_content_slot{
       width: 90vw;
     }
   }
+
   /* 拉霸加碼 */
   .code_direction_close_text {
     text-align: right;
@@ -288,7 +320,7 @@
 
   /* 左側popup */
 
-  /* .left_popup {
+  .left_popup {
     position: fixed;
     cursor: pointer;
     z-index: 98;
@@ -326,7 +358,7 @@
   .left_popup img:hover {
     opacity: 0.5;
     transition: opacity 0.5s ease;
-  } */
+  }
 </style>
 
 <body>
@@ -348,13 +380,14 @@
       <div class="js_code_direction_close code_direction_close_text">✖</div>
       <p class="code_direction_text"></p>
       <!-- <p>歡迎 <a target="_blank" href="https://m.me/102641435046761?ref=drFee2eHyzM8">點此</a>加入官方粉專，開啟提醒通知，折扣不錯過！</p> -->
+
     </div>
   </div>
 
   <!-- 拉霸加碼 -->
   <div id="code_direction_slot">
     <div class="code_modal_content_slot">
-      <img id="slot_gif"  src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_slot.gif" alt="" style="width:100%">
+      <img id="slot_gif"  src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_copy_0626.png" alt="" style="width:100%;cursor: pointer;">
     </div>
   </div>
 
@@ -411,16 +444,16 @@
   </style>
   <div class="sizelinkbtn" style="text-align: center">
     <!-- <img class="gotop" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img0606/gotop_0606.png"> -->
-    <img class="slot_float" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_slot.gif">
+    <img class="slot_float" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_slot_0626.gif">
   </div>
-  <!-- <div class="left_popup">
+  <div class="left_popup">
     <img class="left_popup_btn" src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_btn.png" alt="">
     <div class="left_popup_box">
       <img class="left_popup_event" src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_01.png" alt="">
       <img class="left_popup_offer" src="https://lunanaturalbra.com/hk/lurphknew/img0606/popup_02.png" alt="">
     </div>
-  </div> -->
-  <!-- <script>
+  </div>
+  <script>
     let discount = document.querySelector(".gotop");
     discount.addEventListener("click", function (e) {
       // if ($(window).scrollTop() > $('#wheel_ly').offset().top) {
@@ -438,16 +471,15 @@
       //   }, 900);
       // }
     });
-  </script> -->
+  </script>
 
   <div id="wrapper">
     <div id="lu-wrapper" class="lu-wrapper">
       <div class="countdown_box">
         <div id="cdtimer">
           <div class="countdown">
-            <p class="countdown_title">高額購物金</p>
+            <p class="countdown_title">會員年中慶只剩</p>
             <div id="countdown" class="main-content">
-              <div class="timer-box"><span>只剩</span></div>
               <div class="timer-box" style="display: none;"><span class="day number"></span><span class="name">天</span>
               </div>
               <div class="timer-box"><span class="hours number"></span><span class="name">小時</span></div>
@@ -460,9 +492,8 @@
         </div>
         <div id="cdtimer_day">
           <div class="countdown">
-            <p class="countdown_title">高額購物金</p>
+            <p class="countdown_title">會員年中慶只剩</p>
             <div id="countdown" class="main-content">
-              <div class="timer-box"><span>只剩</span></div>
               <div class="timer-box"><span class="day number"></span><span class="name">天</span></div>
             </div>
           </div>
@@ -729,7 +760,8 @@
                           <div class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade offerbefore">
                             <a href="#size">
                               <img class="btn-add-to-cart js-btn-add-to-cart imgcss"
-                                src="https://lunanaturalbra.com/hk/lurphknew/img0606/07_offer_0606.png" alt="" id="offer" class="imgcss">
+                                src="https://lunanaturalbra.com/hk/lurphknew/img0606/07_offer_0606.png" alt=""
+                                id="offer" class="imgcss">
                             </a>
                           </div>
                         </div>
@@ -818,75 +850,75 @@
     //     }
     // });
     // 倒數計時器
-    // const countdown = () => {
-    //     const now = new Date();
-    //     //倒數計時開始時間
-    //     const target_start = new Date('2024/05/23 00:00:00');
-    //     const differ_start = target_start.getTime() - now.getTime();
-    //     //倒數計時開始區間
-    //     const target_mid_start = new Date('2024/05/23 00:00:00');
-    //     const differ_mid_start = target_mid_start.getTime() - now.getTime();
-    //     //倒數計時結束區間
-    //     const target_mid_end = new Date('2024/05/23 00:00:00');
-    //     const differ_mid_end = target_mid_end.getTime() - now.getTime();
-    //     //倒數計時結束時間
-    //     const target_end = new Date('2024/05/23 23:59:59');
-    //     const differ_end = target_end.getTime() - now.getTime();
-    //     // console.log(differ_end)
-    //     //  console.log(differ_start)
-    //     // console.log(differ_mid_start)
-    //     // console.log(differ_mid_end)
+    const countdown = () => {
+      const now = new Date();
+      //倒數計時開始時間
+      const target_start = new Date('2024/06/24 00:00:00');
+      const differ_start = target_start.getTime() - now.getTime();
+      //倒數計時開始區間
+      const target_mid_start = new Date('2024/06/24 00:00:00');
+      const differ_mid_start = target_mid_start.getTime() - now.getTime();
+      //倒數計時結束區間
+      const target_mid_end = new Date('2024/06/26 00:00:00');
+      const differ_mid_end = target_mid_end.getTime() - now.getTime();
+      //倒數計時結束時間
+      const target_end = new Date('2024/06/26 23:59:59');
+      const differ_end = target_end.getTime() - now.getTime();
+      // console.log(differ_end)
+      //  console.log(differ_start)
+      // console.log(differ_mid_start)
+      // console.log(differ_mid_end)
 
-    //     if ((differ_end > 0) && (differ_start < 0) && ((differ_mid_start > 0) || (differ_mid_end < 0))) {
-    //         $("#cdtimer").show();
-    //         $("#cdtimer_day").hide();
-    //     } else if ((differ_end > 0) && (differ_start < 0) && (differ_mid_start < 0) && (differ_mid_end > 0)) {
-    //         $("#cdtimer").hide();
-    //         $("#cdtimer_day").show();
-    //     } else if ((differ_end < 0)) {
-    //         $("#cdtimer").hide();
-    //         $("#cdtimer_day").hide();
-    //     }
+      if ((differ_end > 0) && (differ_start < 0) && ((differ_mid_start > 0) || (differ_mid_end < 0))) {
+        $("#cdtimer").show();
+        $("#cdtimer_day").hide();
+      } else if ((differ_end > 0) && (differ_start < 0) && (differ_mid_start < 0) && (differ_mid_end > 0)) {
+        $("#cdtimer").hide();
+        $("#cdtimer_day").show();
+      } else if ((differ_end < 0)) {
+        $("#cdtimer").hide();
+        $("#cdtimer_day").hide();
+      }
 
-    //     const ms = Math.floor(differ_end);
-    //     const sec = Math.floor(differ_end / 1000 % 60);
-    //     const min = Math.floor(differ_end / 1000 / 60 % 60);
-    //     const hour = Math.floor(differ_end / 1000 / 60 / 60 % 24);
-    //     const day = Math.floor(differ_end / 1000 / 60 / 60 / 24);
+      const ms = Math.floor(differ_end);
+      const sec = Math.floor(differ_end / 1000 % 60);
+      const min = Math.floor(differ_end / 1000 / 60 % 60);
+      const hour = Math.floor(differ_end / 1000 / 60 / 60 % 24);
+      const day = Math.floor(differ_end / 1000 / 60 / 60 / 24);
 
-    //     document.querySelector('#countdown .miriseconds').textContent = String(ms).slice(-3, -1);
-    //     document.querySelector('#countdown .seconds').textContent = String(sec).padStart(2, '0');
-    //     document.querySelector('#countdown .minutes').textContent = String(min).padStart(2, '0');
-    //     document.querySelector('#countdown .hours').textContent = String(hour).padStart(2, '0');
-    //     document.querySelectorAll('#countdown .day').textContent = String(day).padStart(2, '0');
-    //     for (i = 0; i <= document.querySelectorAll('#countdown .day').length; i++) {
-    //         if (document.querySelectorAll('#countdown .day')[i] != undefined)
-    //             document.querySelectorAll('#countdown .day')[i].textContent = String(day).padStart(2, '0');
-    //     }
-    // }
-    // setInterval(countdown, 1000);
+      document.querySelector('#countdown .miriseconds').textContent = String(ms).slice(-3, -1);
+      document.querySelector('#countdown .seconds').textContent = String(sec).padStart(2, '0');
+      document.querySelector('#countdown .minutes').textContent = String(min).padStart(2, '0');
+      document.querySelector('#countdown .hours').textContent = String(hour).padStart(2, '0');
+      document.querySelectorAll('#countdown .day').textContent = String(day).padStart(2, '0');
+      for (i = 0; i <= document.querySelectorAll('#countdown .day').length; i++) {
+        if (document.querySelectorAll('#countdown .day')[i] != undefined)
+          document.querySelectorAll('#countdown .day')[i].textContent = String(day).padStart(2, '0');
+      }
+    }
+    setInterval(countdown, 1000);
   </script>
 
   <script>
     // 左側popup
-    // $(window).scroll(function () {
-    //   $('.left_popup').addClass('popup_hide');
-    // });
-    // $('.left_popup').click(function (e) {
-    //   $('.left_popup').toggleClass('popup_hide');
-    // });
-    // $('.left_popup_event').click(function (e) {
-    //   e.preventDefault();
-    //   $('html , body').animate({
-    //     scrollTop: $('#event').offset().top,
-    //   }, 900);
-    // });
-    // $('.left_popup_offer').click(function (e) {
-    //   e.preventDefault();
-    //   $('html , body').animate({
-    //     scrollTop: $('#offer').offset().top,
-    //   }, 900);
-    // });
+    $(window).scroll(function () {
+      $('.left_popup').addClass('popup_hide');
+    });
+    $('.left_popup').click(function (e) {
+      $('.left_popup').toggleClass('popup_hide');
+    });
+    $('.left_popup_event').click(function (e) {
+      e.preventDefault();
+      $('html , body').animate({
+        scrollTop: $('#event').offset().top,
+      }, 900);
+    });
+    $('.left_popup_offer').click(function (e) {
+      e.preventDefault();
+      $('html , body').animate({
+        scrollTop: $('#offer').offset().top,
+      }, 900);
+    });
     // coupon折扣
     function copybtn(couponcode) {
       // 複製（利用 Clipboard API 中的寫入功能）
@@ -986,35 +1018,21 @@
 
     // 加碼拉霸
     // 拉霸活動專用 複製折扣碼
-     function slot_copy() {
+    function slot_copy() {
         navigator.clipboard.writeText("06bra618");
-        confirm(`恭喜您成功領取折扣碼！\n您已複製以下優惠代碼 : 06bra618\n結帳時於購物車輸入折扣碼\n即可享會員年中優惠再加碼：\n不限顏色方案享3%現金回饋\n(與限定色優惠碼只能擇一使用)`)
+        confirm(`您已成功複製折扣碼： 06bra618！\n結帳時於購物車輸入，即享活動優惠折扣＋整單再折50元\n此為期間限定折扣，有效期限只到今晚12點。敬請把握機會！`)
     }
 
     //一進入畫面就顯示拉霸popup
     $("#code_direction_slot").show();
-    //6秒後拉霸gif圖換成另張圖，點選圖片可複製折扣碼
-    setTimeout(() => {
-      $("#slot_gif").attr("src", "https://lunanaturalbra.com/hk/lurphknew/img0606/popup_copy.png");
-      $("#slot_gif").css("cursor", "pointer");
-      $("#slot_gif").on("click", function () {
+    $("#slot_gif").on("click", function () {
         slot_copy();
         $("#code_direction_slot").hide();
       });
-    }, 6000);
 
     //點選右側拉霸漂浮按鈕
     $(".slot_float").on("click", function () {
         //再次跳出 popup_copy 這張圖
         $("#code_direction_slot").show();
-        let scrollPos = $(window).scrollTop();
-        let offerTop = $('#sizelink').position().top;
-
-        //跳到offer區塊，若點擊拉霸漂浮按鈕時已經過了offer區塊，則不用
-        if (offerTop > scrollPos ) {
-            $('html , body').animate({
-                scrollTop: $('#sizelink').offset().top - 40,
-            }, 900);
-        }
     });
   </script>
