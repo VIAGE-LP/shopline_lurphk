@@ -348,8 +348,16 @@
             bottom: 0px;
             z-index: 101;
         }
-        .sizelinkbtn img{
-            width:100%;
+
+        .sizelinkbtn .gotop {
+            transform: translate(-8px, 0px);
+            width: 95%;
+            height: auto;
+        }
+
+        .sizelinkbtn .copyButton2 {
+            width: 85%;
+            height: auto;
         }
 
         @media (max-width: 768px) {
@@ -357,14 +365,24 @@
                 width: 35%;
                 max-width: 170px;
             }
+
+            .sizelinkbtn .gotop {
+                transform: translate(7px, 0px);
+                width: 92%;
+                height: auto;
+            }
+
+            .sizelinkbtn .copyButton2 {
+                transform: translate(30px, 0px);
+                width: 65%;
+                height: auto;
+            }
         }
     </style>
     <div class="sizelinkbtn" style="text-align: center">
-        <!-- <a href="#event2">
-            <img src="https://lunanaturalbra.com/hk/lurphknew/img0627/float_btn.png">
-        </a> -->
         <img class="gotop" style="cursor: pointer;"
             src="https://lunanaturalbra.com/hk/lurphknew/img0606/gotop_0606.png">
+    </div>
     </div>
     <script>
         let discount = document.querySelector(".gotop");
@@ -414,9 +432,6 @@
                 </div>
             </div> -->
             <div class="luna-mv__content">
-                <!-- <a href="#event2">
-                    <img class="imgcss" src="https://lunanaturalbra.com/hk/lurphknew/img0627/news_ticker.gif" alt="">
-                </a> -->
                 <div class="luna-mv__contentUpper">
                     <h1 class="luna-mv__title">
                         <img src="https://lunanaturalbra.com/hk/lurphknew/img0627/01_title_sp_0627.png" alt="">
@@ -498,10 +513,7 @@
                         </g>
                     </svg>
                 </div>
-                <img src="https://lunanaturalbra.com/hk/lurphknew/img0627/event-1_0627.png" alt=""
-                    class="imgcss event event_summer">
-                <!-- <a id="event2"></a>
-                <img class="imgcss" src="https://lunanaturalbra.com/hk/lurphknew/img0627/event2.png" alt=""> -->
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img0627/event-1_0627.png" alt="" class="imgcss event event_summer">
                 <a id="summer"></a>
                 <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/color.png" alt="" class="imgcss">
                 <!--<div class="wheel_box">
@@ -774,19 +786,23 @@
             return;
         });
 
-        $('a[href="#event2"]').on("click", function () {
-            $('html , body').animate({
-                scrollTop: $('#event2').offset().top,
-            }, 900);
-        });
+        // $(".eventbtn").on("click", function () {
+        //     if ($(window).scrollTop() > $('#coupon').offset().top) {
+        //         e.preventDefault()
+        //     } else {
+        //         $('html , body').animate({
+        //             scrollTop: $('#coupon').offset().top,
+        //         }, 900);
+        //     }
+        // });
     </script>
 
     <script>
         // coupon折扣
         // function copybtn(couponcode) {
-        // 複製（利用 Clipboard API 中的寫入功能）
-        // navigator.clipboard.writeText(couponcode);
-        // 提醒視窗
+            // 複製（利用 Clipboard API 中的寫入功能）
+            // navigator.clipboard.writeText(couponcode);
+            // 提醒視窗
         //     confirm(`恭喜您成功領取折扣碼！\n您已複製以下優惠代碼 :${couponcode}！\n於購物車選擇<當週指定顏色>後，於「優惠代碼」欄位輸入 即可享總結帳金額再折HKD$13(NT$50)元`);
         // }
         //shopline手刻彈跳視窗
@@ -817,11 +833,11 @@
             }
         }
         $(".event_summer").on("click", function () {
-            if ($(".event_summer.event")) {
+            if($(".event_summer.event")){
                 $('html , body').animate({
-                    scrollTop: $('#sizelink').offset().top - 20,
-                }, 900);
+            scrollTop: $('#sizelink').offset().top - 20,
+        }, 900);
             }
-            confirm(`折扣套用成功！\n您正在使用LUNA老顧客夏日優惠\n結帳即享網頁標示最優惠價格！\n優惠期限只到7/16，折扣權益別錯過`)
-        });
+        confirm(`折扣套用成功！\n您正在使用LUNA老顧客夏日優惠\n結帳即享網頁標示最優惠價格！\n優惠期限只到7/16，折扣權益別錯過`)
+    });
     </script>
