@@ -580,8 +580,9 @@
                     </svg>
                 </div>
                 <img src="https://lunanaturalbra.com/hk/lurphknew/img0717/event-1.png" alt=""
-                    class="imgcss">
-                <img src="https://lunanaturalbra.com/hk/lurphknew/img0717/event-2.png" alt="" class="imgcss offer" style="cursor: pointer;">
+                    class="imgcss copybtn" style="cursor: pointer;">
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img0717/event-2.png" alt="" class="imgcss copybtn offer"
+                    style="cursor: pointer;">
                 <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/color.png" alt="" class="imgcss">
                 <!--<div class="wheel_box">
           <div class="wheel_ly" id="wheel_ly">
@@ -758,7 +759,7 @@
                         </div>
                     </div>
                     <a id="sizelink"></a>
-                    <div id="shopline-section-1691658726756013023f" class="shopline-section">
+                    <div id="shopline-section-1691658726756013023f" class="shopline-section copybtn">
                         <div class="section-width">
                             <div class="product-list-custom-padding__1691658726756013023f">
                                 <div class="product-list__container">
