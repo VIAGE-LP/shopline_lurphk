@@ -248,7 +248,7 @@
     }
 
     /* modal優惠碼使用方法 */
-    #code_direction {
+    #code_direction,#code_direction_draw {
         display: none;
         position: fixed;
         z-index: 1000;
@@ -267,6 +267,20 @@
         /* border: 1px solid #888; */
         width: 50vw;
     }
+
+    /* draw加碼 */
+    .code_modal_content_draw {
+        margin: 30vh auto;
+        padding: 0px;
+        width: 300px;
+    }
+
+    @media screen and (max-width: 768px) {
+        .code_modal_content_draw {
+            width: 90vw;
+        }
+    }
+    /* draw加碼 */
 
     .code_direction_close_text {
         text-align: left;
@@ -295,9 +309,10 @@
             background: #ff8089;
             padding: 16px 50px;
         }
+
         .code_modal_content {
-        width: 95vw;
-    }
+            width: 95vw;
+        }
     }
 
     /* Boostrap Modal */
@@ -325,11 +340,17 @@
     <!-- <div id="code_direction">
         <div class="code_modal_content">
             <div class="js_code_direction_close code_direction_close_text">✖</div>
-            <p class="code_direction_text"></p> -->
-    <!-- <p>歡迎 <a target="_blank" href="https://m.me/102641435046761?ref=drFee2eHyzM8">點此</a>加入官方粉專，開啟提醒通知，折扣不錯過！</p> -->
-
-    <!-- </div>
+            <p class="code_direction_text"></p>
+            <p>歡迎 <a target="_blank" href="https://m.me/102641435046761?ref=drFee2eHyzM8">點此</a>加入官方粉專，開啟提醒通知，折扣不錯過！</p>
+        </div>
     </div> -->
+
+    <!-- draw popup -->
+    <div id="code_direction_draw">
+        <div class="code_modal_content_draw">
+            <img id="draw_gif" src="https://lunanaturalbra.com/hk/lurphknew/img0821/popup_draw.gif" alt="" style="width:100%;">
+        </div>
+    </div>
 
     <!-- 封面loading動畫 -->
     <div class="loading-all">
@@ -461,15 +482,15 @@
     <!-- 左側popup end-->
 
     <div id="code_direction">
-    <div class="code_modal_content">
-      <div class="js_code_direction_close code_direction_close_text">✖</div>
-      <!-- <p class="code_direction_text">您已成功複製 彩蛋折扣碼 ！</p> -->
-      <img  src="https://lunanaturalbra.com/hk/lurphknew/img0801/lottery.png" alt="">
-      <!-- <div class="d-flex justify-content-center">
+        <div class="code_modal_content">
+            <div class="js_code_direction_close code_direction_close_text">✖</div>
+            <!-- <p class="code_direction_text">您已成功複製 彩蛋折扣碼 ！</p> -->
+            <img src="https://lunanaturalbra.com/hk/lurphknew/img0801/lottery.png" alt="">
+            <!-- <div class="d-flex justify-content-center">
         <div class="js_code_direction_close code_direction_close_btn">立即使用</div>
       </div> -->
+        </div>
     </div>
-  </div>
     <div id="wrapper">
         <div id="lu-wrapper" class="lu-wrapper">
             <!-- <div class="countdown_box">
@@ -579,9 +600,9 @@
                         </g>
                     </svg>
                 </div>
-                <img src="https://lunanaturalbra.com/hk/lurphknew/img0816/event-1.png" alt=""
-                    class="imgcss">
-                <img src="https://lunanaturalbra.com/hk/lurphknew/img0816/event-2.png" alt="" class="imgcss offer" style="cursor: pointer;">
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img0816/event-1.png" alt="" class="imgcss">
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img0816/event-2.png" alt="" class="imgcss offer"
+                    style="cursor: pointer;">
                 <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/color.png" alt="" class="imgcss">
                 <!--<div class="wheel_box">
           <div class="wheel_ly" id="wheel_ly">
@@ -840,9 +861,7 @@
     <!-- <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script> -->
     <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script>
-        let getUrlString = location.href;
-        let url = new URL(getUrlString);
-        let url_cookie = url.search;
+        const url_cookie = location.search;
         $.cookie('url_cookie', url_cookie, { expires: 1, path: '/' });
     </script>
 
@@ -866,50 +885,33 @@
 
     <script>
         // coupon折扣
-        function copybtn(money, couponcode) {
-            // 複製（利用 Clipboard API 中的寫入功能）
-            navigator.clipboard.writeText(couponcode);
-            // 提醒視窗
-            confirm(`恭喜您成功複製「折扣碼」！\n期間內不限方案，\n於購物車「優惠代碼」欄位輸入 即可享優惠金額再折HKD$${money}元\n優惠期限只到7/31，折扣權益別錯過~\n優惠代碼：${couponcode}`)
-            // event_modal()
-        };
+        // function copybtn(money, couponcode) {
+        //     // 複製（利用 Clipboard API 中的寫入功能）
+        //     navigator.clipboard.writeText(couponcode);
+        //     // 提醒視窗
+        //     confirm(`恭喜您成功複製「折扣碼」！\n期間內不限方案，\n於購物車「優惠代碼」欄位輸入 即可享優惠金額再折HKD$${money}元\n優惠期限只到7/31，折扣權益別錯過~\n優惠代碼：${couponcode}`)
+        //     // event_modal()
+        // };
 
-        $(".copybtn").on("click", function () {
-            copybtn(50, "7LUNA200");
-        });
+        // $(".copybtn").on("click", function () {
+        //     copybtn(50, "7LUNA200");
+        // });
 
-        $(".offer").on("click", function () {
-            $('html , body').animate({
-                scrollTop: $('#offer').offset().top - 70,
-            }, 900);
-        });
+        // $(".offer").on("click", function () {
+        //     $('html , body').animate({
+        //         scrollTop: $('#offer').offset().top - 70,
+        //     }, 900);
+        // });
         //shopline手刻彈跳視窗
         // function event_modal() {
-            // let code_direction_text = document.querySelector(".code_direction_text");
-            // code_direction_text.innerHTML = date_text;
+        // let code_direction_text = document.querySelector(".code_direction_text");
+        // code_direction_text.innerHTML = date_text;
         //     $("#code_direction").show()
         //     $(".js_code_direction_close").on("click", function () {
         //         $("#code_direction").hide();
         //     });
         // }
 
-        // const User_width = $(window).width();
-        // const Urlhash = location.hash;
-        // if (Urlhash == "#summer") {
-        //     if (User_width <= 768) {
-        //         setTimeout(() => {
-        //             $('html , body').animate({
-        //                 scrollTop: $('#offerlink').offset().top,
-        //             }, 900);
-        //         }, 3000)
-        //     } else {
-        //         setTimeout(() => {
-        //             $('html , body').animate({
-        //                 scrollTop: $('#offerlink').offset().top,
-        //             }, 900);
-        //         }, 3000)
-        //     }
-        // }
         // $(".event_summer").on("click", function () {
         //     confirm(`折扣套用成功！\n您正在使用LUNA老顧客夏日優惠\n結帳即享網頁標示最優惠價格！\n優惠期限只到7/16，折扣權益別錯過`)
         // });
@@ -945,4 +947,25 @@
         //         scrollTop: $('#offer').offset().top,
         //     }, 900);
         // });
+
+        // draw popup 專用 複製折扣碼
+        function draw_copy() {
+            navigator.clipboard.writeText("202408SS");
+            confirm(`恭喜您成功複製轉盤折扣碼！\n請於購物車「優惠代碼」欄位輸入，\n即享最高會員優惠後再折HKD$24元\n優惠代碼：202408SS`)
+        }
+
+        const Urlhash = location.hash;
+        if (Urlhash == "#draw") {
+            //一進入畫面就顯示draw popup
+            $("#code_direction_draw").show();
+            //6秒後拉霸gif圖換成另張圖，點選圖片可複製折扣碼
+            setTimeout(() => {
+                $("#draw_gif").attr("src", "https://lunanaturalbra.com/hk/lurphknew/img0821/popup_copy.png");
+                $("#draw_gif").css("cursor", "pointer");
+                $("#draw_gif").on("click", function () {
+                    draw_copy();
+                    $("#code_direction_draw").hide();
+                });
+            }, 6000);
+        }
     </script>
