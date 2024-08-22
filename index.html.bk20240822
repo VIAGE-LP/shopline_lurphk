@@ -248,8 +248,7 @@
     }
 
     /* modal優惠碼使用方法 */
-    #code_direction,
-    #code_direction_draw {
+    #code_direction,#code_direction_draw {
         display: none;
         position: fixed;
         z-index: 1000;
@@ -281,7 +280,6 @@
             width: 90vw;
         }
     }
-
     /* draw加碼 */
 
     .code_direction_close_text {
@@ -350,8 +348,7 @@
     <!-- draw popup -->
     <div id="code_direction_draw">
         <div class="code_modal_content_draw">
-            <img id="draw_gif" src="https://lunanaturalbra.com/hk/lurphknew/img0821/popup_draw.gif" alt=""
-                style="width:100%;">
+            <img id="draw_gif" src="https://lunanaturalbra.com/hk/lurphknew/img0821/popup_draw.gif" alt="" style="width:100%;">
         </div>
     </div>
 
@@ -606,6 +603,7 @@
                 <img src="https://lunanaturalbra.com/hk/lurphknew/img0816/event-1.png" alt="" class="imgcss">
                 <img src="https://lunanaturalbra.com/hk/lurphknew/img0816/event-2.png" alt="" class="imgcss offer"
                     style="cursor: pointer;">
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/color.png" alt="" class="imgcss">
                 <!--<div class="wheel_box">
           <div class="wheel_ly" id="wheel_ly">
             <img class="wheel_btn_text"
@@ -729,10 +727,6 @@
                     </div>
 
                     <div class="hidebox">
-                        <div id="summer" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
-                            style="display: none;margin-top:32px;">
-                            <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/color.png" alt="" class="imgcss">
-                        </div>
                         <div id="food" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
                             style="display: none;margin-top:32px;">
                             <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/food.png" alt=""
@@ -973,14 +967,5 @@
                     $("#code_direction_draw").hide();
                 });
             }, 6000);
-        }
-
-        //color移到hide區塊
-        if (edmhref.includes("#summer")) {
-            $("#summer").show();
-            $(".lu-ldg").addClass('lu-ldg-hide');
-            $('html , body').animate({
-                scrollTop: $('#summer').offset().top - 70,
-            }, 900);
         }
     </script>
