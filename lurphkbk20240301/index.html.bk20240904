@@ -1,0 +1,1059 @@
+<!-- ▼自由編集箇所▼ -->
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lnubhksta/css/bootstrap_custom.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<!-- <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/bootstrap.min.css" /> -->
+<!-- <link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/wheel.css"> -->
+<link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/fv.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/loading.css">
+<link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/common.css" />
+<link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/hide.css" />
+<link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/modal.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<link rel="stylesheet" href="https://lunanaturalbra.com/hk/lurphknew/css/countdown.css" type="text/css" media="all">
+<!-- shopline offer css -->
+<style>
+  /* 隱藏第一個商品列表 */
+  div#shopline-section-1691658726756013023f:nth-child(1) {
+    display: none !important;
+  }
+
+  #product-list__products__1691658726756013023f {
+
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .section-width {
+    padding: 0px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #shopline-section-1691658726756013023f .section-width {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  /* @media (min-width: 768px) {
+    #shopline-section-1691658726756013023f .section-width {
+      width: 640px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+  } */
+
+  @media screen and (max-width: 767px) {
+    .product-list-custom-padding__1691658726756013023f {
+      padding: 0;
+    }
+
+    #product-list__products__1691658726756013023f {
+      display: block;
+      grid-template-columns: 100%;
+      grid-template-rows: initial;
+    }
+  }
+</style>
+
+<!-- shopline相關css -->
+<style>
+  .header {
+    z-index: 102;
+  }
+
+  .header--desktop .header__container {
+    position: fixed;
+    background-color: white;
+    left: 50%;
+    margin-left: -700px;
+    width: 1400px;
+    max-width: 100%;
+    min-height: 103px;
+    padding: 10px 20px 0;
+    display: flex;
+  }
+
+  @media screen and (max-width: 1400px) {
+    .header--desktop .header__container {
+      left: 0;
+      margin-left: 0;
+      margin: 0 auto;
+    }
+  }
+
+  .header--mobile .header__menu {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #wrapper {
+    margin-top: 103px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    #wrapper {
+      margin-top: 60px;
+    }
+  }
+
+  /* 隱藏電腦版商品資訊標籤 */
+  .quick-cart-body .variant-gallery-stage>a:last-child {
+    display: none;
+  }
+
+  /* 隱藏手機版商品資訊標籤 */
+  a.ng-binding {
+    display: none;
+  }
+
+  .CustomPage .quick-cart-price {
+    display: none;
+  }
+</style>
+
+<!-- 客製化區塊css -->
+<style>
+  header {
+    top: 1%;
+    left: 0%;
+  }
+
+  @media screen and (max-width: 450px) {
+    header {
+      top: 1%;
+      left: 10%;
+    }
+  }
+
+  .tab-pane {
+    padding: 0px;
+  }
+
+  @media screen and (max-width: 767px) {
+    .tab-pane {
+      padding: 0px;
+    }
+  }
+
+  .nav-pill_new .nav-item {
+    width: calc(100%/8);
+    padding: 1%;
+    margin: 0;
+  }
+
+  .bg_modelCarousel--mid .row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+  }
+
+
+
+  /* 彈跳視窗樣式 */
+  /* .modal-content {
+    box-shadow: 0px 0px 0px rgb(0 0 0 / 0%);
+  } */
+
+  /* offer按鈕位置 */
+  .midoffer_btn1 {
+    position: absolute;
+    top: 66%;
+    right: 11%;
+    width: 78%;
+  }
+
+  .midoffer_btn1:hover {
+    opacity: 0.8;
+  }
+</style>
+
+<body>
+
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="exampleModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+        </div>
+        <div class="modal-body copybtn" style="cursor: pointer;"></div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- 封面loading動畫 -->
+  <div class="loading-all">
+    <img id="logo-001" src="https://lunanaturalbra.com/hk/lurphknew/img/logo.png">
+    <p class="loading_txt">會員價格loading...</p>
+    <div>
+      <div class="loading-outer">
+        <div class="loading-inner"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 漂浮按鈕 start-->
+  <div class="buybtn">
+    <img class="gotop" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img0216/gotop.png" alt="">
+  </div>
+  <style>
+    .buybtn {
+      position: fixed;
+      right: 2px;
+      bottom: 6px;
+      z-index: 101;
+      width: 13.5%;
+    }
+
+    .buybtn img {
+      width: 70%;
+    }
+
+    #eventtext {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.2rem;
+    }
+
+    @media only screen and (max-width:768px) {
+      .buybtn {
+        right: -5px;
+        bottom: 6px;
+        width: 30%;
+      }
+
+      #eventtext {
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+      }
+    }
+
+    /* 幸運轉盤 */
+    .wheel_box {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      background-image: url('https://lunanaturalbra.com/hk/lurphknew/img0216/LuckyWheel/LuckyWheel_bg.png');
+      background-repeat: no-repeat;
+      background-position: bottom;
+      width: 750px;
+      margin: 0 auto;
+      position: relative;
+      background-size: 100%;
+    }
+
+    .wheel_ly {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      padding: 16px;
+      padding-bottom: 48px;
+    }
+
+    .wheel_btn_text {
+      position: absolute;
+      z-index: 1000;
+      width: 26% !important;
+      left: 38%;
+      top: 36%;
+    }
+
+    .wheel_ly img {
+      width: 98%;
+    }
+
+    .wheel_btn_ly {
+      position: absolute;
+      transform-origin: 51% 54%;
+      /* display: flex;
+    justify-content: center;
+    align-content: center; */
+    }
+
+    @media screen and (max-width: 768px) {
+      .wheel {
+        grid-template: auto auto/auto auto;
+      }
+
+      .wheel_box {
+        width: 100%;
+      }
+
+      /* .wheel_ly img{
+        width: 80%;
+    } */
+      /* .wheel_btn_ly{
+        width: 70px;
+        height: 70px;
+    } */
+      .wheel_btn_text {
+        position: absolute;
+        z-index: 1000;
+        width: 25% !important;
+        left: 38%;
+        top: 33%;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .wheel {
+        grid-template: auto auto/auto auto;
+      }
+
+      .wheel_box {
+        width: 100%;
+      }
+
+      .wheel_ly img {
+        width: 100%;
+      }
+
+      .wheel_ly {
+        padding-bottom: 2.5vh;
+      }
+
+      .wheel_btn_ly img {
+        max-width: 30vw;
+      }
+
+      .wheel_btn_text {
+        width: 30vw !important;
+        left: 36%;
+        top: 35%;
+      }
+    }
+  </style>
+  <!-- 漂浮按鈕 start-->
+  <!--<style>
+    .sizelinkbtn {
+      width: 174px;
+      position: fixed;
+      right: 0px;
+      bottom: 0px;
+      z-index: 101;
+    }
+
+    .sizelinkbtn .gotop {
+      transform: translate(-8px, 0px);
+      width: 95%;
+      height: auto;
+    }
+
+    .sizelinkbtn .copyButton2 {
+      width: 85%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .sizelinkbtn {
+        width: 35%;
+        max-width: 170px;
+      }
+
+      .sizelinkbtn .gotop {
+        transform: translate(7px, 0px);
+        width: 92%;
+        height: auto;
+      }
+
+      .sizelinkbtn .copyButton2 {
+        transform: translate(30px, 0px);
+        width: 65%;
+        height: auto;
+      }
+    }
+  </style>
+  <div class="sizelinkbtn" style="text-align: center">
+     <a href="#buy"> 
+    <img class="gotop" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img/button_LUNATW.png">
+  </div>-->
+  <script>
+    let discount = document.querySelector(".gotop");
+    discount.addEventListener("click", function (e) {
+      // if ($(window).scrollTop() > $('#wheel_ly').offset().top) {
+      //   e.preventDefault()
+      // } else {
+        $('html , body').animate({
+          scrollTop: $('#wheel_ly').offset().top - 20,
+        }, 900);
+      // }
+      // if ($(window).scrollTop() > $('#sizelink').offset().top) {
+      //   e.preventDefault()
+      // } else {
+      //   $('html , body').animate({
+      //     scrollTop: $('#sizelink').offset().top - 20,
+      //   }, 900);
+      // }
+    });
+  </script>
+  <!-- 漂浮按鈕 end -->
+  <!-- <div id="countdown" class="countdown">
+    <div class="box">
+      <div class="timer-box">
+        <p>夏末快閃只剩</p>
+        <p><span class="hours">00</span><span class="name">小時</span></p>
+        <p><span class="minutes">00</span><span class="name">分</span></p>
+        <p><span class="seconds">00</span><span class="name">秒</span></p>
+      </div>
+    </div>
+  </div> -->
+  <div id="wrapper">
+    <div id="lu-wrapper" class="lu-wrapper">
+      <div class="luna-mv__content">
+        <div class="luna-mv__contentUpper">
+          <h1 class="luna-mv__title">
+            <img src="https://lunanaturalbra.com/hk/lurphknew/img0216/01_title_sp.png" alt="">
+          </h1>
+
+          <div class="luna-mv__hashtag">
+            <img src="https://lunanaturalbra.com/hk/lurphknew/img/mv_hashtag_sp.svg" alt="">
+          </div>
+        </div>
+        <div class="luna-mv__text">
+          LUNA晚安內衣開發團隊透過研究女性的胸部構造，<br>
+          發現了主導美胸形成的基本線-ω歐美伽曲線。<br>
+          透過穿著保養擁有完美的ω歐美伽曲線，<br>
+          會讓胸型輪廓更加好看、胸部看起來更加立體！<br>
+          請期待LUNA晚安內衣為你帶來「美麗新變化」吧！
+        </div>
+        <div class="luna-mv__mov lujs-scrollfade">
+          <!-- 影片輪播 -->
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <video class="video01 d-block w-100" src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov"
+                  loop autoplay muted playsinline style="width:100%;">
+                  <source src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov" type="video/mp4" />
+                  <source src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov/video.ogg" type="video/ogg" />
+                </video>
+              </div>
+              <div class="carousel-item">
+                <video class="video01 d-block w-100" src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov"
+                  loop autoplay muted playsinline style="width:100%;">
+                  <source src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov" type="video/mp4" />
+                  <source src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov/video.ogg" type="video/ogg" />
+                </video>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <p class="lu-mv__movtext" style="margin-top:4px">【日本專利獲得】ω歐美伽曲線養成特別設計</p>
+        </div>
+      </div>
+      <div class="lu-section lu-section--bgL">
+        <div class="lu-section--bgL__bg">
+          <svg id="figure1" xmlns="http://www.w3.org/2000/svg" width="842.1927" height="2159.999"
+            viewBox="0 0 842.1927 2159.999">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #f9dae0;
+                }
+              </style>
+            </defs>
+            <title>アセット 13</title>
+            <g id="レイヤー_2" data-name="レイヤー 2">
+              <g id="背景">
+                <path id="pai" class="cls-1"
+                  d="M0,1263.2877c.0006-231.204,190.8707-349.322,361.7466-464.58,199.2629-134.4052,373.2643-319.5824,444.335-553.97A844.5478,844.5478,0,0,0,842.1927,0V2159.999H285.9386l.026-.035A390.1665,390.1665,0,0,0,356.22,1935.99C356.2235,1643.1849,0,1562.8709,0,1263.2877Z" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <img src="https://lunanaturalbra.com/hk/lurphknew/img0216/event.png" alt="" class="imgcss">
+
+        <div class="wheel_box">
+          <div class="wheel_ly" id="wheel_ly">
+            <img class="wheel_btn_text"
+              src="https://lunanaturalbra.com/hk/lurphknew/img0216/LuckyWheel/LuckyWheel_btn_text.png" alt="">
+            <img src="https://lunanaturalbra.com/hk/lurphknew/img0216/LuckyWheel/LuckyWheel.png" alt="">
+            <div class="wheel_btn_ly">
+              <img class="wheel_btn" src="https://lunanaturalbra.com/hk/lurphknew/img0216/LuckyWheel/LuckyWheel_btn.png"
+                alt="">
+            </div>
+          </div>
+        </div>
+        <p id="wheel_couponcode" style="position: fixed;clip:rect(0 0 0 0);top: -10%;z-index: -100;">$$$50$$$</p>
+        <!-- google表單 -->
+        <!-- <div class="form_box">
+          <iframe style="width: 750px;height: 350px;" src="https://docs.google.com/forms/d/e/1FAIpQLSeUmEVFnwUQlzhjCA8zHZ6YMHmZmkRqoilUsGwhM6KPBM1sPg/viewform?embedded=true" width="640" height="672" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+        </div> -->
+        <div class="lu-innr">
+          <h3 class="lu-section__title01 lujs-scrollfade"><img
+              src="https://lunanaturalbra.com/hk/lurphknew/img/sec_title_01.png" alt="" class="lu-resize">
+          </h3>
+          <div class="lu-movie">
+            <div class="lu-movie__main lujs-scrollfade">
+              <img src="https://lunanaturalbra.com/hk/lurphknew/img/05_data.png" alt="" class="imgcss">
+            </div>
+          </div>
+
+          <div class="lu-instaArea">
+            <div class="lu-instaArea__btn lujs-scrollfade">
+              <img src="https://lunanaturalbra.com/hk/lurphknew/img/btn_ladygo.png" alt="" class="lu-resize">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lu-section lu-section--bgR">
+        <div class="lu-section--bgR__bg">
+          <svg id="figure2" xmlns="http://www.w3.org/2000/svg" width="842.1927" height="2059.999"
+            viewBox="0 0 742.1927 2159.999">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #f9dae0;
+                }
+              </style>
+            </defs>
+            <title>アセット 13</title>
+            <g id="レイヤー_2" data-name="レイヤー 2">
+              <g id="背景">
+                <path id="pai2" class="cls-1"
+                  d="M0,1263.2877c.0006-231.204,190.8707-349.322,361.7466-464.58,199.2629-134.4052,373.2643-319.5824,444.335-553.97A844.5478,844.5478,0,0,0,842.1927,0V2159.999H285.9386l.026-.035A390.1665,390.1665,0,0,0,356.22,1935.99C356.2235,1643.1849,0,1562.8709,0,1263.2877Z" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="lu-innr">
+          <div class="lu-nbr">
+            <div class="lu-nbrClm lu-clm2">
+              <div class="lu-clm2__li lujs-scrollfade">
+                <div class="lu-nbrBlock">
+                  <div class="lu-nbrBlock__thumb"><img
+                      src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_01.jpg" alt="" class="lu-resize">
+                  </div>
+                  <div class="lu-nbrBlock__text"><img src="https://lunanaturalbra.com/hk/lurphknew/img/text_before.svg"
+                      alt="" class="lu-resize">
+                  </div>
+                </div>
+              </div>
+              <div class="lu-clm2__li lujs-scrollfade">
+                <picture>
+                  <source media="(max-width: 767px)"
+                    srcset="https://lunanaturalbra.com/hk/lurphknew/img/nbr_title_sp.svg">
+                  <source media="(min-width: 768px)" srcset="https://lunanaturalbra.com/hk/lurphknew/img/nbr_title.svg">
+                  <img src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_title.svg" alt="" class="lu-resize">
+                </picture>
+
+              </div>
+              <div class="lu-clm2__li lujs-scrollfade" style="z-index: 2;">
+                <div class="lu-nbrBlock">
+                  <div class="lu-nbrBlock__thumb"><img
+                      src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_02.jpg" alt="" class="lu-resize">
+                  </div>
+                  <div class="lu-nbrBlock__text"><img src="https://lunanaturalbra.com/hk/lurphknew/img/text_1month.svg"
+                      alt="" class="lu-resize">
+                  </div>
+                </div>
+              </div>
+              <div class="lu-clm2__li lujs-scrollfade">
+                <div class="lu-nbrBlock">
+                  <div class="lu-nbrBlock__thumb"><img
+                      src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_03.jpg" alt="" class="lu-resize">
+                  </div>
+                  <div class="lu-nbrBlock__text"><img src="https://lunanaturalbra.com/hk/lurphknew/img/text_2month.svg"
+                      alt="" class="lu-resize">
+                  </div>
+                </div>
+              </div>
+              <div class="lu-clm2__li lujs-scrollfade">
+                <div class="lu-nbrBlock">
+                  <div class="lu-nbrBlock__thumb"><img
+                      src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_04.jpg" alt="" class="lu-resize">
+                  </div>
+                  <div class="lu-nbrBlock__text"><img src="https://lunanaturalbra.com/hk/lurphknew/img/text_3month.svg"
+                      alt="" class="lu-resize">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="lu-nbrClm lu-clm3">
+              <p>※穿著晚安內衣搭配運動鍛鍊後的效果。</p>
+            </div>
+          </div>
+
+          <div class="hidebox">
+            <div id="food" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade" style="display: none;margin-top:32px;">
+              <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/food.png" alt="" class="imgcss">
+            </div>
+            <div id="replace" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
+              style="display: none;margin-top:32px;">
+              <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/replace.png" alt="" class="imgcss">
+            </div>
+            <div id="massage" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
+              style="display: none;margin-top:32px;">
+              <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/massage.png" alt="" class="imgcss">
+            </div>
+            <div id="ootd" class=" lu-ldgBlock--01 lujs-scrollfade" style="display: none;margin-top:32px;">
+              <div class="ootd_top">
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_top.png" alt="" class="imgcss">
+                <div class="ootd_button">
+                  <div class="d-flex">
+                    <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_01.png" alt=""
+                      data-day="01">
+                    <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_02.png" alt=""
+                      data-day="02">
+                    <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_03.png" alt=""
+                      data-day="03">
+                    <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_04.png" alt=""
+                      data-day="04">
+                  </div>
+                  <div class="d-flex mt-2">
+                    <img class="mr-0" src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_05.png"
+                      alt="" data-day="05">
+                    <img class="mx-2" src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_06.png"
+                      alt="" data-day="06">
+                    <img class="ml-0" src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_07.png"
+                      alt="" data-day="07">
+                  </div>
+                </div>
+              </div>
+              <div class="ootd_show">
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_01.png" alt="" class="imgcss">
+              </div>
+              <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_bottom.png" alt="" class="imgcss">
+            </div>
+          </div>
+          <a id="sizelink"></a>
+          <div id="shopline-section-1691658726756013023f" class="shopline-section ">
+            <div class="section-width">
+              <div class="product-list-custom-padding__1691658726756013023f">
+                <div class="product-list__container">
+                  <div class="product-list__product" product-id="654b2b7a32130f001705ee46">
+
+                    <div class="product-item">
+                      <product-item product-id="654b2b7a32130f001705ee46"
+                        ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
+                        modal-window-class="">
+                        <div class="lu-ldg">
+                          <div class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade offerbefore">
+                            <a href="#size">
+                              <img class="btn-add-to-cart js-btn-add-to-cart imgcss"
+                                src="https://lunanaturalbra.com/hk/lurphknew/img0216/07_offer.png" alt="" id="offer"
+                                class="imgcss">
+                            </a>
+                          </div>
+                        </div>
+                      </product-item>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lu-section--bgL__bg pconly">
+          <svg id="figure3" xmlns="http://www.w3.org/2000/svg" width="842.1927" height="1459.999"
+            viewBox="0 0 442.1927 2159.999">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #f9dae0;
+                }
+              </style>
+            </defs>
+            <title>アセット 13</title>
+            <g id="レイヤー_3" data-name="レイヤー 3">
+              <g id="背景">
+                <path id="pai" class="cls-1"
+                  d="M0,1263.2877c.0006-231.204,190.8707-349.322,361.7466-464.58,199.2629-134.4052,373.2643-319.5824,444.335-553.97A844.5478,844.5478,0,0,0,842.1927,0V2159.999H285.9386l.026-.035A390.1665,390.1665,0,0,0,356.22,1935.99C356.2235,1643.1849,0,1562.8709,0,1263.2877Z" />
+              </g>
+            </g>
+          </svg>
+
+        </div>
+        <div class="lu-innr">
+          <div class="lu-ldgBlock lu-ldgBlock--04 lujs-scrollfade">
+            <img src="https://lunanaturalbra.com/hk/lurphknew/img/08_color.png" alt="" class="imgcss">
+          </div>
+          <div class="lu-ldgBlock lu-ldgBlock--04 lujs-scrollfade">
+            <img src="https://lunanaturalbra.com/hk/lurphknew/img/09_size.png" alt="" class="imgcss">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://lunanaturalbra.com/hk/lurphknew/js/common.js"></script>
+  <script src="https://lunanaturalbra.com/hk/lurphknew/js/bootstrap.min.js"></script>
+  <script src="https://lunanaturalbra.com/hk/lurphknew/js/all.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <!-- <script src="https://lunanaturalbra.com/lurpnew1216/js/gift.js"></script> -->
+  <!-- <script src="https://lunanaturalbra.com/hk/lurphknew/js/countdown.js"></script> -->
+  <!-- <script src="https://lunanaturalbra.com/hk/lurphknew/js/jquery-rotate.js"></script> -->
+  <!-- 封面loading動畫 -->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $('#logo-001').fadeIn();
+      setTimeout(function () {
+        $('.loading-all').fadeOut()
+      }, 650);
+    });
+  </script>
+
+  <!-- 抓取網址參數存到cookie -->
+  <!-- <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script> -->
+  <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script>
+    let getUrlString = location.href;
+    let url = new URL(getUrlString);
+    let url_cookie = url.search;
+    $.cookie('url_cookie', url_cookie, { expires: 1, path: '/' });
+  </script>
+
+  <script>
+    // 點選左上角logo不跳轉
+    $('a[href="/"]').click(function (e) {
+      e.preventDefault();
+      return;
+    });
+
+    $(".eventbtn").on("click", function () {
+      if ($(window).scrollTop() > $('#offer').offset().top) {
+        e.preventDefault()
+      } else {
+        $('html , body').animate({
+          scrollTop: $('#offer').offset().top,
+        }, 900);
+      }
+
+    });
+
+    //抓取頁面物件
+    let wheel_btn = document.querySelector(".wheel_btn_text");
+    let wheel_rotate = document.querySelector(".wheel_btn_ly");
+    let wheel = document.querySelector(".wheel");
+    // let myModal = new bootstrap.Modal(document.getElementById("exampleModal"));
+    let modal_title = document.querySelector(".modal-title")
+    let modal_body = document.querySelector(".modal-body")
+    let textarea = document.getElementById("wheel_couponcode");
+
+    //機率參數
+    let _prize = ['一獎', '二獎']
+    let _prop = [500, 1000] //累计分布函数
+    let a = 0, b = 0
+    let count = 0;
+
+    //基本參數
+    let deg = 0;//初始角度
+    let clicked = false;
+    let cookie = false;
+    let name = " ";
+    let code = " ";
+    let amount = " ";
+    let nowTime = new Date().getTime();
+    const currency = "HKD$";
+    let myTimeline = anime.timeline({
+      duration: 1000,
+    });
+
+    //獲獎內容參數
+    const coupon = [
+      {
+        name: "一獎",
+        amount: "75",
+        code: "24L300LUCK",
+        rotateStart: "-36",
+        rotateEnd: "36",
+      },
+      {
+        name: "二獎",
+        amount: "50",
+        code: "L200LUCK24",
+        rotateStart: "262",
+        rotateEnd: "314",
+      },
+    ]
+    //設定基本的cookie
+    function setCookie(cName, cValue, expTime) {
+      const expires = "expires=" + new Date(expTime).toUTCString();
+      document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+    }
+    function setLocalStorage(key, value) {
+      localStorage.setItem(key, value);
+    }
+
+    window.onload = function () {
+
+      //讀取cookie並將cookie轉換為物件
+      function getAllCookies() {
+        let cookies = document.cookie.split('; ');
+        let cookieData = {};
+        // console.log(cookies)
+        // Iterate through all cookies
+        for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i];
+          let cookieParts = cookie.split('=');
+          // console.log(cookie)
+          // console.log(cookieParts)
+          // Decode key and value
+          let key = decodeURIComponent(cookieParts[0]);
+          let value = decodeURIComponent(cookieParts[1]);
+          // Store the key-value pair in the cookieData object
+          cookieData[key] = value;
+        }
+        return cookieData;
+      }
+
+
+      //找到targetKey陣列中key值得value值
+      let allCookies = getAllCookies();
+      // console.log(getAllCookies());
+      function findValeByKey(obj, targetKey) {
+        const foundEntry = Object.entries(obj).find(([key, value]) => key === targetKey);
+        // If the entry is found, return the corresponding value; otherwise, return null or another specified value.
+        return foundEntry ? foundEntry[1] : null;
+      }
+      const targetData = {};
+      const targetKey = ["name", "clicked", "deg", "code", "amount"];
+      for (i = 0; i < targetKey.length; i++) {
+        const foundValue = findValeByKey(allCookies, targetKey[i]);
+        if (foundValue !== null) {
+          // console.log(`The value for key ${targetKey[i]} is: ${foundValue}`);
+          //讀取後存入新陣列targetData並將值帶入參數中
+          targetData[targetKey[i]] = foundValue;
+          name = targetData.name;
+          clicked = Boolean(targetData.clicked);
+          expiredTime = Number(targetData.expiredTime);
+          deg = Number(targetData.deg);
+          amount = targetData.amount;
+          code = targetData.code;
+          cookie = true;
+          wheel_rotate.style.transform = `rotate(${deg}deg)`;
+          //如果targetData有值將會帶入以下字串
+          // modal_title.innerHTML = `恭喜你獲得${amount}折扣！`
+          // modal_body.innerHTML = `<p data-code=${code}>現在就複製以下優惠代碼，於購物車「優惠代碼」欄位輸入 即可享網頁顯示價格再折${code}\n結帳時請於購物車輸入，\n即享活動優惠折扣+整單再折${currency}${amount}。<br>👉點我複製折扣碼</p>`;
+          // console.log(amount);
+        }
+
+      }
+
+      // console.log(name);
+      // console.log(clicked);
+      // console.log(deg);
+      // console.log(code);
+      // console.log(amount);
+      if (cookie == false && localStorage != null && (Number(localStorage.getItem("expiredTime")) - nowTime) > 0) {
+
+        // console.log(localStorage.getItem("name"))
+        // console.log(localStorage.getItem("clicked"))
+        // console.log(localStorage.getItem("expiredTime"))
+        // console.log(localStorage.getItem("deg"))
+        // console.log(localStorage.getItem("amount"))
+        // console.log(localStorage.getItem("code"))
+        name = localStorage.getItem("name");
+        clicked = Boolean(localStorage.getItem("clicked"));
+        expiredTime = Number(localStorage.getItem("expiredTime"));
+        deg = Number(localStorage.getItem("deg"));
+        amount = targetData.amount;
+        code = localStorage.getItem("code");
+        wheel_rotate.style.transform = `rotate(${deg}deg)`;
+
+        //設定基本的cookie
+        function setCookie(cName, cValue, expTime) {
+          const expires = "expires=" + new Date(expTime).toUTCString();
+          document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+        }
+        //將參數存入cookie
+        setCookie('clicked', `${clicked}`, expiredTime);
+        setCookie('expiredTime', `${expiredTime}`, expiredTime);
+        setCookie('name', `${name}`, expiredTime);
+        setCookie('amount', `${amount}`, expiredTime);
+        setCookie('deg', `${deg}`, expiredTime);
+        setCookie('code', `${code}`, expiredTime);
+        // console.log(document.cookie)
+        //如果targetData有值將會帶入以下字串
+        modal_title.innerHTML = `恭喜你獲得${amount}折扣！`
+        modal_body.innerHTML = `<p data-code=${code}>現在就複製以下優惠代碼，於購物車「優惠代碼」欄位輸入 即可享網頁顯示價格再折${code}\n結帳時請於購物車輸入，\n即享活動優惠折扣+整單再折${currency}${amount}。<br>👉點我複製折扣碼</p>`;
+        // console.log(amount);
+      } else if (cookie == false && localStorage != null && (Number(localStorage.getItem("expiredTime")) - nowTime) < 0) {
+        localStorage.removeItem("name");
+        localStorage.removeItem("clicked");
+        localStorage.removeItem("expiredTime");
+        localStorage.removeItem("deg");
+        localStorage.removeItem("amount");
+        localStorage.removeItem("code");
+      }
+
+
+
+    }
+
+    wheel_btn.addEventListener("click", function (e) {
+      // console.log(123)
+      // console.log(clicked)
+      // console.log(cookie)
+      if (clicked == false) {
+        //利用二分查找演算法增加效能找到該有的值
+        function getPrize() {
+          let random = Math.ceil(Math.random() * 1000) //生成1-1000的正整数
+          //二分查找
+          let low = 0
+          let high = _prop.length - 1
+          count++;
+          while (low < high) {
+            let mid = Math.floor((low + high) / 2)
+            if (random > _prop[mid] && random <= _prop[mid + 1]) {
+              return _prize[mid + 1]
+            } else if (random > _prop[mid + 1]) {
+              low = mid
+            } else {
+              high = mid
+            }
+          }
+          return _prize[0]
+        }
+        //查詢物件coupon中是否有searchValue的值,若有的話才會將相關參數帶入對應的字串中
+        searchValue = getPrize(_prize[0])
+        // console.log(searchValue)
+        function search(searchValue) {
+          let searched = coupon.map(obj => {
+            if (Object.keys(obj).some(property => obj[property].toString().indexOf(searchValue) != -1))
+              return obj;
+          });
+          return searched.filter(obj => obj != undefined);
+        }
+        // console.log(search(searchValue))
+        // console.log(search(searchValue)[0].amount)
+        // console.log(Number(search(searchValue)[0].rotateStart)+10)
+        // console.log(Number(search(searchValue)[0].rotateEnd)-10)
+        // console.log(Math.floor(Math.random() * (Number(search(searchValue)[0].rotateEnd) - (Number(search(searchValue)[0].rotateStart)-1)) + Number(search(searchValue)[0].rotateStart)))
+        rotateStart = Number(search(searchValue)[0].rotateStart) + 10;
+        rotateEnd = Number(search(searchValue)[0].rotateEnd) - 10;
+        deg = Math.floor(Math.random() * (rotateEnd - (rotateStart - 1)) + rotateStart);
+        name = search(searchValue)[0].name;
+        code = search(searchValue)[0].code;
+        amount = search(searchValue)[0].amount;
+        clicked = true;
+        cookie = true;
+        expiredTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+        // console.log(amount)
+        // document.cookie = `clicked=${clicked};`,`deg=${deg+2160};`,`name=${name};`,`code=${code};`;
+        // console.log(document.cookie);
+        //anima套件,定義旋轉圈數
+        myTimeline.add({
+          targets: '.wheel_btn_ly',
+          rotate: `${deg + 2160}`,
+          loop: 1,
+          easing: 'linear'
+        })
+        // wheel_code.innerHTML = `<p id="event_couponcode" style="position: fixed;clip:rect(0 0 0 0);top: -10%;z-index: -100;">${code}</p>`;
+        // modal_title.innerHTML = `恭喜你獲得${amount}折扣！`
+        // modal_body.innerHTML = `<p data-code=${code}>您已成功複製折扣碼 :${code}\n結帳時請於購物車輸入，\n即享活動優惠折扣+整單再折${currency}${amount}。<br>👉點我複製折扣碼</p>`;
+        setTimeout(function () {
+          // alert(`${code}`)
+          // myModal.show();
+          // copybtn = document.querySelector(".copybtn")
+          // copybtn.addEventListener("click", function (e) {
+          // 賦值
+          textarea.innerText = code;
+          // 選中
+          window.getSelection().selectAllChildren(textarea);
+          // 複製
+          document.execCommand('copy', true);
+
+          // myModal.show();
+          setTimeout(function () {
+            alert(`您已成功複製折扣碼 :${code}\n結帳時請於購物車輸入，\n即享活動優惠折扣+整單再折${currency}${amount}。`)
+          }, 300);
+          // });
+
+        }, 1000);
+
+        // console.log(clicked)
+
+
+        //將參數存入cookie
+        setCookie('clicked', `${clicked}`, expiredTime);
+        setCookie('expiredTime', `${expiredTime}`, expiredTime);
+        setCookie('name', `${name}`, expiredTime);
+        setCookie('amount', `${amount}`, expiredTime);
+        setCookie('deg', `${deg}`, expiredTime);
+        setCookie('code', `${code}`, expiredTime);
+        console.log(document.cookie)
+
+
+        setLocalStorage('clicked', `${clicked}`);
+        setLocalStorage('expiredTime', `${expiredTime}`);
+        setLocalStorage('name', `${name}`);
+        setLocalStorage('amount', `${amount}`);
+        setLocalStorage('deg', `${deg}`);
+        setLocalStorage('code', `${code}`);
+        // console.log(localStorage)
+
+      } else if (clicked == true && cookie == true) {
+        // myTimeline.add({
+        //     targets: '.wheel',
+        //     rotate: `${deg + 2160}`,
+        //     loop: 1,
+        // })
+        // e.preventDefault();
+        setTimeout(function () {
+          // alert(`${code}`)
+          // myModal.show();
+          // copybtn = document.querySelector(".copybtn")
+          // copybtn.addEventListener("click", function (e) {
+          // 賦值
+          textarea.innerText = code;
+          // 選中
+          window.getSelection().selectAllChildren(textarea);
+          // 複製
+          document.execCommand('copy', true);
+          // myModal.show();
+          setTimeout(function () {
+            alert(`您已成功複製折扣碼 :${code}\n結帳時請於購物車輸入，\n即享活動優惠折扣+整單再折${currency}${amount}。`)
+          }, 500);
+          // });
+
+        }, 1000);
+        // console.log(cookie)
+      }
+      //機率驗算10000次
+      // let computeP = (func, times) => {
+      //     while (count < times){
+      //         let cur_prize = func()
+      //         switch (cur_prize){
+      //             case "一獎":
+      //                 a++
+      //                 break
+      //             case '二獎':
+      //                 b++
+      //                 break
+      //         }
+      //     }   
+      //     let res = [a, b, c]                                                                                                                                                                                                                         
+      //     res.forEach((item, k) => {
+      //         res[k] = (item/times).toFixed(3)
+      //     })
+      //     return res
+      // }
+      // console.log(computeP(getPrize, 10000))
+    });
+
+  </script>
