@@ -1,0 +1,33 @@
+.countdown{
+    background: #faff87;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin: 0 auto;
+    display: none;
+}
+.countdown .timer-box{
+    margin: 0;
+    text-align: center;
+}
+.countdown .timer-box p{
+    display: inline-block;
+    font-size: 36px;
+    color: #af285c;
+    margin: 0;
+    font-weight: 700;
+}
+.countdown .timer-box .name{
+    font-size: 16px;
+    color: #ff5596;
+}
+@media (max-width: 576px) {
+    .countdown .timer-box p{
+        font-size: 24px;
+    }
+    .countdown .timer-box .name{
+        font-size: 14px;
+        color: #ff5596;
+    }
+}
