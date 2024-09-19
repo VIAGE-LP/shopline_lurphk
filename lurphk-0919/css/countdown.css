@@ -1,0 +1,74 @@
+/* 倒數計時器 */
+.countdown_box{
+    width:750px;
+    margin:0 auto;
+    background-color: #ee1515;
+    /* text-shadow: 2px 2px 2px #f6617a, -2px 2px 2px #f6617a, 2px -2px 2px #f6617a, -2px -2px 2px #f6617a; */
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+p{
+    margin:0;
+}
+
+.linegreen{
+    color: #06C755;
+    -webkit-text-stroke: 1.5px;
+    margin: 0 4px;
+}
+
+#cdtimer .linegreen{
+    font-size: 18px;
+    line-height: 20px;
+}
+
+#cdtimer_day .linegreen{
+    font-size: 18px;
+    line-height: 20px;
+}
+
+@media screen and (max-width: 768px){
+    #cdtimer{
+        font-size: 1.3rem;
+    }
+
+    #cdtimer .linegreen{
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+
+.countdown_box #cdtimer,.countdown_box #cdtimer_day{
+    display: none;
+}
+.countdown{
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    padding: 10px 0;
+}
+.countdown_title{
+    margin:0;
+    display: flex;
+}
+.main-content{
+    display: flex;
+    justify-content: center;
+}
+.timer-box .number{
+    color: #fffa55;
+    padding: 0 4px;
+    /* text-shadow: 2px 2px 2px #9a2849, -2px 2px 2px #9a2849, 2px -2px 2px #9a2849, -2px -2px 2px #9a2849; */
+}
+
+@media screen and (max-width: 768px){
+    .countdown_box{
+        width:100%;
+        font-size: 1.5rem;
+    }
+}
+
+/* 倒數計時器 */
