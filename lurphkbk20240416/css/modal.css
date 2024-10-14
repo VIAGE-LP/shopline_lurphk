@@ -1,0 +1,7 @@
+.modal-dialog .layout-close{
+    display: flex;
+    justify-content: flex-end;
+}
+.modal-dialog .btn-close{
+    position: absolute;
+}
