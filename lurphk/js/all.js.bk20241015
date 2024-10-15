@@ -26,13 +26,6 @@ if (edmhref.includes("#news")) {
     $("#news").show();
     $(".news_animate").removeClass("animate__animated");
 }
-if (edmhref.includes("#pose")) {
-    $("#pose").show();
-    $(".lu-ldg").addClass('lu-ldg-hide');
-    $('html , body').animate({
-        scrollTop: $('#pose').offset().top - 70,
-    }, 900);
-}
 if (edmhref.includes("#food")) {
     $("#food").show();
     $(".lu-ldg").addClass('lu-ldg-hide');
