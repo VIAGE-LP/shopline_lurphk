@@ -56,7 +56,7 @@ if (edmhref.includes("#massage")) {
 }
 if (edmhref.includes("#ootd")) {
     $("#ootd").show();
-    $(".lu-ldg").addClass('lu-ldg-ootd');
+    //$(".lu-ldg").addClass('lu-ldg-ootd');
     $('html , body').animate({
         scrollTop: $('#ootd').offset().top - 70,
     }, 900);
