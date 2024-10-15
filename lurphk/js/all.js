@@ -28,7 +28,7 @@ if (edmhref.includes("#news")) {
 }
 if (edmhref.includes("#pose")) {
     $("#pose").show();
-    $(".lu-ldg").addClass('lu-ldg-hide');
+    //$(".lu-ldg").addClass('lu-ldg-hide');
     $('html , body').animate({
         scrollTop: $('#pose').offset().top - 70,
     }, 900);
