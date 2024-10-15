@@ -35,21 +35,21 @@ if (edmhref.includes("#pose")) {
 }
 if (edmhref.includes("#food")) {
     $("#food").show();
-    $(".lu-ldg").addClass('lu-ldg-hide');
+    //$(".lu-ldg").addClass('lu-ldg-hide');
     $('html , body').animate({
         scrollTop: $('#food').offset().top - 70,
     }, 900);
 }
 if (edmhref.includes("#replace")) {
     $("#replace").show();
-    $(".lu-ldg").addClass('lu-ldg-hide');
+    //$(".lu-ldg").addClass('lu-ldg-hide');
     $('html , body').animate({
         scrollTop: $('#replace').offset().top - 70,
     }, 900);
 }
 if (edmhref.includes("#massage")) {
     $("#massage").show();
-    $(".lu-ldg").addClass('lu-ldg-hide');
+    //$(".lu-ldg").addClass('lu-ldg-hide');
     $('html , body').animate({
         scrollTop: $('#massage').offset().top - 70,
     }, 900);
