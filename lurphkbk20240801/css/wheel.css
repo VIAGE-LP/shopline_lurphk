@@ -1,0 +1,40 @@
+.luckywheel_box{
+    position: relative;
+    width:750px;
+    margin:0 auto;
+}
+
+.luckywheel_bg{
+    width:100%;
+}
+
+.luckywheel_box .luckywheel_wheel{
+    width: 66%;
+    left: 15%;
+    top: 14%;    
+}
+.luckywheel_box .luckywheel_btn{
+    position: absolute;
+    width: 20%;
+    top: 17.5%;
+    left: 37.5%;
+    cursor: pointer;
+}
+.luckywheel_box .luckywheel_point{
+    position: absolute;
+    width: 9%;
+    top: 18%;
+    left: 46%;
+}
+.luckywheel_box .luckywheel_200{
+    position: absolute;
+    width: 31%;
+    top: 24.5%;
+    left: 35%;
+}
+
+@media screen and (max-width: 768px){
+    .luckywheel_box{
+        width:100%;
+    }
+}
