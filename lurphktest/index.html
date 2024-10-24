@@ -1,0 +1,1023 @@
+<!-- ▼自由編集箇所▼ -->
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/bootstrap_custom.css">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/fv.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/loading.css">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/common.css" />
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/hide.css" />
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/countdown.css" type="text/css" media="all">
+<!-- shopline offer css -->
+<style>
+    /* 隱藏第一個商品列表 */
+    div#shopline-section-1691658726756013023f:nth-child(1) {
+        display: none !important;
+    }
+
+    #product-list__products__1691658726756013023f {
+
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .section-width {
+        padding: 0px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #shopline-section-1691658726756013023f .section-width {
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    /* @media (min-width: 768px) {
+    #shopline-section-1691658726756013023f .section-width {
+      width: 640px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+  } */
+
+    @media screen and (max-width: 767px) {
+        .product-list-custom-padding__1691658726756013023f {
+            padding: 0;
+        }
+
+        #product-list__products__1691658726756013023f {
+            display: block;
+            grid-template-columns: 100%;
+            grid-template-rows: initial;
+        }
+    }
+</style>
+
+<!-- shopline相關css -->
+<style>
+    .header {
+        z-index: 102;
+    }
+
+    .header--desktop .header__container {
+        position: fixed;
+        /* background-color: white; */
+        left: 50%;
+        margin-left: -700px;
+        width: 1400px;
+        max-width: 100%;
+        min-height: 103px;
+        padding: 10px 20px 0;
+        display: flex;
+    }
+
+    @media screen and (max-width: 1400px) {
+        .header--desktop .header__container {
+            left: 0;
+            margin-left: 0;
+            margin: 0 auto;
+        }
+    }
+
+    .header--mobile .header__menu {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #wrapper {
+        margin-top: 103px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        #wrapper {
+            margin-top: 60px;
+        }
+    }
+
+    /* 隱藏電腦版商品資訊標籤 */
+    .quick-cart-body .variant-gallery-stage>a:last-child {
+        display: none;
+    }
+
+    /* 隱藏手機版商品資訊標籤 */
+    a.ng-binding {
+        display: none;
+    }
+
+    .CustomPage .quick-cart-price {
+        display: none;
+    }
+</style>
+
+<!-- 客製化區塊css -->
+<style>
+    header {
+        top: 1%;
+        left: 0%;
+    }
+
+    @media screen and (max-width: 450px) {
+        header {
+            top: 1%;
+            left: 10%;
+        }
+    }
+
+    .tab-pane {
+        padding: 0px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .tab-pane {
+            padding: 0px;
+        }
+    }
+
+    .nav-pill_new .nav-item {
+        width: calc(100%/8);
+        padding: 1%;
+        margin: 0;
+    }
+
+    .bg_modelCarousel--mid .row>* {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-top: var(--bs-gutter-y);
+    }
+
+    /* 倒數計時器 */
+    /* .countdown_box {
+        width: 750px;
+        margin: 0 auto;
+        background-color: #fdb534;
+        text-shadow: 2px 2px 2px #f6617a, -2px 2px 2px #f6617a, 2px -2px 2px #f6617a, -2px -2px 2px #f6617a;
+        color: #ffffff;
+        text-align: center;
+        font-size: 2.25rem;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    #cdtimer .linegreen {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    #cdtimer_day .linegreen {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        #cdtimer {
+            font-size: 1.3rem;
+        }
+
+        #cdtimer .linegreen {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    .countdown_box #cdtimer,
+    .countdown_box #cdtimer_day {
+        display: none;
+    }
+
+    .countdown {
+        display: flex;
+        justify-content: center;
+        /* text-align: center; */
+    /* padding: 10px 0;
+    } */
+    /* 
+    .countdown_title {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .timer-box .number {
+        color: #fffa55;
+        padding: 0 4px;
+        text-shadow: 2px 2px 2px #9a2849, -2px 2px 2px #9a2849, 2px -2px 2px #9a2849, -2px -2px 2px #9a2849;
+    }
+
+    @media screen and (max-width: 768px) {
+        .countdown_box {
+            width: 100%;
+            font-size: 1.8rem;
+        }
+    }  */
+
+    /* 倒數計時器 */
+</style>
+
+<body>
+    <!-- draw popup start-->
+    <style>
+        #code_direction_draw {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .code_modal_content_draw {
+            margin: 30vh auto;
+            padding: 0px;
+            width: 300px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .code_modal_content_draw {
+                width: 90vw;
+            }
+        }
+    </style>
+    <div id="code_direction_draw">
+        <div class="code_modal_content_draw">
+            <img id="draw_gif" src="https://lunanaturalbra.com/hk/lurphknew/img0821/popup_draw.gif" alt=""
+                style="width:100%;">
+        </div>
+    </div>
+    <!-- draw popup end-->
+
+    <!-- 封面loading動畫 -->
+    <div class="loading-all">
+        <img id="logo-001" src="https://lunanaturalbra.com/hk/lurphknew/img/logo.png">
+        <p class="loading_txt">會員價格loading...</p>
+        <div>
+            <div class="loading-outer">
+                <div class="loading-inner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 漂浮按鈕 start-->
+    <style>
+        .sizelinkbtn {
+            width: 174px;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            z-index: 101;
+        }
+
+        .sizelinkbtn .gotop {
+            transform: translate(-8px, 0px);
+            width: 95%;
+            height: auto;
+        }
+
+        .sizelinkbtn .copyButton2 {
+            width: 85%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .sizelinkbtn {
+                width: 35%;
+                max-width: 170px;
+            }
+
+            .sizelinkbtn .gotop {
+                transform: translate(7px, 0px);
+                width: 92%;
+                height: auto;
+            }
+
+            .sizelinkbtn .copyButton2 {
+                transform: translate(30px, 0px);
+                width: 65%;
+                height: auto;
+            }
+        }
+    </style>
+    <div class="sizelinkbtn" style="text-align: center">
+        <img class="gotop" style="cursor: pointer;"
+            src="https://lunanaturalbra.com/hk/lurphknew/img241017/gotop_1017.png">
+    </div>
+    <!-- 漂浮按鈕end -->
+
+    <!-- 左側popup start-->
+    <!-- <style>
+        .left_popup {
+            position: fixed;
+            cursor: pointer;
+            z-index: 98;
+            bottom: 5%;
+            width: 250px;
+        }
+
+        .left_popup_box {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .left_popup_btn {
+            width: 27.5%;
+            right: -27%;
+            position: absolute;
+        }
+
+        .left_popup.left_hide {
+            left: -250px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .left_popup {
+                width: 158px;
+            }
+
+            .left_popup.left_hide {
+                left: -158px;
+            }
+        }
+
+        .left_popup img:hover {
+            opacity: 0.5;
+            transition: opacity 0.5s ease;
+        }
+    </style> -->
+    <!-- <div class="left_popup">
+        <img class="left_popup_btn" src="https://lunanaturalbra.com/hk/lurphknew/img0627/popup_btn_0712.png" alt="">
+        <div class="left_popup_box">
+            <img class="left_popup_event" src="https://lunanaturalbra.com/hk/lurphknew/img0627/popup_01_0712.png"
+                alt="">
+            <img class="left_popup_offer copybtn"
+                src="https://lunanaturalbra.com/hk/lurphknew/img0627/popup_02_0712.png" alt="">
+        </div>
+    </div> -->
+    <!-- 左側popup end-->
+
+    <div id="wrapper">
+        <div id="lu-wrapper" class="lu-wrapper">
+            <!-- <div class="countdown_box">
+                <div id="cdtimer">
+                    <div class="countdown">
+                        <p class="countdown_title">夏日感謝祭只剩</p>
+                        <div id="countdown" class="main-content">
+                            <div class="timer-box" style="display: none;"><span class="day number"></span><span
+                                    class="name">天</span>
+                            </div>
+                            <div class="timer-box"><span class="hours number"></span><span class="name">小時</span></div>
+                            <div class="timer-box"><span class="minutes number"></span><span class="name">分</span></div>
+                            <div class="timer-box"><span class="seconds number"></span><span class="name">秒</span></div>
+                            <div class="timer-box" style="display: none;"><span class="miriseconds number"></span><span
+                                    class="name">　　</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cdtimer_day">
+                    <div class="countdown">
+                        <p class="countdown_title">夏日感謝祭只剩</p>
+                        <div id="countdown" class="main-content">
+                            <div class="timer-box"><span class="day number"></span><span class="name">天</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="luna-mv__content">
+                <div class="luna-mv__contentUpper">
+                    <h1 class="luna-mv__title">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_sp_title.png" alt="">
+                    </h1>
+
+                    <div class="luna-mv__hashtag">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/mv_hashtag_sp.svg" alt="">
+                    </div>
+                </div>
+                <div class="luna-mv__text">
+                    LUNA晚安內衣開發團隊透過研究女性的胸部構造，<br>
+                    發現了主導美胸形成的基本線-ω歐美伽曲線。<br>
+                    透過穿著保養擁有完美的ω歐美伽曲線，<br>
+                    會讓胸型輪廓更加好看、胸部看起來更加立體！<br>
+                    請期待LUNA晚安內衣為你帶來「美麗新變化」吧！
+                </div>
+                <div class="luna-mv__mov lujs-scrollfade">
+                    <!-- 影片輪播 -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <video class="video01 d-block w-100"
+                                    src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov" loop autoplay muted
+                                    playsinline style="width:100%;">
+                                    <source src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov"
+                                        type="video/mp4" />
+                                    <source src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov/video.ogg"
+                                        type="video/ogg" />
+                                </video>
+                            </div>
+                            <div class="carousel-item">
+                                <video class="video01 d-block w-100"
+                                    src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov" loop autoplay muted
+                                    playsinline style="width:100%;">
+                                    <source src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov"
+                                        type="video/mp4" />
+                                    <source src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov/video.ogg"
+                                        type="video/ogg" />
+                                </video>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <p class="lu-mv__movtext" style="margin-top:4px">【日本專利獲得】ω歐美伽曲線養成特別設計</p>
+                </div>
+            </div>
+            <div class="lu-section lu-section--bgL">
+                <div class="lu-section--bgL__bg">
+                    <svg id="figure1" xmlns="http://www.w3.org/2000/svg" width="842.1927" height="2159.999"
+                        viewBox="0 0 842.1927 2159.999">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #f9dae0;
+                                }
+                            </style>
+                        </defs>
+                        <title>アセット 13</title>
+                        <g id="レイヤー_2" data-name="レイヤー 2">
+                            <g id="背景">
+                                <path id="pai" class="cls-1"
+                                    d="M0,1263.2877c.0006-231.204,190.8707-349.322,361.7466-464.58,199.2629-134.4052,373.2643-319.5824,444.335-553.97A844.5478,844.5478,0,0,0,842.1927,0V2159.999H285.9386l.026-.035A390.1665,390.1665,0,0,0,356.22,1935.99C356.2235,1643.1849,0,1562.8709,0,1263.2877Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_coupon_banner.png" alt="" class="imgcss">
+                
+                <!-- 拉霸功能 -->
+                <style>
+                    .slotMachine_body {
+                        position: absolute;
+                        z-index: -1;
+                        width: 85%;
+                        transform: translate(-13%, 0%);
+                    }
+
+                    .slotMachine_ly {
+                        margin: 0 auto;
+                        display: block;
+                        display: flex;
+                        position: relative;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .slotmachine_ly {
+                        width: 500px;
+                    }
+
+                    .slotmachine_box_ly {
+                        position: absolute;
+                        z-index: 100;
+                        transform: translate(5%, 0);
+                    }
+
+                    .slotmachine_box {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    #startButton {
+                        border: none;
+                        background-color: #00000000;
+                        width: 30%;
+                        height: 250px;
+                        background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把1.svg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                    .startButtonAnimation {
+                        animation: startButton 0.5s backwards cubic-bezier(0.04, 0.04, 0.56, 1.15);
+                        ;
+                    }
+
+                    @media (max-width:768px) {
+                        .slotMachine_bg {
+                            width: 100%;
+                        }
+
+                        .slotMachine_body {
+                            width: 90%;
+                            transform: translate(-12%, 0%);
+                        }
+
+                        .slotmachine_ly {
+                            width: 85vw;
+                        }
+
+                        #startButton {
+                            width: 30%;
+                            height: 300px;
+                        }
+
+                        .slotmachine_box_ly {
+                            width: 70%;
+                        }
+                    }
+
+                    @media (max-width:576px) {
+                        .slotmachine_ly {
+                            width: 60%;
+                        }
+
+                        .slotMachine_body {
+                            width: 65%;
+                            transform: translate(-15%, 0%);
+                        }
+
+                        .slotmachine_box_ly {
+                            width: 90%;
+                        }
+
+                        #startButton {
+                            width: 20%;
+                            height: 250px;
+                        }
+                    }
+                </style>
+                <div class="slotMachine_ly">
+                    <img class="slotMachine_bg" src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-bg.png" alt="">
+
+                    <div class="slotmachine_box_ly">
+                        <div class="slotmachine_box">
+                            <div class="slotmachine_ly">
+                                <canvas id="slotMachine"></canvas>
+                            </div>
+                            <button id="startButton"></button>
+                            <img class="slotMachine_body" src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-box-bg.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 拉霸功能 -->
+
+                <div class="lu-innr">
+                    <h3 class="lu-section__title01 lujs-scrollfade"><img
+                            src="https://lunanaturalbra.com/hk/lurphknew/img/sec_title_01.png" alt="" class="lu-resize">
+                    </h3>
+                    <div class="lu-movie">
+                        <div class="lu-movie__main lujs-scrollfade">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/05_data.png" alt="" class="imgcss">
+                        </div>
+                    </div>
+
+                    <div class="lu-instaArea">
+                        <div class="lu-instaArea__btn lujs-scrollfade">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/btn_ladygo.png" alt=""
+                                class="lu-resize">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lu-section lu-section--bgR">
+                <div class="lu-section--bgR__bg">
+                    <svg id="figure2" xmlns="http://www.w3.org/2000/svg" width="842.1927" height="2059.999"
+                        viewBox="0 0 742.1927 2159.999">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #f9dae0;
+                                }
+                            </style>
+                        </defs>
+                        <title>アセット 13</title>
+                        <g id="レイヤー_2" data-name="レイヤー 2">
+                            <g id="背景">
+                                <path id="pai2" class="cls-1"
+                                    d="M0,1263.2877c.0006-231.204,190.8707-349.322,361.7466-464.58,199.2629-134.4052,373.2643-319.5824,444.335-553.97A844.5478,844.5478,0,0,0,842.1927,0V2159.999H285.9386l.026-.035A390.1665,390.1665,0,0,0,356.22,1935.99C356.2235,1643.1849,0,1562.8709,0,1263.2877Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="lu-innr">
+                    <div class="lu-nbr">
+                        <div class="lu-nbrClm lu-clm2">
+                            <div class="lu-clm2__li lujs-scrollfade">
+                                <div class="lu-nbrBlock">
+                                    <div class="lu-nbrBlock__thumb"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_01.jpg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                    <div class="lu-nbrBlock__text"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/text_before.svg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lu-clm2__li lujs-scrollfade">
+                                <picture>
+                                    <source media="(max-width: 767px)"
+                                        srcset="https://lunanaturalbra.com/hk/lurphknew/img/nbr_title_sp.svg">
+                                    <source media="(min-width: 768px)"
+                                        srcset="https://lunanaturalbra.com/hk/lurphknew/img/nbr_title.svg">
+                                    <img src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_title.svg" alt=""
+                                        class="lu-resize">
+                                </picture>
+
+                            </div>
+                            <div class="lu-clm2__li lujs-scrollfade" style="z-index: 2;">
+                                <div class="lu-nbrBlock">
+                                    <div class="lu-nbrBlock__thumb"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_02.jpg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                    <div class="lu-nbrBlock__text"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/text_1month.svg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lu-clm2__li lujs-scrollfade">
+                                <div class="lu-nbrBlock">
+                                    <div class="lu-nbrBlock__thumb"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_03.jpg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                    <div class="lu-nbrBlock__text"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/text_2month.svg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lu-clm2__li lujs-scrollfade">
+                                <div class="lu-nbrBlock">
+                                    <div class="lu-nbrBlock__thumb"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_04.jpg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                    <div class="lu-nbrBlock__text"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/text_3month.svg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" lu-clm2 hidebox">
+                            <div class="lu-clm2__li lujs-scrollfade" style="display: none;margin-top:32px;" id="pose">
+                                <img src="https://lunanaturalbra.com/hk/lurphknew/img/pose.png" alt="" class="imgcss">
+                            </div>
+                        </div>
+                        <div class="lu-nbrClm lu-clm3">
+                            <p>※穿著晚安內衣搭配運動鍛鍊後的效果。</p>
+                        </div>
+                    </div>
+
+                    <div class="hidebox">
+                        <div id="summer" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
+                            style="display: none;margin-top:32px;">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/color.png" alt="" class="imgcss">
+                        </div>
+                        <div id="food" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
+                            style="display: none;margin-top:32px;">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/food.png" alt=""
+                                class="imgcss">
+                        </div>
+                        <div id="replace" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
+                            style="display: none;margin-top:32px;">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/replace.png" alt=""
+                                class="imgcss">
+                        </div>
+                        <div id="massage" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
+                            style="display: none;margin-top:32px;">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/massage.png" alt=""
+                                class="imgcss">
+                        </div>
+                        <div id="ootd" class=" lu-ldgBlock--01 lujs-scrollfade" style="display: none;margin-top:32px;">
+                            <div class="ootd_top">
+                                <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_top.png" alt=""
+                                    class="imgcss">
+                                <div class="ootd_button">
+                                    <div class="d-flex">
+                                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_01.png"
+                                            alt="" data-day="01">
+                                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_02.png"
+                                            alt="" data-day="02">
+                                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_03.png"
+                                            alt="" data-day="03">
+                                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_04.png"
+                                            alt="" data-day="04">
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                        <img class="mr-0"
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_05.png"
+                                            alt="" data-day="05">
+                                        <img class="mx-2"
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_06.png"
+                                            alt="" data-day="06">
+                                        <img class="ml-0"
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_07.png"
+                                            alt="" data-day="07">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ootd_show">
+                                <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_01.png" alt=""
+                                    class="imgcss">
+                            </div>
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_bottom.png" alt=""
+                                class="imgcss">
+                        </div>
+                    </div>
+                    <a id="sizelink"></a>
+                    <div id="shopline-section-1691658726756013023f" class="shopline-section">
+                        <div class="section-width">
+                            <div class="product-list-custom-padding__1691658726756013023f">
+                                <div class="product-list__container">
+                                    <div class="product-list__product" product-id="654b2b7a32130f001705ee46">
+
+                                        <div class="product-item">
+                                            <product-item product-id="654b2b7a32130f001705ee46"
+                                                ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
+                                                class="ng-scope quick-cart-mobile" modal-window-class="">
+                                                <div class="lu-ldg">
+                                                    <div
+                                                        class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade offerbefore">
+                                                        <img class="btn-add-to-cart js-btn-add-to-cart imgcss"
+                                                            src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_07_offer.png"
+                                                            alt="" id="offer" class="imgcss">
+                                                    </div>
+                                                </div>
+                                            </product-item>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lu-section--bgL__bg pconly">
+                    <svg id="figure3" xmlns="http://www.w3.org/2000/svg" width="842.1927" height="1459.999"
+                        viewBox="0 0 442.1927 2159.999">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #f9dae0;
+                                }
+                            </style>
+                        </defs>
+                        <title>アセット 13</title>
+                        <g id="レイヤー_3" data-name="レイヤー 3">
+                            <g id="背景">
+                                <path id="pai" class="cls-1"
+                                    d="M0,1263.2877c.0006-231.204,190.8707-349.322,361.7466-464.58,199.2629-134.4052,373.2643-319.5824,444.335-553.97A844.5478,844.5478,0,0,0,842.1927,0V2159.999H285.9386l.026-.035A390.1665,390.1665,0,0,0,356.22,1935.99C356.2235,1643.1849,0,1562.8709,0,1263.2877Z" />
+                            </g>
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="lu-innr">
+                    <div class="lu-ldgBlock lu-ldgBlock--04 lujs-scrollfade">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/08_color.png" alt="" class="imgcss">
+                    </div>
+                    <div class="lu-ldgBlock lu-ldgBlock--04 lujs-scrollfade">
+                        <a id="size"></a>
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/09_size.png" alt="" class="imgcss">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphktest/js/common.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphktest/js/bootstrap.min.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphktest/js/all.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphktest/js/countdown.js"></script>
+
+    <!-- 封面loading動畫 -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#logo-001').fadeIn();
+            setTimeout(function () {
+                $('.loading-all').fadeOut()
+            }, 650);
+        });
+    </script>
+
+    <!-- 抓取網址參數存到cookie -->
+    <!-- <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script> -->
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script>
+        const url_cookie = location.search;
+        $.cookie('url_cookie', url_cookie, { expires: 1, path: '/' });
+    </script>
+
+    <script>
+        // 點選左上角logo不跳轉
+        $('a[href="/"]').click(function (e) {
+            e.preventDefault();
+            return;
+        });
+
+        //漂浮按鈕
+        $('.sizelinkbtn').click(function (e) {
+            e.preventDefault();
+            let innerheight = window.innerHeight;
+            $('html , body').animate({
+                // scrollTop: $('#sizelink').offset().top - (0.5 * innerheight),
+                scrollTop: $('#offer').offset().top,
+            }, 900);
+        });
+    </script>
+
+
+    <!-- 拉霸功能 20241024 -->
+    <script>
+        //獎項機率設定
+        // let prize = ['A獎', 'B獎', 'C獎'] //300元、200元、150元
+        let probability = [13.50, 25.24, 61.26] //獎項機率，假設A獎13.50%、 B獎25.24%、C獎61.26%，設定機率時要注意，可以設到小數點或是增加獎項欄位都沒關係，但所有數字加總要是100％
+        let num = Math.random() * 99;  // 0~99 共100個數字，取一個 0~99之間的亂數。
+
+        //點擊拉霸手把
+        $("#startButton").on("click", function () {
+            //手把動畫
+            startButtonAn();
+
+            // A獎13.50% 亂數落在 0 ~ 12.5 之間 (這裡13.5要減1，因為是從0開始取亂數)
+            if ((0 <= num) && (num <= probability[0] - 1)) {
+                renderCanvas([2, 2, 2]); //顯示拉霸圖片
+                copyCode("fkookko", 300);
+
+            // B獎25.24% 亂數落在 12.5 ~ 37.74 之間
+            } else if ((probability[0] - 1 < num) && (num <= (probability[0] - 1 + probability[1]))) {
+                renderCanvas([0, 0, 0]); //顯示拉霸圖片
+                copyCode("fkookko_200", 200);
+
+            // C獎61.26% 亂數落在 37.74 ~ 99 之間
+            } else if (((probability[0] - 1 + probability[1]) < num) && (num <= 99)) {
+                renderCanvas([1, 1, 1]); //顯示拉霸圖片
+                copyCode("fkookko_150", 150);
+            };
+        });
+
+        //複製折扣碼
+        let first_click = true;
+        function copyCode(couponcode, money) {
+            navigator.clipboard.writeText(couponcode);
+            // 判斷是否第一次點擊拉霸手把，第一次要等拉霸轉完再跳出提醒視窗，約1秒，抽過之後再按把手就直接跳出提醒視窗。
+            if (first_click) {
+                setTimeout(() => {
+                    confirm(`恭喜您獲得$${money}折扣!\n您已成功複製折扣碼：${couponcode}\n結帳時請於購物車輸入，\n即享活動優惠折扣＋整單再折TWD$${money}`);
+                    first_click = false;
+                }, 1000)
+            } else {
+                confirm(`恭喜您獲得$${money}折扣!\n您已成功複製折扣碼：${couponcode}\n結帳時請於購物車輸入，\n即享活動優惠折扣＋整單再折TWD$${money}`);
+            }
+        }
+
+        //玟瑀coding部分//
+        //canvas繪製參數
+        let canvas = document.querySelector("#slotMachine");
+        let ctx = canvas.getContext('2d');
+        //繪製的行數
+        let rows = 1;
+        //繪製的列數
+        let cols = 3;
+        //每個方塊的寬度
+        let rectWidth = 100;
+        //每個方塊的高度
+        let rectHeight = 100;
+        //方塊之間的間隔
+        let spacing = 0;
+
+        //避免不同螢幕導致的圖片模糊
+        const ratio = window.devicePixelRatio || 1;
+        //繪製整個canvas背景尺寸
+        canvas.width = cols * (rectWidth + spacing) * ratio;
+        canvas.height = rows * (rectHeight + spacing) * ratio;
+        canvas.style.width = `100%`;
+        canvas.style.height = `100%`;
+
+        //canvas需匯入的圖片(本機測試使用)
+        let imagePaths = [
+            'https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-02.svg',
+            'https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-03.svg',
+            'https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-04.svg',
+            'https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-05.svg',
+            'https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-06.svg',
+            'https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-07.svg',
+        ];
+
+        //canvas初始圖片位置
+        let startColumnImageIndices = [0, 1, 2];
+        //canvas旋轉計算時所儲存的陣列
+        let currentImage = [0, 0, 0];
+
+        //計算圖片是否完全載入
+        let imagesLoaded = 0;
+        //使用map抓取imagePaths陣列之中的值
+        let images = imagePaths.map((path, index) => {
+            //創建一個圖片物件
+            let img = new Image();
+            //進行圖片載入
+            img.onload = () => {
+                //每載入一張圖計數器增加1
+                imagesLoaded++;
+                //當圖片載入的數量與imagePaths陣列相等時進行內部邏輯運行
+                if (imagesLoaded === imagePaths.length) {
+                    //判斷按鈕是否被點選過,若被點選過顯示最後結果,若不是則顯示初始值
+                    if (first_click == false) {
+                        console.log(typeof (Array(award)))
+                        awardArr = Array(award.split(','))[0]
+                        renderCanvas(awardArr);
+                    } else {
+                        renderCanvas(startColumnImageIndices);
+                        // console.log(456)
+                    }
+                }
+            };
+            //設置圖像路徑並開始加載
+            img.src = path;
+            //傳回已建立的影像對象，並儲存在 images 數組中。
+            return img;
+        });
+
+
+        //點擊手把動畫
+        function startButtonAn() {
+            let startButton = document.getElementById('startButton');
+            let startButtonAnimation = document.createElement('style');
+            //canvas需匯入的圖片(線上正式使用)url(../lurptest/img/slotMachine/SLOTBG-手把1.svg);
+            //canvas需匯入的圖片(本機測試使用)
+            startButtonAnimation.innerHTML = `
+            @keyframes startButton {
+                0% {
+                background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把1.svg);
+                }
+                20% {
+                background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把2.svg);
+                }
+                40% {
+                background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把3.svg);
+                }
+                60% {
+                background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把4.svg);
+                }
+                80% {
+                background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把5.svg);
+                }
+                100% {
+                background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把1.svg);
+                }
+            `;
+            startButton.classList.add('startButtonAnimation');
+            document.head.appendChild(startButtonAnimation);
+        }
+
+        //canvas計算結果顯示與起始值顯示
+        function renderCanvas(startColumnImageIndices) {
+            //依序使用canvas繪至圖片
+            for (let j = 0; j < cols; j++) {
+                let i = 0;
+                while (i < currentImage.length) {
+                    let x = j * (rectWidth + spacing) * ratio;
+                    let y = i * (rectHeight + spacing) * ratio;
+                    ctx.clearRect(x, y, rectWidth * ratio, rectHeight * ratio);
+                    ctx.fillStyle = '#ffffff';
+                    ctx.fillRect(x, y, rectWidth * ratio, rectHeight * ratio);
+
+                    currentImage[i] = startColumnImageIndices[j];
+                    ctx.drawImage(images[currentImage[i]], x, y, rectWidth * ratio, rectHeight * ratio);
+                    i++;
+                }
+            }
+        }
+    </script>

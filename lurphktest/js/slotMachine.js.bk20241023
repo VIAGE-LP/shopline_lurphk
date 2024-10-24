@@ -1,0 +1,399 @@
+//機率參數
+let _prize = ['一獎', '二獎']
+let _prop = [500, 1000] //累计分布函数
+let a = 0, b = 0;
+let count = 0;
+
+//機率基本參數
+const currency = "TWD$";
+let clicked = false;
+let cookie = false;
+let name = "";
+let code = "";
+let award = [];
+let nowTime = new Date().getTime();
+
+
+//獲獎內容參數
+const coupon = [
+  {
+    name: "一獎",
+    amount: "300",
+    code: "fkookko",
+    //停止時在第幾張圖的位置
+    stopColumnImageIndices: [5, 5, 5]
+  },
+  {
+    name: "二獎",
+    amount: "200",
+    code: "djklskj",
+    //停止時在第幾張圖的位置
+    stopColumnImageIndices: [3, 3, 3]
+  },
+]
+
+//利用二分查找演算法增加效能找到該有的值
+function getPrize() {
+  let random = Math.ceil(Math.random() * 1000) //生成1-1000的正整数
+  //二分查找
+  let low = 0
+  let high = _prop.length - 1
+  count++;
+  while (low < high) {
+    let mid = Math.floor((low + high) / 2)
+    if (random > _prop[mid] && random <= _prop[mid + 1]) {
+      return _prize[mid + 1]
+    } else if (random > _prop[mid + 1]) {
+      low = mid
+    } else {
+      high = mid
+    }
+  }
+  return _prize[0]
+}
+
+//設定基本的cookie
+function setCookie(cName, cValue, expTime) {
+  const expires = "expires=" + new Date(expTime).toUTCString();
+  document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+}
+function setLocalStorage(key, value) {
+  localStorage.setItem(key, value);
+}
+//複製折扣碼函式
+function copyCode(code) {
+  navigator.clipboard.writeText(code);
+  alert(`您已成功複製折扣碼 :${code}\n結帳時請於購物車輸入，\n即享活動優惠折扣+整單再折${currency}${amount}。`);
+}
+//在打開網頁時，需先確認cookie與localstage是否有既存的值，若有既存的值則直接顯示抽獎結果，若沒有既存值則顯示預設畫面可進行抽獎
+//讀取cookie並將cookie轉換為物件
+function getAllCookies() {
+  let cookies = document.cookie.split('; ');
+  let cookieData = {};
+  // console.log(cookies)
+  for (let i = 0; i < cookies.length; i++) {
+    let cookie = cookies[i];
+    let cookieParts = cookie.split('=');
+    // console.log(cookie)
+    // console.log(cookieParts)
+    let key = decodeURIComponent(cookieParts[0]);
+    let value = decodeURIComponent(cookieParts[1]);
+    cookieData[key] = value;
+  }
+  return cookieData;
+}
+
+
+//找到targetKey陣列中key值得value值
+let allCookies = getAllCookies();
+// console.log(getAllCookies());
+function findValeByKey(obj, targetKey) {
+  const foundEntry = Object.entries(obj).find(([key, value]) => key === targetKey);
+  return foundEntry ? foundEntry[1] : null;
+}
+//將cookie或是localStorage的值存入物件中
+const targetData = {};
+//cookie需抓取的key值
+const targetKey = ["name", "clicked", "deg", "code", "award", "amount"];
+for (i = 0; i < targetKey.length; i++) {
+  const foundValue = findValeByKey(allCookies, targetKey[i]);
+  if (foundValue !== null) {
+    // console.log(`The value for key ${targetKey[i]} is: ${foundValue}`);
+    //讀取後存入新陣列targetData，將值存入參數中藉以控制畫面結果
+    targetData[targetKey[i]] = foundValue;
+    name = targetData.name;
+    clicked = Boolean(targetData.clicked);
+    expiredTime = Number(targetData.expiredTime);
+    award = targetData.award;
+    amount = targetData.amount;
+    code = targetData.code;
+    cookie = true;
+    // console.log(award);
+  }
+}
+
+//若cookie沒有值，但localStorage有值，且尚未超過刷新抽獎的日期，則將localStorage的值引入並控制介面，並將該值存入cookie中
+if (cookie == false && localStorage != null && (Number(localStorage.getItem("expiredTime")) - nowTime) > 0) {
+  name = localStorage.getItem("name");
+  clicked = Boolean(targetData.clicked);
+  expiredTime = Number(localStorage.getItem("expiredTime"));
+  award = localStorage.getItem("award");
+  amount = Number(localStorage.getItem("amount"));
+  code = localStorage.getItem("code");
+  cookie = true;
+
+  setCookie('clicked', `${clicked}`, expiredTime);
+  setCookie('expiredTime', `${expiredTime}`, expiredTime);
+  setCookie('name', `${name}`, expiredTime);
+  setCookie('amount', `${amount}`, expiredTime);
+  setCookie('award', `${award}`, expiredTime);
+  setCookie('code', `${code}`, expiredTime);
+  //若cookie沒有值，但localStorage有值，且超過刷新抽獎的日期，則將localStorage的值移除
+} else if (cookie == false && localStorage != null && (Number(localStorage.getItem("expiredTime")) - nowTime) < 0) {
+  localStorage.removeItem("clicked");
+  localStorage.removeItem("expiredTime");
+  localStorage.removeItem("name");
+  localStorage.removeItem("amount");
+  localStorage.removeItem("amount");
+  localStorage.removeItem("code");
+}
+
+window.onload = function () {
+
+  //canvas繪製參數
+  let canvas = document.querySelector("#slotMachine");
+  let ctx = canvas.getContext('2d');
+  //繪製的行數
+  let rows = 1;
+  //繪製的列數
+  let cols = 3;
+  //每個方塊的寬度
+  let rectWidth = 100;
+  //每個方塊的高度
+  let rectHeight = 100;
+  //方塊之間的間隔
+  let spacing = 0;
+
+  //先換圖幾次再顯示結果
+  let rotationCount = 0; // 設定旋轉次數
+  let maxRotationCount = 30; // 設定最大旋轉次數
+  let rotationCountStop = maxRotationCount * 200;//旋轉停止的時間(目前為停止時的最少時間，若少於該時間有可能會無法轉動到正確的位置)
+  let speed = 50;//旋轉速度（第一次快速轉動時）
+  let stopSpeed = 500;//旋轉速度（第二次即將停止轉動）
+
+  //避免不同螢幕導致的圖片模糊
+  const ratio = window.devicePixelRatio || 1;
+  //繪製整個canvas背景尺寸
+  canvas.width = cols * (rectWidth + spacing) * ratio;
+  canvas.height = rows * (rectHeight + spacing) * ratio;
+  canvas.style.width = `100%`;
+  canvas.style.height = `100%`;
+
+  //canvas需匯入的圖片(線上正式使用)
+  // let imagePaths = [
+  //   '../lurptest/img/slotMachine/SLOTBG-7-02.svg',
+  //   '../lurptest/img/slotMachine/SLOTBG-7-03.svg',
+  //   '../lurptest/img/slotMachine/SLOTBG-7-04.svg',
+  //   '../lurptest/img/slotMachine/SLOTBG-7-05.svg',
+  //   '../lurptest/img/slotMachine/SLOTBG-7-06.svg',
+  //   '../lurptest/img/slotMachine/SLOTBG-7-07.svg',
+  // ];
+
+  //canvas需匯入的圖片(本機測試使用)
+  let imagePaths = [
+    './img/slotMachine/SLOTBG-7-02.svg',
+    './img/slotMachine/SLOTBG-7-03.svg',
+    './img/slotMachine/SLOTBG-7-05.svg',
+    './img/slotMachine/SLOTBG-7-06.svg',
+    './img/slotMachine/SLOTBG-7-07.svg',
+  ];
+
+  //canvas初始圖片位置
+  let startColumnImageIndices = [2, 1, 0];
+  //canvas旋轉計算時所儲存的陣列陣列
+  let currentImage = [0, 0, 0];
+
+  //計算圖片是否完全載入
+  let imagesLoaded = 0;
+  //使用map抓取imagePaths陣列之中的值
+  let images = imagePaths.map((path, index) => {
+    //創建一個圖片物件
+    let img = new Image();
+    //進行圖片載入
+    img.onload = () => {
+      //每載入一張圖計數器增加1
+      imagesLoaded++;
+      //當圖片載入的數量與imagePaths陣列相等時進行內部邏輯運行
+      if (imagesLoaded === imagePaths.length) {
+        //判斷按鈕是否被點選過,若被點選過顯示最後結果,若不是則顯示初始值
+        if (cookie == true && clicked == true && award !== undefined && award !== null) {
+          console.log(typeof (Array(award)))
+          awardArr = Array(award.split(','))[0]
+          renderCanvas(awardArr);
+        } else {
+          renderCanvas(startColumnImageIndices);
+          // console.log(456)
+        }
+        let interval1;
+        startButton.addEventListener('click', async function () {
+          if (clicked == false) {
+
+            //查詢物件coupon中是否有searchValue的值,若有的話才會將相關參數帶入對應的字串中
+            searchValue = getPrize(_prize[0])
+            // console.log(searchValue)
+            function search(searchValue) {
+              let searched = coupon.map(obj => {
+                if (Object.keys(obj).some(property => obj[property].toString().indexOf(searchValue) != -1))
+                  return obj;
+              });
+              return searched.filter(obj => obj != undefined);
+            }
+            // console.log(search(searchValue)[0].stopColumnImageIndices)
+            clicked = true;
+            cookie = true;
+            expiredTime = new Date().getTime();
+            // + (24 * 60 * 60 * 1);
+            name = search(searchValue)[0].name;
+            code = search(searchValue)[0].code;
+            amount = search(searchValue)[0].amount;
+            award = search(searchValue)[0].stopColumnImageIndices;
+
+
+
+            //將參數存入cookie
+            setCookie('clicked', `${clicked}`, expiredTime);
+            setCookie('expiredTime', `${expiredTime}`, expiredTime);
+            setCookie('name', `${name}`, expiredTime);
+            setCookie('amount', `${amount}`, expiredTime);
+            setCookie('award', `${award}`, expiredTime);
+            setCookie('code', `${code}`, expiredTime);
+            console.log(document.cookie)
+
+            setLocalStorage('clicked', `${clicked}`);
+            setLocalStorage('expiredTime', `${expiredTime}`);
+            setLocalStorage('name', `${name}`);
+            setLocalStorage('amount', `${amount}`);
+            setLocalStorage('award', `${award}`);
+            setLocalStorage('code', `${code}`);
+
+
+            //手把動畫
+            startButtonAn()
+
+            function wait(time) {
+              return new Promise(resolve => setTimeout(resolve, time));
+            }
+            //保留原始寫法方便查看主要邏輯
+            // interval1 = setInterval(function () {
+            //   animateCanvas_run();
+            //   rotationCount++;
+            // }, speed);
+
+            // interval2 = setInterval(function () {
+            //   if (rotationCount === maxRotationCount && clicked == true) {
+            //     clearInterval(interval1); // 停止 setInterval
+            //     // 在完成旋轉次數後啟動 animateCanvas_stop()
+            //     animateCanvas_stop(award);
+            //   }
+            // }, stopSpeed);
+
+            // wait(rotationCountStop).then(function (result) {
+            //   clearInterval(interval2); // 停止 setInterval
+            // }).then(function (result) {
+            //   copyCode(code);
+            //   startButton.removeAttribute('disabled');
+            // })
+
+            // 使用 async 函数控制动画
+            async function runAnimation() {
+              const interval1 = setInterval(() => {
+                animateCanvas_run();
+                rotationCount++;
+              }, speed);
+
+              const interval2 = setInterval(() => {
+                if (rotationCount === maxRotationCount && clicked) {
+                  clearInterval(interval1);
+                  animateCanvas_stop(award);
+                }
+              }, stopSpeed);
+
+              await wait(rotationCountStop);
+              clearInterval(interval2);
+            }
+
+            // 启动动画并等待其完成
+            await runAnimation();
+            copyCode(code);
+            startButton.removeAttribute('disabled');
+
+          } else {
+            // clearInterval(interval1); // 停止 setInterval
+            // animateCanvas_stop(award); // 執行一次動畫停止，以顯示結果
+            console.log(typeof (Array(award)))
+            awardArr = Array(award.split(','))[0]
+            renderCanvas(awardArr);
+            copyCode(code);
+          }
+        });
+      }
+    };
+    //設置圖像路徑並開始加載
+    img.src = path;
+    //傳回已建立的影像對象，並儲存在 images 數組中。
+    return img;
+  });
+
+  //點擊手把動畫
+  function startButtonAn() {
+    let startButton = document.getElementById('startButton');
+    let startButtonAnimation = document.createElement('style');
+    //canvas需匯入的圖片(線上正式使用)url(../lurptest/img/slotMachine/SLOTBG-手把1.svg);
+    //canvas需匯入的圖片(本機測試使用)
+    startButtonAnimation.innerHTML = `
+    @keyframes startButton {
+      0% {
+        background-image: url(../img/slotMachine/SLOTBG-手把1.svg);
+      }
+      20% {
+        background-image: url(../img/slotMachine/SLOTBG-手把2.svg);
+      }
+      40% {
+        background-image: url(../img/slotMachine/SLOTBG-手把3.svg);
+      }
+      60% {
+        background-image: url(../img/slotMachine/SLOTBG-手把4.svg);
+      }
+      80% {
+        background-image: url(../img/slotMachine/SLOTBG-手把5.svg);
+      }
+      100% {
+        background-image: url(../img/slotMachine/SLOTBG-手把1.svg);
+      }
+    `;
+    startButton.classList.add('startButtonAnimation');
+    document.head.appendChild(startButtonAnimation);
+  }
+
+  //canvas計算結果顯示與起始值顯示
+  function renderCanvas(startColumnImageIndices) {
+    //依序使用canvas繪至圖片
+    for (let j = 0; j < cols; j++) {
+      let i = 0;
+      while (i < currentImage.length) {
+        let x = j * (rectWidth + spacing) * ratio;
+        let y = i * (rectHeight + spacing) * ratio;
+        ctx.clearRect(x, y, rectWidth * ratio, rectHeight * ratio);
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(x, y, rectWidth * ratio, rectHeight * ratio);
+
+        currentImage[i] = startColumnImageIndices[j];
+        console.log(startColumnImageIndices)
+        ctx.drawImage(images[currentImage[i]], x, y, rectWidth * ratio, rectHeight * ratio);
+
+        i++;
+      }
+    }
+  }
+
+  //轉動時的動畫
+  function animateCanvas_run() {
+    for (let j = 0; j < cols; j++) {
+      startColumnImageIndices[j] = (startColumnImageIndices[j] + 1) % images.length;
+    }
+    renderCanvas(startColumnImageIndices)
+  }
+
+  //即將停止時的動畫
+  function animateCanvas_stop(stopColumnImageIndices) {
+    for (let j = 0; j < cols; j++) {
+      if (startColumnImageIndices[j] != stopColumnImageIndices[j]) {
+        startColumnImageIndices[j] = (startColumnImageIndices[j] + 1) % images.length;
+      } else {
+        startColumnImageIndices[j] == stopColumnImageIndices[j];
+      }
+      // console.log(startColumnImageIndices[j]==stopColumnImageIndices[j])
+    }
+    renderCanvas(startColumnImageIndices)
+  }
+}

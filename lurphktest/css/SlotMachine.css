@@ -1,0 +1,114 @@
+/* .slotMachine_bg {
+  width: 750px;
+  margin: 0 auto;
+  display: block;
+} */
+
+.slotMachine_body {
+  position: absolute;
+  z-index: -1;
+  width: 85%;
+  transform: translate(-13%, 0%);
+}
+
+.slotMachine_ly {
+  margin: 0 auto;
+  display: block;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.slotmachine_ly{
+  width: 500px;
+}
+
+.slotmachine_box_ly {
+  position: absolute;
+  z-index: 100;
+  transform: translate(5%, 0);
+}
+
+.slotmachine_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#startButton {
+  border: none;
+  background-color: #00000000;
+  width: 30%;
+  height: 250px;
+  background-image: url(../img/slotMachine/SLOTBG-手把1.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.startButtonAnimation {
+  animation: startButton 0.5s backwards cubic-bezier(0.04, 0.04, 0.56, 1.15);
+  ;
+}
+
+@media (max-width:768px) {
+  .slotMachine_bg {
+    width: 100%;
+  }
+  .slotMachine_body {
+    width: 90%;
+    transform: translate(-12%, 0%);
+  }
+  .slotmachine_ly{
+    width: 85vw;
+  }
+  #startButton {
+    width: 30%;
+    height: 300px;
+  }
+  .slotmachine_box_ly {
+    width: 70%;
+  }
+}
+
+@media (max-width:576px) {
+  .slotmachine_ly {
+    width: 60%;
+}
+.slotMachine_body {
+  width: 65%;
+  transform: translate(-15%, 0%);
+}
+.slotmachine_box_ly {
+  width: 90%;
+}
+  #startButton {
+    width: 20%;
+    height: 250px;
+  }
+}
+
+/* @media (max-width:375px) {
+  .slotMachine_bg {
+    width: 150%;
+  }
+} */
+
+/* @keyframes startButton {
+  0% {
+    background-image: url(../img/SLOTBG-手把1.svg);
+    transform: translate(-24px, -27%);
+  }
+  25% {
+    background-image: url(../img/SLOTBG-手把2.svg);
+    transform: translate(-18px, 0%);
+  }
+  75% {
+    background-image: url(../img/SLOTBG-手把3.svg);
+    transform: translate(-24px, 38%);
+  }
+  100% {
+    background-image: url(../img/SLOTBG-手把1.svg);
+    transform: translate(-24px, -27%);
+  }
+} */
