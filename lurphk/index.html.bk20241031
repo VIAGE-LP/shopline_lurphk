@@ -312,10 +312,8 @@
         }
     </style>
     <div class="sizelinkbtn" style="text-align: center">
-        <img class="gotop event_1031" style="cursor: pointer;"
+        <img class="gotop" style="cursor: pointer;"
             src="https://lunanaturalbra.com/hk/lurphknew/img241028/hk_gotop.png">
-        <img class="gotop event_1101" style="cursor: pointer;display: none;"
-            src="https://lunanaturalbra.com/hk/lurphknew/img241101/hk_gotop.png">
     </div>
     <!-- 漂浮按鈕end -->
 
@@ -401,8 +399,7 @@
             <div class="luna-mv__content">
                 <div class="luna-mv__contentUpper">
                     <h1 class="luna-mv__title">
-                        <img class="event_1031" src="https://lunanaturalbra.com/hk/lurphknew/img241028/hk_sp_title.png" alt="">
-                        <img class="event_1101" src="https://lunanaturalbra.com/hk/lurphknew/img241101/hk_sp_title.png" alt="" style="display: none;">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img241028/hk_sp_title.png" alt="">
                     </h1>
 
                     <div class="luna-mv__hashtag">
@@ -481,8 +478,7 @@
                         </g>
                     </svg>
                 </div>
-                <img src="https://lunanaturalbra.com/hk/lurphknew/img241028/hk_event.png" alt="" class="imgcss event_1031">
-                <img src="https://lunanaturalbra.com/hk/lurphknew/img241101/hk_event.png" alt="" class="imgcss event_1101" style="display: none;">
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img241028/hk_event.png" alt="" class="imgcss">
                 <!-- <div id="coupon_box" class="imgcss">
                     <img class="coupon_50_A coupon_time_1"
                         src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_coupon50_A.png" alt=""
@@ -692,12 +688,9 @@
                                                     <div
                                                         class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade offerbefore">
                                                         <a href="#size">
-                                                            <img class="btn-add-to-cart js-btn-add-to-cart imgcss event_1031"
+                                                            <img class="btn-add-to-cart js-btn-add-to-cart imgcss"
                                                                 src="https://lunanaturalbra.com/hk/lurphknew/img241028/hk_07_offer.png"
-                                                                alt="" id="offer">
-                                                            <img class="btn-add-to-cart js-btn-add-to-cart imgcss event_1101"
-                                                            src="https://lunanaturalbra.com/hk/lurphknew/img241101/hk_07_offer.png"
-                                                            alt="" id="offer" style="display: none;">
+                                                                alt="" id="offer" class="imgcss">
                                                         </a>
                                                     </div>
                                                 </div>
@@ -833,11 +826,11 @@
         // });        
 
         //coupon在指定時間自動切換
-        // const now_time = new Date();
-        // const coupon_time_1_start = new Date('2024/10/16 00:00:00');
-        // const coupon_time_2_start = new Date('2024/10/20 08:00:00');
-        // const coupon_time_3_start = new Date('2024/10/22 23:00:00');
-        // const coupon_time_4_start = new Date('2024/10/26 23:00:00');
+        const now_time = new Date();
+        const coupon_time_1_start = new Date('2024/10/16 00:00:00');
+        const coupon_time_2_start = new Date('2024/10/20 08:00:00');
+        const coupon_time_3_start = new Date('2024/10/22 23:00:00');
+        const coupon_time_4_start = new Date('2024/10/26 23:00:00');
 
         // coupon折扣 
         function copybtn(money, couponcode) {
@@ -847,66 +840,53 @@
         }
 
         //coupon_time_1
-        // if (now_time >= coupon_time_1_start && now_time < coupon_time_2_start) {
-        //     // 在活動一的區間內
-        //     // 在這裡執行相應的功能或代碼
-        //     $(".coupon_time_1").show();
+        if (now_time >= coupon_time_1_start && now_time < coupon_time_2_start) {
+            // 在活動一的區間內
+            // 在這裡執行相應的功能或代碼
+            $(".coupon_time_1").show();
 
-        //     $(".coupon_50_A").on("click", function () {
-        //         copybtn(50, "ANL200");
-        //     });
-        //     $(".coupon_35_A").on("click", function () {
-        //         copybtn(35, "150ANL");
-        //     });
-        //     $(".coupon_25_A").on("click", function () {
-        //         copybtn(25, "100LAN");
-        //     });
-        //coupon_time_2
-        // } else if (now_time >= coupon_time_2_start && now_time < coupon_time_3_start) {
-        //     $(".coupon_time_2").show();
+            $(".coupon_50_A").on("click", function () {
+                copybtn(50, "ANL200");
+            });
+            $(".coupon_35_A").on("click", function () {
+                copybtn(35, "150ANL");
+            });
+            $(".coupon_25_A").on("click", function () {
+                copybtn(25, "100LAN");
+            });
+            //coupon_time_2
+        } else if (now_time >= coupon_time_2_start && now_time < coupon_time_3_start) {
+            $(".coupon_time_2").show();
 
-        //     $(".coupon_50_B").on("click", function () {
-        //         copybtn(50, "ANL200");
-        //     });
-        //     $(".coupon_35_A").on("click", function () {
-        //         copybtn(35, "150ANL");
-        //     });
-        //     $(".coupon_25_A").on("click", function () {
-        //         copybtn(25, "100LAN");
-        //     });
+            $(".coupon_50_B").on("click", function () {
+                copybtn(50, "ANL200");
+            });
+            $(".coupon_35_A").on("click", function () {
+                copybtn(35, "150ANL");
+            });
+            $(".coupon_25_A").on("click", function () {
+                copybtn(25, "100LAN");
+            });
 
-        //coupon_time_3
-        // } else if (now_time >= coupon_time_3_start && now_time < coupon_time_4_start) {
-        //     $(".coupon_time_3").show();
+            //coupon_time_3
+        } else if (now_time >= coupon_time_3_start && now_time < coupon_time_4_start) {
+            $(".coupon_time_3").show();
 
-        //     $(".coupon_35_B").on("click", function () {
-        //         copybtn(35, "150ANL");
-        //     });
-        //     $(".coupon_25_A").on("click", function () {
-        //         copybtn(25, "100LAN");
-        //     });
-        //coupon_time_4
-        // } else if (now_time >= coupon_time_4_start) {
-        //     $(".coupon_time_4").show();
+            $(".coupon_35_B").on("click", function () {
+                copybtn(35, "150ANL");
+            });
+            $(".coupon_25_A").on("click", function () {
+                copybtn(25, "100LAN");
+            });
+            //coupon_time_4
+        } else if (now_time >= coupon_time_4_start) {
+            $(".coupon_time_4").show();
 
-        //     $(".coupon_50_D").on("click", function () {
-        //         copybtn(50, "ANL200");
-        //     });
-        //     $(".coupon_25_A").on("click", function () {
-        //         copybtn(25, "100LAN");
-        //     });
-        // }
-
-        //時間到自動切換素材
-        $(document).ready(function() {
-            const currentDate = new Date();
-            const time_1101_start = new Date('2024/11/01 00:00:00');
-
-            //time_1101
-            if (currentDate >= time_1101_start) {
-                $(".event_1101").show();
-                $(".event_1031").hide();
-                document.title = "萬聖節好評延長🎃LUNA自選禮包低至40%off";
-            }
-        });
+            $(".coupon_50_D").on("click", function () {
+                copybtn(50, "ANL200");
+            });
+            $(".coupon_25_A").on("click", function () {
+                copybtn(25, "100LAN");
+            });
+        }
     </script>
