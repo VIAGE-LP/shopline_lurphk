@@ -1,10 +1,12 @@
 <!-- ▼自由編集箇所▼ -->
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/bootstrap_custom.css">
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/fv.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/fv.css" type="text/css"
+    media="all">
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/loading.css">
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/common.css" />
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/hide.css" />
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/countdown.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/countdown.css" type="text/css"
+    media="all">
 <!-- shopline offer css -->
 <style>
     /* 隱藏第一個商品列表 */
@@ -486,12 +488,9 @@
                     <img class="coupon_50_B coupon_time_2"
                         src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_coupon50_B.png" alt=""
                         style="cursor: pointer;display: none;">
-                    <img class="coupon_50_C coupon_time_3"
+                    <img class="coupon_50_C coupon_time_3 coupon_time_4"
                         src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_coupon50_C.png" alt=""
                         style="display: none;">
-                    <img class="coupon_50_D coupon_time_4"
-                        src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_coupon50_D.png" alt=""
-                        style="cursor: pointer;display: none;">
                     <img class="coupon_35_A coupon_time_1 coupon_time_2"
                         src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_coupon35_A.png" alt=""
                         style="cursor: pointer;display: none;">
@@ -882,9 +881,6 @@
         } else if (now_time >= coupon_time_4_start) {
             $(".coupon_time_4").show();
 
-            $(".coupon_50_D").on("click", function () {
-                copybtn(50, "ANL200");
-            });
             $(".coupon_25_A").on("click", function () {
                 copybtn(25, "100LAN");
             });

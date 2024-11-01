@@ -1,10 +1,10 @@
 <!-- ▼自由編集箇所▼ -->
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/bootstrap_custom.css">
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/fv.css" type="text/css" media="all">
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/loading.css">
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/common.css" />
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/hide.css" />
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/css/countdown.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk1029/css/bootstrap_custom.css">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk1029/css/fv.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk1029/css/loading.css">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk1029/css/common.css" />
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk1029/css/hide.css" />
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk1029/css/countdown.css" type="text/css" media="all">
 <!-- shopline offer css -->
 <style>
     /* 隱藏第一個商品列表 */
@@ -313,7 +313,7 @@
     </style>
     <div class="sizelinkbtn" style="text-align: center">
         <img class="gotop" style="cursor: pointer;"
-            src="https://lunanaturalbra.com/hk/lurphknew/img241017/gotop_1017.png">
+            src="https://lunanaturalbra.com/hk/lurphknew/img241028/hk_gotop.png">
     </div>
     <!-- 漂浮按鈕end -->
 
@@ -399,7 +399,7 @@
             <div class="luna-mv__content">
                 <div class="luna-mv__contentUpper">
                     <h1 class="luna-mv__title">
-                        <img src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_sp_title.png" alt="">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img241028/hk_sp_title.png" alt="">
                     </h1>
 
                     <div class="luna-mv__hashtag">
@@ -478,8 +478,8 @@
                         </g>
                     </svg>
                 </div>
-                <img src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_coupon_banner.png" alt="" class="imgcss">
-                <div id="coupon_box" class="imgcss">
+                <img src="https://lunanaturalbra.com/hk/lurphknew/img241028/hk_event.png" alt="" class="imgcss">
+                <!-- <div id="coupon_box" class="imgcss">
                     <img class="coupon_50_A coupon_time_1"
                         src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_coupon50_A.png" alt=""
                         style="cursor: pointer;display: none;">
@@ -505,7 +505,7 @@
                         src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_coupon25_A.png" alt=""
                         style="cursor: pointer;display: none;">
                     <img id="coupon_btn" src="https://lunanaturalbra.com/hk/lurphknew/img241017/sp_coupon_btn.png" alt="" style="cursor: pointer;">
-                </div>
+                </div> -->
                 <div class="lu-innr">
                     <h3 class="lu-section__title01 lujs-scrollfade"><img
                             src="https://lunanaturalbra.com/hk/lurphknew/img/sec_title_01.png" alt="" class="lu-resize">
@@ -687,9 +687,9 @@
                                                 <div class="lu-ldg">
                                                     <div
                                                         class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade offerbefore">
-                                                        <a href="#coupon_box">
+                                                        <a href="#size">
                                                             <img class="btn-add-to-cart js-btn-add-to-cart imgcss"
-                                                                src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_07_offer.png"
+                                                                src="https://lunanaturalbra.com/hk/lurphknew/img241028/hk_07_offer.png"
                                                                 alt="" id="offer" class="imgcss">
                                                         </a>
                                                     </div>
@@ -729,17 +729,17 @@
                     </div>
                     <div class="lu-ldgBlock lu-ldgBlock--04 lujs-scrollfade">
                         <a id="size"></a>
-                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/09_size.png" alt="" class="imgcss">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/09_size.png" alt="" class="imgcss" >
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/js/common.js"></script>
-    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/js/bootstrap.min.js"></script>
-    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/js/all.js"></script>
-    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1017/js/countdown.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk1029/js/common.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk1029/js/bootstrap.min.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk1029/js/all.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk1029/js/countdown.js"></script>
 
     <!-- 封面loading動畫 -->
     <script type="text/javascript">
@@ -772,23 +772,23 @@
             let innerheight = window.innerHeight;
             $('html , body').animate({
                 // scrollTop: $('#sizelink').offset().top - (0.5 * innerheight),
-                scrollTop: $('#coupon_box').offset().top,
+                scrollTop: $('#size').offset().top,
             }, 900);
         });
 
         $('#offer').click(function (e) {
             e.preventDefault();
             $('html , body').animate({
-                scrollTop: $('#coupon_box').offset().top,
-            }, 900);
-        });
-
-        $('#coupon_btn').click(function (e) {
-            e.preventDefault();
-            $('html , body').animate({
                 scrollTop: $('#size').offset().top,
             }, 900);
         });
+
+        //$('#coupon_btn').click(function (e) {
+        //    e.preventDefault();
+        //    $('html , body').animate({
+        //        scrollTop: $('#size').offset().top,
+        //    }, 900);
+        //});
     </script>
 
     <script>
