@@ -920,12 +920,10 @@
             if (first_click) {
                 setTimeout(() => {
                     confirm(`恭喜您獲得HKD$${money}折扣!\n您已成功複製折扣碼：${couponcode}\n結帳時請於購物車輸入，\n即享活動優惠折扣＋整單再折HKD$${money}`);
-                    document.querySelector("#offer").scrollIntoView({ behavior: 'smooth' });
                     first_click = false;
                 }, 1000)
             } else {
                 confirm(`恭喜您獲得HKD$${money}折扣!\n您已成功複製折扣碼：${couponcode}\n結帳時請於購物車輸入，\n即享活動優惠折扣＋整單再折HKD$${money}`);
-                document.querySelector("#offer").scrollIntoView({ behavior: 'smooth' });
             }
         }
     </script>
