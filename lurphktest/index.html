@@ -482,107 +482,158 @@
                 </div>
                 <img src="https://lunanaturalbra.com/hk/lurphknew/img241017/hk_coupon_banner.png" alt="" class="imgcss">
 
-                <!-- 拉霸功能 -->
-                <style>
-                    #slot {
-                        display: flex;
-                        justify-content: center;
-                        background-color: pink;
-                        padding: 2%;
-                        width: 750px;
-                        margin: 0 auto;
-                    }
-
-                    @media (max-width:768px) {
-                        #slot {
-                            width: 100%;
-                        }
-                    }
-
-                    #slot_btn {
-                        z-index: 10000;
-                        background: #ffe83d;
-                        width: 50px;
-                    }
-                    #slot_btn:hover{
-                        opacity: 0.6;
-                    }
-
-                    .slot_box {
-                        width: 100px;
-                        height: 100px;
-                        overflow: hidden;
-                    }
-
-                    .card {
-                        width: 100%;
-                        color: white;
-                        box-shadow: rgba(255, 255, 255, 0.1) 5px 5px 20px 0;
-                        font-size: xx-large;
-                        justify-content: center;
-                        align-items: center;
-                        min-height: 100px;
-                        background: #ffffff;
-                    }
-
-                    .group_1.scroll {
-                        will-change: transform;
-                        /* 速度0.1秒 10次 */
-                        animation: scrolling 0.1s linear 10;
-                    }
-
-                    .group_2.scroll {
-                        will-change: transform;
-                        /* 速度0.3秒 10次 */
-                        animation: scrolling 0.3s linear 10;
-                    }
-
-                    .group_3.scroll {
-                        will-change: transform;
-                        /* 速度0.2秒 10次 */
-                        animation: scrolling 0.2s linear 10;
-                    }
-
-                    @keyframes scrolling {
-                        0% {
-                            transform: translateY(0);
-                        }
-
-                        100% {
-                            transform: translateY(-100%);
-                        }
-                    }
-                </style>
-                <div id="slot">
-                    <div class="slot_box">
-                        <div class="group group_1">
-                            <div class="card"><img class="first_card" src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-02.svg" alt="">
-                            </div>
-                            <div class="card"><img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-03.svg" alt=""></div>
-                            <div class="card"><img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-04.svg" alt=""></div>
-                        </div>
-                    </div>
-                    <div class="slot_box">
-                        <div class="group group_2">
-                            <div class="card"><img class="first_card" src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-04.svg" alt="">
-                            </div>
-                            <div class="card"><img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-02.svg" alt=""></div>
-                            <div class="card"><img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-03.svg" alt=""></div>
-                        </div>
-                    </div>
-                    <div class="slot_box">
-                        <div class="group group_3">
-                            <div class="card"><img class="first_card" src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-03.svg" alt="">
-                            </div>
-                            <div class="card"><img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-04.svg" alt=""></div>
-                            <div class="card"><img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-02.svg" alt=""></div>
-                        </div>
-                    </div>
-                    <button id="slot_btn">click</button>
-                </div>
-                <!-- 拉霸功能 -->
+                
 
                 <div class="lu-innr">
+                    <!-- 拉霸功能 -->
+                    <style>
+                        #slot {
+                            background-color: #ffc0c0;
+                            padding: 2%;
+                            width: 750px;
+                            margin: 0 auto;
+                        }
+
+                        @media (max-width:767px) {
+                            #slot {
+                                width: 100%;
+                            }
+                        }
+
+                        .slot_grid{
+                            display: flex;
+                            margin-left: 129px;
+                        }
+
+                        .slot_box {
+                            width: 150px;
+                            height: 150px;
+                            overflow: hidden;
+                        }
+
+                        @media (max-width:767px) {
+                            .slot_grid{
+                                margin-left: calc(46% - 109px);
+                            }
+                            .slot_box {
+                                width: 80px;
+                                height: 80px;
+                            }
+                        }
+
+                        .card {
+                            width: 100%;
+                            background: #ffffff;
+                        }
+
+                        /* 三個格子 動畫 */
+                        .group_1.scroll {
+                            will-change: transform;
+                            /* 速度0.1秒 10次 */
+                            animation: scrolling 0.1s linear 10;
+                        }
+
+                        .group_2.scroll {
+                            will-change: transform;
+                            /* 速度0.3秒 10次 */
+                            animation: scrolling 0.3s linear 10;
+                        }
+
+                        .group_3.scroll {
+                            will-change: transform;
+                            /* 速度0.2秒 10次 */
+                            animation: scrolling 0.2s linear 10;
+                        }
+
+                        @keyframes scrolling {
+                            0% {
+                                transform: translateY(0);
+                            }
+
+                            100% {
+                                transform: translateY(-100%);
+                            }
+                        }
+
+                        /* 把手 動畫 */
+                        #startButton {
+                            width: 14%;
+                            background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把1.svg);
+                        }
+
+                        .startButtonAnimation {
+                            will-change: background-image;
+                            animation: startButton 0.5s backwards cubic-bezier(0.04, 0.04, 0.56, 1.15);
+                        }
+
+                        @keyframes startButton {
+                            0% {
+                            background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把1.svg);
+                            }
+                            20% {
+                            background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把2.svg);
+                            }
+                            40% {
+                            background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把3.svg);
+                            }
+                            60% {
+                            background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把4.svg);
+                            }
+                            80% {
+                            background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把5.svg);
+                            }
+                            100% {
+                            background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把1.svg);
+                            }
+                        }
+                    </style>
+                    <div id="slot">
+                        <div class="slot_grid">
+                            <div class="slot_box">
+                                <div class="group group_1">
+                                    <div class="card">
+                                        <img class="first_card" src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-02.svg" alt="">
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-03.svg" alt="">
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-04.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slot_box">
+                                <div class="group group_2">
+                                    <div class="card">
+                                        <img class="first_card" src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-04.svg" alt="">
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-02.svg" alt="">
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-03.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slot_box">
+                                <div class="group group_3">
+                                    <div class="card">
+                                        <img class="first_card" src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-03.svg" alt="">
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-04.svg" alt="">
+                                    </div>
+                                    <div class="card">
+                                        <img src="https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-02.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button id="startButton"></button>
+                        </div>                        
+                    </div>
+                    <!-- 拉霸功能 -->
+
                     <h3 class="lu-section__title01 lujs-scrollfade"><img
                             src="https://lunanaturalbra.com/hk/lurphknew/img/sec_title_01.png" alt="" class="lu-resize">
                     </h3>
@@ -854,30 +905,48 @@
 
     <!-- 拉霸功能 20241115 -->
     <script>
-        //複製折扣碼
+        const probability = [13.50, 25.24, 61.26] //獎項機率，假設A獎13.50%、 B獎25.24%、C獎61.26%，設定機率時要注意，可以設到小數點或是增加獎項欄位都沒關係，但所有數字加總要是100％
+        const num = Math.random() * 99;  // 0~99 共100個數字，取一個 0~99之間的亂數。
         let first_click = true;
-        function copyCode(couponcode, money) {
-            navigator.clipboard.writeText(couponcode);
-            // 判斷是否第一次按抽獎按鈕，第一次要等拉霸轉完再跳出提醒視窗，約0.6秒，抽過之後再按按鈕就直接跳出提醒視窗。
-            if (first_click) {
-                //監聽最慢結束的格子，目前是設定中間那格group_2最慢，等它動畫結束再跳出複製折扣碼視窗
-                document.querySelector("div.group_2").addEventListener("animationend", () => {
-                    setTimeout(() => {
-                        confirm(`恭喜您獲得$${money}折扣!\n您已成功複製折扣碼：${couponcode}\n結帳時請於購物車輸入，\n即享活動優惠折扣＋整單再折TWD$${money}`);
-                        first_click = false;
-                    }, 600)
-                });
-            } else {
-                confirm(`恭喜您獲得$${money}折扣!\n您已成功複製折扣碼：${couponcode}\n結帳時請於購物車輸入，\n即享活動優惠折扣＋整單再折TWD$${money}`);
-            }
-        }
+
+        //click 拉霸按鈕 
+        document.querySelector("#startButton").addEventListener("click", () => {
+            //手把動畫
+            const startButton = document.getElementById('startButton');
+            startButton.classList.add('startButtonAnimation');
+
+            // A獎13.50% 亂數num落在 0 ~ 12.5 之間 (這裡13.5要減1，因為是從0開始取亂數)
+            if ((0 <= num) && (num <= probability[0] - 1)) {
+                //第一次click拉霸按鈕，呼叫拉霸轉動函式，順便帶入A獎要呈現的圖片src連結
+                if (first_click) {
+                    slot_animation("https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-02.svg");
+                }
+                copyCode("fkookko", 300);
+
+            // B獎25.24% 亂數num落在 12.5 ~ 37.74 之間
+            } else if ((probability[0] - 1 < num) && (num <= (probability[0] - 1 + probability[1]))) {
+                //第一次第一次click拉霸按鈕，呼叫拉霸轉動函式，順便帶入B獎要呈現的圖片src連結
+                if (first_click) {
+                    slot_animation("https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-03.svg");
+                }
+                copyCode("fkookko_200", 200);
+
+            // C獎61.26% 亂數num落在 37.74 ~ 99 之間
+            } else if (((probability[0] - 1 + probability[1]) < num) && (num <= 99)) {
+                //第一次第一次click拉霸按鈕，呼叫拉霸轉動函式，順便帶入C獎要呈現的圖片src連結
+                if (first_click) {
+                    slot_animation("https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-04.svg");
+                }
+                copyCode("fkookko_150", 150);
+            };
+        })
 
         //拉霸轉動函式，參數img_src為 指定圖片src連結，最後三個格子都會呈現這張圖片
         function slot_animation(img_src) {
             const slot_group = document.querySelectorAll("div.group");
             for (let i = 0; i <= slot_group.length; i++) {
                 if (slot_group[i] != undefined) {
-                    //三個格子都加上scroll這個class，css抓到這個class後，啟動animation，開始滾動
+                    //三個格子都加上scroll這個class，css抓到這個class後，啟動動畫功能，開始滾動
                     slot_group[i].classList.add("scroll");
 
                     //監聽三個格子動畫結束的“animationend”事件
@@ -892,37 +961,20 @@
             }
         }
 
-
-        //獎項機率設定
-        // let prize = ['A獎', 'B獎', 'C獎'] //300元、200元、150元
-        let probability = [13.50, 25.24, 61.26] //獎項機率，假設A獎13.50%、 B獎25.24%、C獎61.26%，設定機率時要注意，可以設到小數點或是增加獎項欄位都沒關係，但所有數字加總要是100％
-        let num = Math.random() * 99;  // 0~99 共100個數字，取一個 0~99之間的亂數。
-
-        //按拉霸按鈕
-        document.querySelector("#slot_btn").addEventListener("click", () => {
-            // A獎13.50% 亂數落在 0 ~ 12.5 之間 (這裡13.5要減1，因為是從0開始取亂數)
-            if ((0 <= num) && (num <= probability[0] - 1)) {
-                //第一次按拉霸按鈕，呼叫拉霸轉動函式，順便帶入A獎要呈現的圖片src連結
-                if (first_click) {
-                    slot_animation("https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-02.svg");
-                }
-                copyCode("fkookko", 300);
-
-            // B獎25.24% 亂數落在 12.5 ~ 37.74 之間
-            } else if ((probability[0] - 1 < num) && (num <= (probability[0] - 1 + probability[1]))) {
-                //第一次按拉霸按鈕，呼叫拉霸轉動函式，順便帶入B獎要呈現的圖片src連結
-                if (first_click) {
-                    slot_animation("https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-03.svg");
-                }
-                copyCode("fkookko_200", 200);
-
-            // C獎61.26% 亂數落在 37.74 ~ 99 之間
-            } else if (((probability[0] - 1 + probability[1]) < num) && (num <= 99)) {
-                //第一次按拉霸按鈕，呼叫拉霸轉動函式，順便帶入C獎要呈現的圖片src連結
-                if (first_click) {
-                    slot_animation("https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-04.svg");
-                }
-                copyCode("fkookko_150", 150);
-            };
-        })
+        //複製折扣碼
+        function copyCode(couponcode, money) {
+            navigator.clipboard.writeText(couponcode);
+            // 判斷是否第一次click拉霸按鈕，第一次要等三個格子全部轉完再跳出提醒視窗，約0.3秒。
+            if (first_click) {
+                //監聽最慢結束的格子，目前是設定中間那格group_2最慢，等它動畫結束後0.3秒再跳出提醒視窗
+                document.querySelector("div.group_2").addEventListener("animationend", () => {
+                    setTimeout(() => {
+                        confirm(`恭喜您獲得$${money}折扣!\n您已成功複製折扣碼：${couponcode}\n結帳時請於購物車輸入，\n即享活動優惠折扣＋整單再折TWD$${money}`);
+                        first_click = false;
+                    }, 300)
+                });
+            } else {
+                confirm(`恭喜您獲得$${money}折扣!\n您已成功複製折扣碼：${couponcode}\n結帳時請於購物車輸入，\n即享活動優惠折扣＋整單再折TWD$${money}`);
+            }
+        }
     </script>
