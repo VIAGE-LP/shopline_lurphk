@@ -555,7 +555,7 @@
                             }
                         }
 
-                        /* 把手 動畫 */
+                        /* 手把 動畫 */
                         #startButton {
                             width: 14%;
                             background-image: url(https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-手把1.svg);
@@ -563,7 +563,7 @@
 
                         .startButtonAnimation {
                             will-change: background-image;
-                            animation: startButton 0.5s backwards cubic-bezier(0.04, 0.04, 0.56, 1.15);
+                            animation: startButton 0.5s;
                         }
 
                         @keyframes startButton {
@@ -909,7 +909,7 @@
         const num = Math.random() * 99;  // 0~99 共100個數字，取一個 0~99之間的亂數。
         let first_click = true;
 
-        //click 拉霸按鈕 
+        //click 拉霸手把 
         document.querySelector("#startButton").addEventListener("click", () => {
             //手把動畫
             const startButton = document.getElementById('startButton');
@@ -917,7 +917,7 @@
 
             // A獎13.50% 亂數num落在 0 ~ 12.5 之間 (這裡13.5要減1，因為是從0開始取亂數)
             if ((0 <= num) && (num <= probability[0] - 1)) {
-                //第一次click拉霸按鈕，呼叫拉霸轉動函式，順便帶入A獎要呈現的圖片src連結
+                //第一次click拉霸手把，呼叫拉霸轉動函式，順便帶入A獎要呈現的圖片src連結
                 if (first_click) {
                     slot_animation("https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-02.svg");
                 }
@@ -925,7 +925,7 @@
 
             // B獎25.24% 亂數num落在 12.5 ~ 37.74 之間
             } else if ((probability[0] - 1 < num) && (num <= (probability[0] - 1 + probability[1]))) {
-                //第一次第一次click拉霸按鈕，呼叫拉霸轉動函式，順便帶入B獎要呈現的圖片src連結
+                //第一次第一次click拉霸手把，呼叫拉霸轉動函式，順便帶入B獎要呈現的圖片src連結
                 if (first_click) {
                     slot_animation("https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-03.svg");
                 }
@@ -933,7 +933,7 @@
 
             // C獎61.26% 亂數num落在 37.74 ~ 99 之間
             } else if (((probability[0] - 1 + probability[1]) < num) && (num <= 99)) {
-                //第一次第一次click拉霸按鈕，呼叫拉霸轉動函式，順便帶入C獎要呈現的圖片src連結
+                //第一次第一次click拉霸手把，呼叫拉霸轉動函式，順便帶入C獎要呈現的圖片src連結
                 if (first_click) {
                     slot_animation("https://viage-lp.github.io/shopline_lurphk/lurphktest/img/slotMachine/SLOTBG-7-04.svg");
                 }
@@ -964,7 +964,7 @@
         //複製折扣碼
         function copyCode(couponcode, money) {
             navigator.clipboard.writeText(couponcode);
-            // 判斷是否第一次click拉霸按鈕，第一次要等三個格子全部轉完再跳出提醒視窗，約0.3秒。
+            // 判斷是否第一次click拉霸按手把，第一次要等三個格子全部轉完再跳出提醒視窗，約0.3秒。
             if (first_click) {
                 //監聽最慢結束的格子，目前是設定中間那格group_2最慢，等它動畫結束後0.3秒再跳出提醒視窗
                 document.querySelector("div.group_2").addEventListener("animationend", () => {
