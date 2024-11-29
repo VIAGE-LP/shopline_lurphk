@@ -964,7 +964,7 @@
         //複製折扣碼
         function copyCode(couponcode, money) {
             navigator.clipboard.writeText(couponcode);
-            // 判斷是否第一次click拉霸按手把，第一次要等三個格子全部轉完再跳出提醒視窗，約0.3秒。
+            // 判斷是否第一次click拉霸手把，第一次要等三個格子全部轉完再跳出提醒視窗，約0.3秒。
             if (first_click) {
                 //監聽最慢結束的格子，目前是設定中間那格group_2最慢，等它動畫結束後0.3秒再跳出提醒視窗
                 document.querySelector("div.group_2").addEventListener("animationend", () => {

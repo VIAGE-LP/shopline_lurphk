@@ -1,10 +1,12 @@
 <!-- ▼自由編集箇所▼ -->
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphkmember/css/bootstrap_custom.css">
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphkmember/css/fv.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphkmember/css/fv.css" type="text/css"
+    media="all">
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphkmember/css/loading.css">
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphkmember/css/common.css" />
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphkmember/css/hide.css" />
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphkmember/css/countdown.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphkmember/css/countdown.css" type="text/css"
+    media="all">
 <!-- shopline offer css -->
 <style>
     /* 隱藏第一個商品列表 */
@@ -312,8 +314,7 @@
         }
     </style>
     <div class="sizelinkbtn" style="text-align: center">
-        <img class="gotop" style="cursor: pointer;"
-            src="https://lunanaturalbra.com/hk/lurphknew/img_normal/gotop.png">
+        <img class="gotop" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img_normal/gotop.png">
     </div>
     <!-- 漂浮按鈕end -->
 
@@ -455,7 +456,7 @@
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
-                    <p class="lu-mv__movtext" style="margin-top:4px">【日本專利獲得】ω歐美伽曲線養成特別設計</p>                    
+                    <p class="lu-mv__movtext" style="margin-top:4px">【日本專利獲得】ω歐美伽曲線養成特別設計</p>
                 </div>
             </div>
             <div class="lu-section lu-section--bgL">
@@ -479,9 +480,18 @@
                     </svg>
                 </div>
 
-                <!-- <img src="https://lunanaturalbra.com/hk/lurphknew/img241105/LuckyWheel/hk_event_1111.png" alt="" class="imgcss"> -->
-                
                 <div class="lu-innr">
+
+                    <div class="member_box" id="member_box">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img_member/member_Br.png" alt="" class="imgcss member_Br" style="display: none;">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img_member/member_S200.png" alt="" class="imgcss member_S200"
+                            style="display: none;cursor: pointer;">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img_member/member_G450.png" alt="" class="imgcss member_G450"
+                            style="display: none;cursor: pointer;">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img_member/member_G600.png" alt="" class="imgcss member_G600"
+                            style="display: none;cursor: pointer;">
+                    </div>
+
                     <h3 class="lu-section__title01 lujs-scrollfade"><img
                             src="https://lunanaturalbra.com/hk/lurphknew/img/sec_title_01.png" alt="" class="lu-resize">
                     </h3>
@@ -676,6 +686,17 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="member_box">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img_member/member_Br.png" alt="" class="imgcss member_Br" style="display: none;">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img_member/member_S200.png" alt="" class="imgcss member_S200"
+                            style="display: none;cursor: pointer;">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img_member/member_G450.png" alt="" class="imgcss member_G450"
+                            style="display: none;cursor: pointer;">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img_member/member_G600.png" alt="" class="imgcss member_G600"
+                            style="display: none;cursor: pointer;">
+                    </div>
+
                 </div>
 
                 <div class="lu-section--bgL__bg pconly">
@@ -760,19 +781,6 @@
     </script>
 
     <script>
-        // coupon折扣
-        // function copybtn(money, couponcode) {
-        //     // 複製（利用 Clipboard API 中的寫入功能）
-        //     navigator.clipboard.writeText(couponcode);
-        //     // 提醒視窗
-        //     confirm(`恭喜您成功複製「折扣碼」！\n期間內不限方案，\n於購物車「優惠代碼」欄位輸入 即可享優惠金額再折HKD$${money}元\n優惠期限只到7/31，折扣權益別錯過~\n優惠代碼：${couponcode}`)
-        //     // event_modal()
-        // };
-
-        // $(".copybtn").on("click", function () {
-        //     copybtn(50, "7LUNA200");
-        // });
-
         // //左側popup
         // $(window).scroll(function () {
         //     $('.left_popup').addClass('left_hide');
@@ -792,4 +800,44 @@
         //         scrollTop: $('#offer').offset().top,
         //     }, 900);
         // });
+
+        //member
+        if (edmhref.includes("#member_Br")) {
+            $(".member_Br").show();
+            $('html , body').animate({
+                scrollTop: $('#member_box').offset().top - 70,
+            }, 900);
+        } else if (edmhref.includes("#member_S200")) {
+            $(".member_S200").show();
+            $('html , body').animate({
+                scrollTop: $('#member_box').offset().top - 70,
+            }, 900);
+        } else if (edmhref.includes("#member_G450")) {
+            $(".member_G450").show();
+            $('html , body').animate({
+                scrollTop: $('#member_box').offset().top - 70,
+            }, 900);
+        } else if (edmhref.includes("#member_G600")) {
+            $(".member_G600").show();
+            $('html , body').animate({
+                scrollTop: $('#member_box').offset().top - 70,
+            }, 900);
+        }
+
+        // coupon折扣 
+        function copybtn(level, couponcode, money) {
+            // 複製（利用 Clipboard API 中的寫入功能）
+            navigator.clipboard.writeText(couponcode);
+            confirm(`恭喜您符合會員等級-${level}級！\n您已複製以下優惠代碼：${couponcode}\n選擇商品加入購物車後，於「優惠代碼」欄位輸入：${couponcode}\n即可享有${level}級會員限定優惠=網頁價格再折台幣${money}!!`)
+        }
+
+        $(".member_S200").on("click", function () {
+            copybtn("銀", "LNMBS200", "200元(≒HKD$48)");
+        });
+        $(".member_G450").on("click", function () {
+            copybtn("金", "LNMBG450", "450元(≒HKD$107)");
+        });
+        $(".member_G600").on("click", function () {
+            copybtn("黑金", "LNMBG600", "600元(≒HKD$143)");
+        });
     </script>
