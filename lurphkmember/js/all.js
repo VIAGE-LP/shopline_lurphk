@@ -85,13 +85,24 @@ $(document).ready(function () {
         $(".member_G600").show();
     }
 
-    if (edmhref.includes("#member")){
-        $('html , body').animate({
-            scrollTop: $('#member_box').offset().top + 40,
-        }, 900);
-        setTimeout(()=>{
-            document.getElementById("member_box").scrollIntoView({ behavior: "smooth", block: "start"});
-        },3000)
+    if (edmhref.includes("#member")) {
+        if (window.innerWidth < 768) {
+            $('html , body').animate({
+                scrollTop: $('#member_box').offset().top,
+            }, 900);
+            setTimeout(() => {
+                $('html , body').animate({
+                    scrollTop: $('#member_box').offset().top - 70,
+                }, 900);
+            }, 3000)
+        } else {
+            $('html , body').animate({
+                scrollTop: $('#member_box').offset().top + 40,
+            }, 900);
+            setTimeout(() => {
+                document.getElementById("member_box").scrollIntoView({ behavior: "smooth", block: "start" });
+            }, 3000)
+        }
     }
 
     // coupon折扣 
@@ -110,5 +121,5 @@ $(document).ready(function () {
     $(".member_G600").on("click", function () {
         copybtn("黑金", "LNMBG600", "600元(≒HKD$143)");
     });
-    
+
 });
