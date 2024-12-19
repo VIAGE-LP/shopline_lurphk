@@ -1,12 +1,10 @@
 <!-- ▼自由編集箇所▼ -->
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/bootstrap_custom.css">
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/fv.css" type="text/css"
-    media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/fv.css" type="text/css" media="all">
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/loading.css">
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/common.css" />
 <link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/hide.css" />
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/countdown.css" type="text/css"
-    media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphktest/css/countdown.css" type="text/css" media="all">
 <!-- shopline offer css -->
 <style>
     /* 隱藏第一個商品列表 */
@@ -953,8 +951,9 @@
                     slot_group[i].addEventListener("animationend", () => {
                         //動畫一結束就讓三個格子的第一張圖都顯示成 參數img_src 指定的圖片
                         for (let i = 0; i <= document.querySelectorAll('.first_card').length; i++) {
-                            if (document.querySelectorAll('.first_card')[i] != undefined)
+                            if (document.querySelectorAll('.first_card')[i] != undefined){
                                 document.querySelectorAll('.first_card')[i].src = `${img_src}`;
+                            }
                         }
                     });
                 }
