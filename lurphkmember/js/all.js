@@ -88,11 +88,11 @@ $(document).ready(function () {
     if (edmhref.includes("#member")) {
         if (window.innerWidth < 768) {
             $('html , body').animate({
-                scrollTop: $('#member_box').offset().top,
+                scrollTop: $('#member_box').offset().top - 60,
             }, 900);
             setTimeout(() => {
                 $('html , body').animate({
-                    scrollTop: $('#member_box').offset().top - 70,
+                    scrollTop: $('#member_box').offset().top - 60,
                 }, 900);
             }, 3000)
         } else {
