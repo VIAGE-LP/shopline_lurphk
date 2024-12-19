@@ -88,7 +88,7 @@ $(document).ready(function () {
     if (edmhref.includes("#member")) {
         if (window.innerWidth < 768) {
             $('html , body').animate({
-                scrollTop: $('#member_box').offset().top - 50,
+                scrollTop: $('#member_box').offset().top - 40,
             }, 900);
             setTimeout(() => {
                 $('html , body').animate({
