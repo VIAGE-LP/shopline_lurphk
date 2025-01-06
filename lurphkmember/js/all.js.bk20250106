@@ -77,16 +77,12 @@ $(document).ready(function () {
     //member
     if (edmhref.includes("#member_Br")) {
         $(".member_Br").show();
-        $(".member_use").show();
     } else if (edmhref.includes("#member_S200")) {
         $(".member_S200").show();
-        $(".member_use").show();
     } else if (edmhref.includes("#member_G450")) {
         $(".member_G450").show();
-        $(".member_use").show();
     } else if (edmhref.includes("#member_G600")) {
         $(".member_G600").show();
-        $(".member_use").show();
     }
 
     if (edmhref.includes("#member")) {
