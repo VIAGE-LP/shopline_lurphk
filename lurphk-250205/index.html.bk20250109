@@ -1,10 +1,10 @@
 <!-- ▼自由編集箇所▼ -->
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-0124/css/bootstrap_custom.css">
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-0124/css/fv.css" type="text/css" media="all">
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-0124/css/loading.css">
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-0124/css/common.css" />
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-0124/css/hide.css" />
-<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-0124/css/countdown.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/bootstrap_custom.css">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/fv.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/loading.css">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/common.css" />
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/hide.css" />
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/countdown.css" type="text/css" media="all">
 <!-- shopline offer css -->
 <style>
     /* 隱藏第一個商品列表 */
@@ -226,6 +226,40 @@
 </style>
 
 <body>
+    <!-- draw popup start-->
+    <style>
+        #code_direction_draw {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .code_modal_content_draw {
+            margin: 30vh auto;
+            padding: 0px;
+            width: 300px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .code_modal_content_draw {
+                width: 90vw;
+            }
+        }
+    </style>
+    <div id="code_direction_draw">
+        <div class="code_modal_content_draw">
+            <img id="draw_gif" src="https://lunanaturalbra.com/hk/lurphknew/img0821/popup_draw.gif" alt=""
+                style="width:100%;">
+        </div>
+    </div>
+    <!-- draw popup end-->
+
     <!-- 封面loading動畫 -->
     <div class="loading-all">
         <img id="logo-001" src="https://lunanaturalbra.com/hk/lurphknew/img/logo.png">
@@ -237,108 +271,8 @@
         </div>
     </div>
 
-    <!-- 上下展開圖片，3秒後縮小變漂浮按鈕 start -->
-    <style>
-      .photo.photo_animate {
-        background-image: url("https://lunanaturalbra.com/hk/lurphknew/img_250124/hk_popup.png");
-        background-size: 100%;
-        background-repeat: no-repeat;
-        width: 750px;
-        position: absolute;
-        top: 350px;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        height: 0px;
-        transition: top .5s, height .5s;
-        -wegkit-transition: top .5s, height .5s;
-        cursor: pointer;
-      }
-
-      .photo.active {
-        transform-origin: center;
-        top: 0%;
-        z-index: 1000;
-        height: 750px;
-      }
-
-      .photo.float {
-        background-image: url("https://lunanaturalbra.com/hk/lurphknew/img_250124/hk_gotop.png");
-        background-size: 100%;
-        background-repeat: no-repeat;
-        position: fixed;
-        transform-origin: center;
-        width: 150px;
-        height: 212px;
-        right: 36px;
-        bottom: 20px;
-        z-index: 1000;
-        cursor: pointer;
-      }
-
-      @media screen and (max-width: 768px) {
-        .photo.photo_animate {
-          width: 100%;
-        }
-
-        .photo.float {
-          width: 30%;
-          max-width: 140px;
-          right: 2vw;
-          bottom: calc(76px + 43vw);
-          
-        }
-      }
-    </style>
-    <div class="photo photo_animate copybtn"></div>
-    <!-- 上下展開圖片，3秒後縮小變漂浮按鈕 end -->
-
-    <!-- 可用於 shopline 的 popup -->
-    <style>
-      #shopline_popup {
-          display: none;
-          position: fixed;
-          z-index: 1000;
-          left: 0;
-          top: 0;
-          width: 100vw;
-          height: 100vh;
-          overflow: auto;
-          background-color: rgba(0, 0, 0, 0.5);
-      }
-
-      .shopline_modal_content {
-          margin: 10vh auto;
-          padding: 0px;
-          width: 600px;
-          position: relative;
-      }
-      #popup_close{
-        cursor: pointer;
-        position: absolute;
-        top: 1%;
-        right: 3%;
-        font-size: 32px;
-      }
-      #popup_close:hover{
-        opacity: 0.6;
-      }
-
-      @media screen and (max-width: 768px) {
-          .shopline_modal_content {
-              width: 90vw;
-          }
-      }
-  </style>
-  <div id="shopline_popup">
-      <div class="shopline_modal_content">
-          <img src="https://lunanaturalbra.com/hk/lurphknew/img_250124/lottery.png" alt="" style="width:100%;">
-          <div id="popup_close" style="cursor: pointer;">✖</div>
-      </div>
-  </div>
-  <!-- 可用於 shopline 的 popup -->
-
     <!-- 漂浮按鈕 start-->
-    <!-- <style>
+    <style>
         .sizelinkbtn {
             width: 174px;
             position: fixed;
@@ -380,7 +314,7 @@
     <div class="sizelinkbtn" style="text-align: center">
         <img class="gotop" style="cursor: pointer;"
             src="https://lunanaturalbra.com/hk/lurphknew/img_normal/gotop.png">
-    </div> -->
+    </div>
     <!-- 漂浮按鈕end -->
 
     <!-- 左側popup start-->
@@ -522,9 +456,7 @@
                         </button>
                     </div>
                     <p class="lu-mv__movtext" style="margin-top:4px">【日本專利獲得】ω歐美伽曲線養成特別設計</p>                    
-                  </div>
-                  <img src="https://lunanaturalbra.com/hk/lurphknew/img_250124/hk_banner.png" alt="" class="imgcss copybtn"  style="cursor: pointer;">
-                  <img id="lotterybtn" src="https://lunanaturalbra.com/hk/lurphknew/img_250124/hk_event.png" alt="" class="imgcss" style="cursor: pointer;">              
+                </div>
             </div>
             <div class="lu-section lu-section--bgL">
                 <div class="lu-section--bgL__bg">
@@ -732,7 +664,7 @@
                                                         class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade offerbefore">
                                                         <a href="#size">
                                                             <img class="btn-add-to-cart js-btn-add-to-cart imgcss"
-                                                                src="https://lunanaturalbra.com/hk/lurphknew/img_250124/hk_07_offer.png"
+                                                                src="https://lunanaturalbra.com/hk/lurphknew/img_normal/07_offer.png"
                                                                 alt="" id="offer" class="imgcss">
                                                         </a>
                                                     </div>
@@ -779,20 +711,20 @@
         </div>
     </div>
 
-    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-0124/js/common.js"></script>
-    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-0124/js/bootstrap.min.js"></script>
-    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-0124/js/all.js"></script>
-    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-0124/js/countdown.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/js/common.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/js/bootstrap.min.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/js/all.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/js/countdown.js"></script>
 
     <!-- 封面loading動畫 -->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
         $(document).ready(function () {
             $('#logo-001').fadeIn();
             setTimeout(function () {
                 $('.loading-all').fadeOut()
             }, 650);
         });
-    </script> -->
+    </script>
 
     <!-- 抓取網址參數存到cookie -->
     <!-- <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script> -->
@@ -810,14 +742,14 @@
         });
 
         //漂浮按鈕
-        // $('.sizelinkbtn').click(function (e) {
-        //     e.preventDefault();
-        //     let innerheight = window.innerHeight;
-        //     $('html , body').animate({
-        //         // scrollTop: $('#sizelink').offset().top - (0.5 * innerheight),
-        //         scrollTop: $('#offer').offset().top,
-        //     }, 900);
-        // });
+        $('.sizelinkbtn').click(function (e) {
+            e.preventDefault();
+            let innerheight = window.innerHeight;
+            $('html , body').animate({
+                // scrollTop: $('#sizelink').offset().top - (0.5 * innerheight),
+                scrollTop: $('#offer').offset().top,
+            }, 900);
+        });
 
         $('#offer').click(function (e) {
             e.preventDefault();
@@ -828,66 +760,36 @@
     </script>
 
     <script>
-      // Function to fadeIn the logo and wait for a specified timeout
-      function fadeInLogoAndWait(timeout) {
-          return new Promise(resolve => {
-              $('#logo-001').fadeIn(resolve);
-              wait(timeout).then(resolve);
-          });
-      }
-      // Function to fadeOut the loading element after a delay
-      function fadeOutLoading() {
-          return new Promise(resolve => {
-              setTimeout(function () {
-                  $('.loading-all').fadeOut(resolve);
-              }, 650);
-          });
-      }
-      // Function to wait for a specified timeout
-      function wait(timeout) {
-          return new Promise(resolve => setTimeout(resolve, timeout));
-      }
-      // Start the sequence with logo fadeIn and loading fadeOut
-      fadeInLogoAndWait(0)
-          .then(() => fadeOutLoading())
-          .then(() => {
-              // Continue with the rest of your code
-              $(".photo").addClass("active");
-              return wait(4000);
-          })
-          .then(() => {
-              document.querySelector(".photo").classList.remove("photo_animate","active");
-              $(".photo").addClass("float");
-              return wait(0);
-          })
-          .then(() => {
-              $(".photo").on("click", function (e) {
-                  if (!$(this).hasClass("clicked")) {
-                      $(this).addClass("clicked");
-                  }
-              });
-          });
+        // coupon折扣
+        // function copybtn(money, couponcode) {
+        //     // 複製（利用 Clipboard API 中的寫入功能）
+        //     navigator.clipboard.writeText(couponcode);
+        //     // 提醒視窗
+        //     confirm(`恭喜您成功複製「折扣碼」！\n期間內不限方案，\n於購物車「優惠代碼」欄位輸入 即可享優惠金額再折HKD$${money}元\n優惠期限只到7/31，折扣權益別錯過~\n優惠代碼：${couponcode}`)
+        //     // event_modal()
+        // };
 
-      // copy折扣碼 
-      $(".copybtn").on("click", function () {
-          navigator.clipboard.writeText('25DNY200');
-          confirm(`恭喜您成功複製折扣碼！\n您已複製以下優惠代碼，\n於購物車「優惠代碼」欄位輸入，即可享總結帳金額再折HKD$50(實減NT$200)\n優惠代碼：25DNY200`)
-          if ($(window).scrollTop() > $('#offer').offset().top) {
-              e.preventDefault()
-          } else {
-              $('html , body').animate({
-                  scrollTop: $('#offer').offset().top,
-              }, 900);
-          }
-      });
+        // $(".copybtn").on("click", function () {
+        //     copybtn(50, "7LUNA200");
+        // });
 
-      $("#lotterybtn").click(function (e) { 
-        e.preventDefault();
-        $("#shopline_popup").show();
-      });
-      $("#popup_close").click(function (e) { 
-        e.preventDefault();
-        $("#shopline_popup").hide();
-      });
-
+        // //左側popup
+        // $(window).scroll(function () {
+        //     $('.left_popup').addClass('left_hide');
+        // });
+        // $('.left_popup').click(function (e) {
+        //     $('.left_popup').toggleClass('left_hide');
+        // });
+        // $('.left_popup_event').click(function (e) {
+        //     e.preventDefault();
+        //     $('html , body').animate({
+        //         scrollTop: $('#event').offset().top,
+        //     }, 900);
+        // });
+        // $('.left_popup_offer').click(function (e) {
+        //     e.preventDefault();
+        //     $('html , body').animate({
+        //         scrollTop: $('#offer').offset().top,
+        //     }, 900);
+        // });
     </script>
