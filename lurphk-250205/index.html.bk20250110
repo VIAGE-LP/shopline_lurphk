@@ -313,7 +313,7 @@
     </style>
     <div class="sizelinkbtn" style="text-align: center">
         <img class="gotop" style="cursor: pointer;"
-            src="https://lunanaturalbra.com/hk/lurphknew/img250205/gotop.png">
+            src="https://lunanaturalbra.com/hk/lurphknew/img241105/hk_gotop_1111.png">
     </div>
     <!-- 漂浮按鈕end -->
 
@@ -399,7 +399,7 @@
             <div class="luna-mv__content">
                 <div class="luna-mv__contentUpper">
                     <h1 class="luna-mv__title">
-                        <img src="https://lunanaturalbra.com/hk/lurphknew/img250205/sp_title.png" alt="">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img241105/hk_sp_title_1111.png" alt="">
                     </h1>
 
                     <div class="luna-mv__hashtag">
@@ -479,12 +479,12 @@
                     </svg>
                 </div>
 
-                <!-- 2025開工轉盤 start -->
+                <!-- 雙11轉盤 start -->
                 <style>
                     .wheel_box {
                         padding-top: 16px;
                         padding-bottom: 16px;
-                        background-image: url('https://lunanaturalbra.com/hk/lurphknew/img250205/LuckyWheel/LuckyWheel_bg.png');
+                        background-image: url('https://lunanaturalbra.com/hk/lurphknew/img241105/LuckyWheel/LuckyWheel_bg.png');
                         background-repeat: no-repeat;
                         background-position: bottom;
                         width: 750px;
@@ -564,18 +564,18 @@
                         }
                     }
                 </style>
-                <img id="wheel_2025" src="https://lunanaturalbra.com/hk/lurphknew/img250205/hk_event.png" alt="" class="imgcss">
+                <img id="wheel_1111" src="https://lunanaturalbra.com/hk/lurphknew/img241105/LuckyWheel/hk_event_1111.png" alt="" class="imgcss">
                 <div class="wheel_box">
                     <div class="wheel_ly" id="wheel_ly">
-                        <img class="wheel_btn_text" src="https://lunanaturalbra.com/hk/lurphknew/img250205/LuckyWheel/LuckyWheel_btn_text.png" alt=""
+                        <img class="wheel_btn_text" src="https://lunanaturalbra.com/hk/lurphknew/img241105/LuckyWheel/LuckyWheel_btn_text.png" alt=""
                             style="cursor: pointer;">
-                        <img src="https://lunanaturalbra.com/hk/lurphknew/img250205/LuckyWheel/hk_LuckyWheel_2025.png" alt="">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img241105/LuckyWheel/hk_LuckyWheel_1111.png" alt="">
                         <div class="wheel_btn_ly">
-                            <img class="wheel_btn" src="https://lunanaturalbra.com/hk/lurphknew/img250205/LuckyWheel/LuckyWheel_btn.png" alt="">
+                            <img class="wheel_btn" src="https://lunanaturalbra.com/hk/lurphknew/img241105/LuckyWheel/LuckyWheel_btn.png" alt="">
                         </div>
                     </div>
                 </div>
-                <!-- 2025開工轉盤 end -->
+                <!-- 雙11轉盤 end -->
                 
                 <div class="lu-innr">
                     <h3 class="lu-section__title01 lujs-scrollfade"><img
@@ -760,7 +760,7 @@
                                                         class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade offerbefore">
                                                         <a href="#size">
                                                             <img class="btn-add-to-cart js-btn-add-to-cart imgcss"
-                                                                src="https://lunanaturalbra.com/hk/lurphknew/img250205/hk_07_offer.png"
+                                                                src="https://lunanaturalbra.com/hk/lurphknew/img241105/hk_07_offer_1111.png"
                                                                 alt="" id="offer" class="imgcss">
                                                         </a>
                                                     </div>
@@ -843,7 +843,7 @@
             let innerheight = window.innerHeight;
             $('html , body').animate({
                 // scrollTop: $('#sizelink').offset().top - (0.5 * innerheight),
-                scrollTop: $('#wheel_2025').offset().top,
+                scrollTop: $('#wheel_1111').offset().top,
             }, 900);
         });
 
@@ -889,7 +889,7 @@
         //     }, 900);
         // });        
 
-        //2025開工轉盤抽獎
+        //雙11轉盤抽獎
         //抓取頁面物件
         const wheel_btn = document.querySelector(".wheel_btn_text");
         const wheel_rotate = document.querySelector(".wheel_btn_ly");
