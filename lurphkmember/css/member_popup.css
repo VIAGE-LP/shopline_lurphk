@@ -24,6 +24,12 @@
   position: relative;
 }
 
+@media screen and (max-width: 500px){
+  .popup-content {
+    padding: 12px;
+  }
+}
+
 .popup-open .popup-content {
   transform: scale(1);
 }
@@ -107,6 +113,11 @@
   text-align: center;
   font-size: 18px;
 }
+@media screen and (max-width: 500px){
+  .membership-table th, .membership-table td {
+    padding: 0px;
+  }
+}
 
 .bronze {
   background: #E5A663;
@@ -151,11 +162,11 @@
 }
 
 .start_bronze{
-  left: 9%;
+  left: 10%;
 }
 
 .moveto_silver{
-  transform: translateX(450%);
+  transform: translateX(475%);
 }
 
 .start_silver{
@@ -167,7 +178,7 @@
 }
 
 .start_gold{
-  left: 57%;
+  left: 59%;
 }
 
 .moveto_bkgold{
@@ -176,23 +187,23 @@
 
 @media screen and (max-width: 500px){
   .start_bronze {
-    left: 6%;
+    left: 9%;
   }
 
   .moveto_silver{
-    transform: translateX(270%);
+    transform: translateX(310%);
   }
 
   .start_silver {
-    left: 24%;
+    left: 33%;
   }
 
   .moveto_gold{
-    transform: translateX(350%);
+    transform: translateX(310%);
   }
 
   .start_gold {
-    left: 51%;
+    left: 57%;
   }
 
   .moveto_bkgold{

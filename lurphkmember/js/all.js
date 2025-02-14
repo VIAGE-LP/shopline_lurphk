@@ -94,7 +94,7 @@ $(document).ready(function () {
         member_scroll()
 
         //member_popup 視窗 open
-        $(".discount").text("立即折 200 元！");
+        $(".discount").html(`立即折NT$200！<br><small>(≒HKD$48)</small>`);
         $(".medal_text_1").text("銀");
         $(".medal_text_2").text("銀級");
         $("#member_popup").show();
@@ -108,7 +108,7 @@ $(document).ready(function () {
         member_scroll()
 
         //member_popup 視窗 open
-        $(".discount").text("立即折 450 元！");
+        $(".discount").html(`立即折NT$450！<br><small>(≒HKD$107)</small>`);
         $(".medal_text_1").text("金");
         $(".medal_text_2").text("金級");
         $("#member_popup").show();
@@ -164,6 +164,14 @@ $(document).ready(function () {
     });
     $(".member_G600").on("click", function () {
         copybtn("黑金", "LNMBG600", "600元(≒HKD$143)");
+    });
+
+    //member_popup 視窗 close
+    $("#member_popup_close").on("click", function () {
+        document.getElementById("member_popup").style.opacity = "0";
+        setTimeout(() => { 
+            $("#member_popup").hide();
+        }, 300);
     });
 
 });
