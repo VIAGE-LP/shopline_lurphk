@@ -60,6 +60,8 @@
   font-weight: bold;
   color: #ff3366;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  line-height: 45px;
+  margin-bottom: 8px;
 }
 
 @media screen and (max-width: 500px){
@@ -112,6 +114,7 @@
   border: 2px solid #e0e0e0;
   text-align: center;
   font-size: 18px;
+  line-height: 20px;
 }
 @media screen and (max-width: 500px){
   .membership-table th, .membership-table td {
