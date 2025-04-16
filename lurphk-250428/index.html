@@ -1,0 +1,870 @@
+<!-- ▼自由編集箇所▼ -->
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/bootstrap_custom.css">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/fv.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/loading.css">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/common.css" />
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/hide.css" />
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/css/countdown.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://viage-lp.github.io/shopline_lurphk/lurphk/css/birthday.css">
+<!-- shopline offer css -->
+<style>
+    /* 隱藏第一個商品列表 */
+    div#shopline-section-1691658726756013023f:nth-child(1) {
+        display: none !important;
+    }
+
+    #product-list__products__1691658726756013023f {
+
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .section-width {
+        padding: 0px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #shopline-section-1691658726756013023f .section-width {
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    /* @media (min-width: 768px) {
+    #shopline-section-1691658726756013023f .section-width {
+      width: 640px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+    }
+  } */
+
+    @media screen and (max-width: 767px) {
+        .product-list-custom-padding__1691658726756013023f {
+            padding: 0;
+        }
+
+        #product-list__products__1691658726756013023f {
+            display: block;
+            grid-template-columns: 100%;
+            grid-template-rows: initial;
+        }
+    }
+</style>
+
+<!-- shopline相關css -->
+<style>
+    .header {
+        z-index: 102;
+    }
+
+    .header--desktop .header__container {
+        position: fixed;
+        /* background-color: white; */
+        left: 50%;
+        margin-left: -700px;
+        width: 1400px;
+        max-width: 100%;
+        min-height: 103px;
+        padding: 10px 20px 0;
+        display: flex;
+    }
+
+    @media screen and (max-width: 1400px) {
+        .header--desktop .header__container {
+            left: 0;
+            margin-left: 0;
+            margin: 0 auto;
+        }
+    }
+
+    .header--mobile .header__menu {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #wrapper {
+        margin-top: 103px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        #wrapper {
+            margin-top: 60px;
+        }
+    }
+
+    /* 隱藏電腦版商品資訊標籤 */
+    .quick-cart-body .variant-gallery-stage>a:last-child {
+        display: none;
+    }
+
+    /* 隱藏手機版商品資訊標籤 */
+    a.ng-binding {
+        display: none;
+    }
+
+    .CustomPage .quick-cart-price {
+        display: none;
+    }
+</style>
+
+<!-- 客製化區塊css -->
+<style>
+    header {
+        top: 1%;
+        left: 0%;
+    }
+
+    @media screen and (max-width: 450px) {
+        header {
+            top: 1%;
+            left: 10%;
+        }
+    }
+
+    .tab-pane {
+        padding: 0px;
+    }
+
+    @media screen and (max-width: 767px) {
+        .tab-pane {
+            padding: 0px;
+        }
+    }
+
+    .nav-pill_new .nav-item {
+        width: calc(100%/8);
+        padding: 1%;
+        margin: 0;
+    }
+
+    .bg_modelCarousel--mid .row>* {
+        flex-shrink: 0;
+        width: 100%;
+        max-width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        margin-top: var(--bs-gutter-y);
+    }
+
+    /* 倒數計時器 */
+    /* .countdown_box {
+        width: 750px;
+        margin: 0 auto;
+        background-color: #fdb534;
+        text-shadow: 2px 2px 2px #f6617a, -2px 2px 2px #f6617a, 2px -2px 2px #f6617a, -2px -2px 2px #f6617a;
+        color: #ffffff;
+        text-align: center;
+        font-size: 2.25rem;
+        font-weight: bold;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    #cdtimer .linegreen {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    #cdtimer_day .linegreen {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+        #cdtimer {
+            font-size: 1.3rem;
+        }
+
+        #cdtimer .linegreen {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    .countdown_box #cdtimer,
+    .countdown_box #cdtimer_day {
+        display: none;
+    }
+
+    .countdown {
+        display: flex;
+        justify-content: center;
+        /* text-align: center; */
+    /* padding: 10px 0;
+    } */
+    /* 
+    .countdown_title {
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .main-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .timer-box .number {
+        color: #fffa55;
+        padding: 0 4px;
+        text-shadow: 2px 2px 2px #9a2849, -2px 2px 2px #9a2849, 2px -2px 2px #9a2849, -2px -2px 2px #9a2849;
+    }
+
+    @media screen and (max-width: 768px) {
+        .countdown_box {
+            width: 100%;
+            font-size: 1.8rem;
+        }
+    }  */
+
+    /* 倒數計時器 */
+</style>
+
+<body>
+    <!-- draw popup start-->
+    <style>
+        #code_direction_draw {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .code_modal_content_draw {
+            margin: 30vh auto;
+            padding: 0px;
+            width: 300px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .code_modal_content_draw {
+                width: 90vw;
+            }
+        }
+    </style>
+    <div id="code_direction_draw">
+        <div class="code_modal_content_draw">
+            <img id="draw_gif" src="https://lunanaturalbra.com/hk/lurphknew/img0821/popup_draw.gif" alt=""
+                style="width:100%;">
+        </div>
+    </div>
+    <!-- draw popup end-->
+
+    <!-- 封面loading動畫 -->
+    <div class="loading-all">
+        <img id="logo-001" src="https://lunanaturalbra.com/hk/lurphknew/img/logo.png">
+        <p class="loading_txt">會員價格loading...</p>
+        <div>
+            <div class="loading-outer">
+                <div class="loading-inner"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 漂浮按鈕 start-->
+    <style>
+        .sizelinkbtn {
+            width: 174px;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            z-index: 101;
+        }
+
+        .sizelinkbtn .gotop {
+            transform: translate(-8px, 0px);
+            width: 95%;
+            height: auto;
+        }
+
+        .sizelinkbtn .copyButton2 {
+            width: 85%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .sizelinkbtn {
+                width: 35%;
+                max-width: 170px;
+            }
+
+            .sizelinkbtn .gotop {
+                transform: translate(7px, 0px);
+                width: 92%;
+                height: auto;
+            }
+
+            .sizelinkbtn .copyButton2 {
+                transform: translate(30px, 0px);
+                width: 65%;
+                height: auto;
+            }
+        }
+    </style>
+    <div class="sizelinkbtn" style="text-align: center">
+        <img class="gotop" style="cursor: pointer;"
+            src="https://lunanaturalbra.com/hk/lurphknew/img_normal/gotop.png">
+    </div>
+    <!-- 漂浮按鈕end -->
+
+    <!-- 左側popup start-->
+    <!-- <style>
+        .left_popup {
+            position: fixed;
+            cursor: pointer;
+            z-index: 98;
+            bottom: 5%;
+            width: 250px;
+        }
+
+        .left_popup_box {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .left_popup_btn {
+            width: 27.5%;
+            right: -27%;
+            position: absolute;
+        }
+
+        .left_popup.left_hide {
+            left: -250px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .left_popup {
+                width: 158px;
+            }
+
+            .left_popup.left_hide {
+                left: -158px;
+            }
+        }
+
+        .left_popup img:hover {
+            opacity: 0.5;
+            transition: opacity 0.5s ease;
+        }
+    </style> -->
+    <!-- <div class="left_popup">
+        <img class="left_popup_btn" src="https://lunanaturalbra.com/hk/lurphknew/img0627/popup_btn_0712.png" alt="">
+        <div class="left_popup_box">
+            <img class="left_popup_event" src="https://lunanaturalbra.com/hk/lurphknew/img0627/popup_01_0712.png"
+                alt="">
+            <img class="left_popup_offer copybtn"
+                src="https://lunanaturalbra.com/hk/lurphknew/img0627/popup_02_0712.png" alt="">
+        </div>
+    </div> -->
+    <!-- 左側popup end-->
+
+    <div id="wrapper">
+        <div id="lu-wrapper" class="lu-wrapper">
+
+            <!-- 會員生日折扣碼 -->
+            <div id="birthdayModal" style="display: none;">
+                <div class="birthdayModal-content">
+                <h2>🎉 祝賀 <span id="currentMonth"></span> 月生日快樂！ 🎂</h2>
+                <p>複製下方折扣碼於此網頁使用</p>
+                <div class="discount-code" id="discountCode"></div>
+                <button class="copy-btn" onclick="hbdcopyCode()">複製折扣碼</button>
+                <p>可享網頁表示價格 <b>再折$150元(≒HKD$40)</b><br>不限金額，全品項方案皆適用</p>
+                <p>請務必收下這份禮物！</p>
+                <span class="close-btn" onclick="closeModal()">關閉</span>
+                </div>
+            </div>
+            
+            <!-- 可用於 shopline 的 popup start-->
+            <style>
+                #shopline_popup {
+                    display: none;
+                    position: fixed;
+                    z-index: 1000;
+                    left: 0;
+                    top: 0;
+                    width: 100vw;
+                    height: 100vh;
+                    overflow: auto;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+
+                .shopline_modal_content {
+                    margin: 10vh auto;
+                    padding: 0px;
+                    width: 560px;
+                    position: relative;
+                }
+
+                @media screen and (max-width: 768px) {
+                    .shopline_modal_content {
+                        width: 90vw;
+                    }
+                }
+
+                .code_direction_close_text {
+                    cursor: pointer;
+                    position: absolute;
+                    top: 9%;
+                    right: 5%;
+                    font-size: 32px;
+                    color: #3e3e3e;
+                }
+                .code_direction_close_text:hover{
+                    opacity: 0.6;
+                }
+            </style>
+            <div id="shopline_popup">
+                <div class="shopline_modal_content">
+                    <div class="js_code_direction_close code_direction_close_text">✖</div>
+                    <img src="https://lunanaturalbra.com/hk/lurphknew/img250414/lottery.png" alt="" style="width:100%;">
+                </div>
+            </div>
+            <!-- 可用於 shopline 的 popup end-->
+
+            <!-- <div class="countdown_box">
+                <div id="cdtimer">
+                    <div class="countdown">
+                        <p class="countdown_title">夏日感謝祭只剩</p>
+                        <div id="countdown" class="main-content">
+                            <div class="timer-box" style="display: none;"><span class="day number"></span><span
+                                    class="name">天</span>
+                            </div>
+                            <div class="timer-box"><span class="hours number"></span><span class="name">小時</span></div>
+                            <div class="timer-box"><span class="minutes number"></span><span class="name">分</span></div>
+                            <div class="timer-box"><span class="seconds number"></span><span class="name">秒</span></div>
+                            <div class="timer-box" style="display: none;"><span class="miriseconds number"></span><span
+                                    class="name">　　</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cdtimer_day">
+                    <div class="countdown">
+                        <p class="countdown_title">夏日感謝祭只剩</p>
+                        <div id="countdown" class="main-content">
+                            <div class="timer-box"><span class="day number"></span><span class="name">天</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="luna-mv__content">
+                <div class="luna-mv__contentUpper">
+                    <h1 class="luna-mv__title">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img_normal/01_title_sp.png" alt="">
+                    </h1>
+
+                    <div class="luna-mv__hashtag">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/mv_hashtag_sp.svg" alt="">
+                    </div>
+                </div>
+                <div class="luna-mv__text">
+                    LUNA晚安內衣開發團隊透過研究女性的胸部構造，<br>
+                    發現了主導美胸形成的基本線-ω歐美伽曲線。<br>
+                    透過穿著保養擁有完美的ω歐美伽曲線，<br>
+                    會讓胸型輪廓更加好看、胸部看起來更加立體！<br>
+                    請期待LUNA晚安內衣為你帶來「美麗新變化」吧！
+                </div>
+                <div class="luna-mv__mov lujs-scrollfade">
+                    <!-- 影片輪播 -->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <video class="video01 d-block w-100"
+                                    src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov" loop autoplay muted
+                                    playsinline style="width:100%;">
+                                    <source src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov"
+                                        type="video/mp4" />
+                                    <source src="https://lunanaturalbra.com/hk/lurphknew/video/video01.mov/video.ogg"
+                                        type="video/ogg" />
+                                </video>
+                            </div>
+                            <div class="carousel-item">
+                                <video class="video01 d-block w-100"
+                                    src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov" loop autoplay muted
+                                    playsinline style="width:100%;">
+                                    <source src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov"
+                                        type="video/mp4" />
+                                    <source src="https://lunanaturalbra.com/hk/lurphknew/video/video02.mov/video.ogg"
+                                        type="video/ogg" />
+                                </video>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <p class="lu-mv__movtext" style="margin-top:4px">【日本專利獲得】ω歐美伽曲線養成特別設計</p>                    
+                </div>
+            </div>
+            <div class="lu-section lu-section--bgL">
+                <div class="lu-section--bgL__bg">
+                    <svg id="figure1" xmlns="http://www.w3.org/2000/svg" width="842.1927" height="2159.999"
+                        viewBox="0 0 842.1927 2159.999">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #f9dae0;
+                                }
+                            </style>
+                        </defs>
+                        <title>アセット 13</title>
+                        <g id="レイヤー_2" data-name="レイヤー 2">
+                            <g id="背景">
+                                <path id="pai" class="cls-1"
+                                    d="M0,1263.2877c.0006-231.204,190.8707-349.322,361.7466-464.58,199.2629-134.4052,373.2643-319.5824,444.335-553.97A844.5478,844.5478,0,0,0,842.1927,0V2159.999H285.9386l.026-.035A390.1665,390.1665,0,0,0,356.22,1935.99C356.2235,1643.1849,0,1562.8709,0,1263.2877Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+
+                <!-- <img src="https://lunanaturalbra.com/hk/lurphknew/img241105/LuckyWheel/hk_event_1111.png" alt="" class="imgcss"> -->
+                
+                <div class="lu-innr">
+                    <img src="https://lunanaturalbra.com/hk/lurphknew/img250414/event-1.png" alt="" class="imgcss">
+                    <img id="event" class="imgcss" style="cursor: pointer;" src="https://lunanaturalbra.com/hk/lurphknew/img250414/event-2.png" alt="" >
+                    <h3 class="lu-section__title01 lujs-scrollfade"><img
+                            src="https://lunanaturalbra.com/hk/lurphknew/img/sec_title_01.png" alt="" class="lu-resize">
+                    </h3>
+                    <div class="lu-movie">
+                        <div class="lu-movie__main lujs-scrollfade">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/05_data.png" alt="" class="imgcss">
+                        </div>
+                    </div>
+
+                    <div class="lu-instaArea">
+                        <div class="lu-instaArea__btn lujs-scrollfade">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/btn_ladygo.png" alt=""
+                                class="lu-resize">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lu-section lu-section--bgR">
+                <div class="lu-section--bgR__bg">
+                    <svg id="figure2" xmlns="http://www.w3.org/2000/svg" width="842.1927" height="2059.999"
+                        viewBox="0 0 742.1927 2159.999">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #f9dae0;
+                                }
+                            </style>
+                        </defs>
+                        <title>アセット 13</title>
+                        <g id="レイヤー_2" data-name="レイヤー 2">
+                            <g id="背景">
+                                <path id="pai2" class="cls-1"
+                                    d="M0,1263.2877c.0006-231.204,190.8707-349.322,361.7466-464.58,199.2629-134.4052,373.2643-319.5824,444.335-553.97A844.5478,844.5478,0,0,0,842.1927,0V2159.999H285.9386l.026-.035A390.1665,390.1665,0,0,0,356.22,1935.99C356.2235,1643.1849,0,1562.8709,0,1263.2877Z" />
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="lu-innr">
+                    <div class="lu-nbr">
+                        <div class="lu-nbrClm lu-clm2">
+                            <div class="lu-clm2__li lujs-scrollfade">
+                                <div class="lu-nbrBlock">
+                                    <div class="lu-nbrBlock__thumb"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_01.jpg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                    <div class="lu-nbrBlock__text"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/text_before.svg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lu-clm2__li lujs-scrollfade">
+                                <picture>
+                                    <source media="(max-width: 767px)"
+                                        srcset="https://lunanaturalbra.com/hk/lurphknew/img/nbr_title_sp.svg">
+                                    <source media="(min-width: 768px)"
+                                        srcset="https://lunanaturalbra.com/hk/lurphknew/img/nbr_title.svg">
+                                    <img src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_title.svg" alt=""
+                                        class="lu-resize">
+                                </picture>
+
+                            </div>
+                            <div class="lu-clm2__li lujs-scrollfade" style="z-index: 2;">
+                                <div class="lu-nbrBlock">
+                                    <div class="lu-nbrBlock__thumb"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_02.jpg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                    <div class="lu-nbrBlock__text"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/text_1month.svg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lu-clm2__li lujs-scrollfade">
+                                <div class="lu-nbrBlock">
+                                    <div class="lu-nbrBlock__thumb"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_03.jpg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                    <div class="lu-nbrBlock__text"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/text_2month.svg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lu-clm2__li lujs-scrollfade">
+                                <div class="lu-nbrBlock">
+                                    <div class="lu-nbrBlock__thumb"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/nbr_thumb_04.jpg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                    <div class="lu-nbrBlock__text"><img
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/text_3month.svg" alt=""
+                                            class="lu-resize">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" lu-clm2 hidebox">
+                            <div class="lu-clm2__li lujs-scrollfade" style="display: none;margin-top:32px;" id="pose">
+                                <img src="https://lunanaturalbra.com/hk/lurphknew/img/pose.png" alt="" class="imgcss">
+                            </div>
+                        </div>
+                        <div class="lu-nbrClm lu-clm3">
+                            <p>※穿著晚安內衣搭配運動鍛鍊後的效果。</p>
+                        </div>
+                    </div>
+
+                    <div class="hidebox">
+                        <div id="summer" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
+                            style="display: none;margin-top:32px;">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img0502/color.png" alt="" class="imgcss">
+                        </div>
+                        <div id="food" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
+                            style="display: none;margin-top:32px;">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/food.png" alt=""
+                                class="imgcss">
+                        </div>
+                        <div id="replace" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
+                            style="display: none;margin-top:32px;">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/replace.png" alt=""
+                                class="imgcss">
+                        </div>
+                        <div id="massage" class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade"
+                            style="display: none;margin-top:32px;">
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/massage.png" alt=""
+                                class="imgcss">
+                        </div>
+                        <div id="ootd" class=" lu-ldgBlock--01 lujs-scrollfade" style="display: none;margin-top:32px;">
+                            <div class="ootd_top">
+                                <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_top.png" alt=""
+                                    class="imgcss">
+                                <div class="ootd_button">
+                                    <div class="d-flex">
+                                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_01.png"
+                                            alt="" data-day="01">
+                                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_02.png"
+                                            alt="" data-day="02">
+                                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_03.png"
+                                            alt="" data-day="03">
+                                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_04.png"
+                                            alt="" data-day="04">
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                        <img class="mr-0"
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_05.png"
+                                            alt="" data-day="05">
+                                        <img class="mx-2"
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_06.png"
+                                            alt="" data-day="06">
+                                        <img class="ml-0"
+                                            src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_btn_07.png"
+                                            alt="" data-day="07">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ootd_show">
+                                <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_01.png" alt=""
+                                    class="imgcss">
+                            </div>
+                            <img src="https://lunanaturalbra.com/hk/lurphknew/img/06_hide/ootd/ootd_bottom.png" alt=""
+                                class="imgcss">
+                        </div>
+                    </div>
+                    <a id="sizelink"></a>
+                    <div id="shopline-section-1691658726756013023f" class="shopline-section">
+                        <div class="section-width">
+                            <div class="product-list-custom-padding__1691658726756013023f">
+                                <div class="product-list__container">
+                                    <div class="product-list__product" product-id="654b2b7a32130f001705ee46">
+
+                                        <div class="product-item">
+                                            <product-item product-id="654b2b7a32130f001705ee46"
+                                                ng-class="{'quick-cart-mobile': isMobileTabletWidth()}"
+                                                class="ng-scope quick-cart-mobile" modal-window-class="">
+                                                <div class="lu-ldg">
+                                                    <div
+                                                        class="lu-ldgBlock lu-ldgBlock--01 lujs-scrollfade offerbefore">
+                                                        <a href="#size">
+                                                            <img class="btn-add-to-cart js-btn-add-to-cart imgcss"
+                                                                src="https://lunanaturalbra.com/hk/lurphknew/img250414/07_offer.png"
+                                                                alt="" id="offer" class="imgcss">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </product-item>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lu-section--bgL__bg pconly">
+                    <svg id="figure3" xmlns="http://www.w3.org/2000/svg" width="842.1927" height="1459.999"
+                        viewBox="0 0 442.1927 2159.999">
+                        <defs>
+                            <style>
+                                .cls-1 {
+                                    fill: #f9dae0;
+                                }
+                            </style>
+                        </defs>
+                        <title>アセット 13</title>
+                        <g id="レイヤー_3" data-name="レイヤー 3">
+                            <g id="背景">
+                                <path id="pai" class="cls-1"
+                                    d="M0,1263.2877c.0006-231.204,190.8707-349.322,361.7466-464.58,199.2629-134.4052,373.2643-319.5824,444.335-553.97A844.5478,844.5478,0,0,0,842.1927,0V2159.999H285.9386l.026-.035A390.1665,390.1665,0,0,0,356.22,1935.99C356.2235,1643.1849,0,1562.8709,0,1263.2877Z" />
+                            </g>
+                        </g>
+                    </svg>
+
+                </div>
+                <div class="lu-innr">
+                    <div class="lu-ldgBlock lu-ldgBlock--04 lujs-scrollfade">
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/08_color.png" alt="" class="imgcss">
+                    </div>
+                    <div class="lu-ldgBlock lu-ldgBlock--04 lujs-scrollfade">
+                        <a id="size"></a>
+                        <img src="https://lunanaturalbra.com/hk/lurphknew/img/09_size.png" alt="" class="imgcss">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/js/common.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/js/bootstrap.min.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/js/all.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk-1119/js/countdown.js"></script>
+    <script src="https://viage-lp.github.io/shopline_lurphk/lurphk/js/birthday.js"></script>
+    
+
+    <!-- 封面loading動畫 -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#logo-001').fadeIn();
+            setTimeout(function () {
+                $('.loading-all').fadeOut()
+            }, 650);
+        });
+    </script>
+
+    <!-- 抓取網址參數存到cookie -->
+    <!-- <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script> -->
+    <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script>
+        const url_cookie = location.search;
+        $.cookie('url_cookie', url_cookie, { expires: 1, path: '/' });
+    </script>
+
+    <script>
+        // 點選左上角logo不跳轉
+        $('a[href="/"]').click(function (e) {
+            e.preventDefault();
+            return;
+        });
+
+        //漂浮按鈕
+        $('.sizelinkbtn').click(function (e) {
+            e.preventDefault();
+            let innerheight = window.innerHeight;
+            $('html , body').animate({
+                // scrollTop: $('#sizelink').offset().top - (0.5 * innerheight),
+                scrollTop: $('#offer').offset().top,
+            }, 900);
+        });
+
+        $('#offer').click(function (e) {
+            e.preventDefault();
+            $('html , body').animate({
+                scrollTop: $('#size').offset().top,
+            }, 900);
+        });
+
+        $("#event").on("click", function () {
+            $("#shopline_popup").fadeIn(300); // 開啟時淡入動畫
+        });
+
+        $(".js_code_direction_close").on("click", function () {
+            $("#shopline_popup").fadeOut(300); // 關閉時淡出動畫
+        });
+    </script>
+
+    <script>
+        // coupon折扣
+        // function copybtn(money, couponcode) {
+        //     // 複製（利用 Clipboard API 中的寫入功能）
+        //     navigator.clipboard.writeText(couponcode);
+        //     // 提醒視窗
+        //     confirm(`恭喜您成功複製「折扣碼」！\n期間內不限方案，\n於購物車「優惠代碼」欄位輸入 即可享優惠金額再折HKD$${money}元\n優惠期限只到7/31，折扣權益別錯過~\n優惠代碼：${couponcode}`)
+        //     // event_modal()
+        // };
+
+        // $(".copybtn").on("click", function () {
+        //     copybtn(50, "7LUNA200");
+        // });
+
+        // //左側popup
+        // $(window).scroll(function () {
+        //     $('.left_popup').addClass('left_hide');
+        // });
+        // $('.left_popup').click(function (e) {
+        //     $('.left_popup').toggleClass('left_hide');
+        // });
+        // $('.left_popup_event').click(function (e) {
+        //     e.preventDefault();
+        //     $('html , body').animate({
+        //         scrollTop: $('#event').offset().top,
+        //     }, 900);
+        // });
+        // $('.left_popup_offer').click(function (e) {
+        //     e.preventDefault();
+        //     $('html , body').animate({
+        //         scrollTop: $('#offer').offset().top,
+        //     }, 900);
+        // });
+    </script>
