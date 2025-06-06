@@ -655,10 +655,10 @@
             <div class="section-width">
               <div class="product-list-custom-padding__1691658726756013023f">
                 <div class="product-list__container">
-                  <div class="product-list__product" product-id="684299b9fa8de6000b835862">
+                  <div class="product-list__product" product-id="654b2b7a32130f001705ee46">
 
                     <div class="product-item">
-                      <product-item product-id="684299b9fa8de6000b835862"
+                      <product-item product-id="654b2b7a32130f001705ee46"
                         ng-class="{'quick-cart-mobile': isMobileTabletWidth()}" class="ng-scope quick-cart-mobile"
                         modal-window-class="">
                         <div class="lu-ldg">
